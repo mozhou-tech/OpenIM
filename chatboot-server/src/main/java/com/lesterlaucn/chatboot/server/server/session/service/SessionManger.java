@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.server.server.session.service;
 
-import com.lesterlaucn.chatboot.common.bean.Notification;
 import com.lesterlaucn.chatboot.entity.ImNode;
+import com.lesterlaucn.chatboot.protoc.Notification;
 import com.lesterlaucn.chatboot.server.distributed.ImWorker;
 import com.lesterlaucn.chatboot.server.distributed.OnlineCounter;
 import com.lesterlaucn.chatboot.server.distributed.WorkerRouter;

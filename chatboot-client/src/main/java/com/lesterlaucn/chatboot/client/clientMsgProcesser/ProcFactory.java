@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.client.clientMsgProcesser;
 
 
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 
 import java.util.HashMap;
 import java.util.Map;

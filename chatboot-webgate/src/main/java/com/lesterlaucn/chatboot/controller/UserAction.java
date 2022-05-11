@@ -1,11 +1,11 @@
 package com.lesterlaucn.chatboot.controller;
 
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
 import com.lesterlaucn.chatboot.controller.utility.BaseController;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.entity.LoginBack;
 import com.lesterlaucn.chatboot.infrastructure.ImLoadBalance;
 import com.lesterlaucn.chatboot.infrastructure.mybatis.entity.UserPO;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
 import com.lesterlaucn.chatboot.service.UserService;
 import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.swagger.annotations.Api;

@@ -2,7 +2,7 @@ package com.lesterlaucn.chatboot.client.clientHandler;
 
 
 import com.lesterlaucn.chatboot.client.ClientSender.LoginSender;
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

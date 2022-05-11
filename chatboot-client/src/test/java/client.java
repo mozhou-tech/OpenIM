@@ -1,6 +1,6 @@
 import com.lesterlaucn.chatboot.client.ClientSender.ChatSender;
 import com.lesterlaucn.chatboot.client.client.ClientSession;
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
 import org.junit.Test;
 
 /**

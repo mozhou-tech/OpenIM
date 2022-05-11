@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.server.server.session;
 
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
 import com.lesterlaucn.chatboot.server.server.session.service.SessionManger;
 import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.netty.channel.Channel;

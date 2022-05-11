@@ -1,8 +1,8 @@
 package com.lesterlaucn.chatboot.server.serverProcesser;
 
-import com.lesterlaucn.chatboot.common.ProtoInstant;
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.ProtoInstant;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.server.protoBuilder.LoginResponceBuilder;
 import com.lesterlaucn.chatboot.server.server.session.LocalSession;
 import com.lesterlaucn.chatboot.server.server.session.service.SessionManger;

@@ -1,4 +1,4 @@
-option java_package = "com.lesterlaucn.chatboot.common.bean.msg";
+option java_package = "com.lesterlaucn.chatboot.protoc.msg";
 option java_outer_classname = "ProtoMsg";
 
 

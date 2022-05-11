@@ -5,8 +5,8 @@
 package com.lesterlaucn.chatboot.client.protoBuilder;
 
 import com.lesterlaucn.chatboot.client.client.ClientSession;
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 
 
 /**

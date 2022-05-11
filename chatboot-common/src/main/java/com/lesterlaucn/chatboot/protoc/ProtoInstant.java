@@ -1,4 +1,4 @@
-package com.lesterlaucn.chatboot.common;
+package com.lesterlaucn.chatboot.protoc;
 
 public class ProtoInstant {
 

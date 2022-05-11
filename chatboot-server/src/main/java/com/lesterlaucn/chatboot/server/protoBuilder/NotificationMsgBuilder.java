@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.server.protoBuilder;
 
 
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 
 public class NotificationMsgBuilder {
 

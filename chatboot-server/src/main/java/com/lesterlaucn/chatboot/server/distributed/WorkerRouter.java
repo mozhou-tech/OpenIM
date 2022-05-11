@@ -1,9 +1,9 @@
 package com.lesterlaucn.chatboot.server.distributed;
 
 import com.lesterlaucn.chatboot.cluster.CuratorZKClient;
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
 import com.lesterlaucn.chatboot.entity.ImNode;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.server.protoBuilder.NotificationMsgBuilder;
 import com.lesterlaucn.chatboot.utils.JsonUtil;
 import com.lesterlaucn.chatboot.utils.ObjectUtil;

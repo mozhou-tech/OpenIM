@@ -7,7 +7,7 @@ import com.lesterlaucn.chatboot.client.clientHandler.ExceptionHandler;
 import com.lesterlaucn.chatboot.client.clientHandler.LoginResponceHandler;
 import com.lesterlaucn.chatboot.codec.ProtobufDecoder;
 import com.lesterlaucn.chatboot.codec.ProtobufEncoder;
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.*;

@@ -1,6 +1,6 @@
 package com.lesterlaucn.chatboot.entity;
 
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
 import lombok.Data;
 
 import java.util.List;

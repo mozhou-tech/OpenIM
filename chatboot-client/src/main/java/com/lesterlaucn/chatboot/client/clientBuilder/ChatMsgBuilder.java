@@ -5,9 +5,9 @@
 package com.lesterlaucn.chatboot.client.clientBuilder;
 
 import com.lesterlaucn.chatboot.client.client.ClientSession;
-import com.lesterlaucn.chatboot.common.bean.ChatMsg;
-import com.lesterlaucn.chatboot.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.ChatMsg;
+import com.lesterlaucn.chatboot.protoc.UserDTO;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 
 /**
  * 聊天消息Builder

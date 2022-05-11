@@ -1,5 +1,5 @@
 syntax = "proto3";
-package com.lesterlaucn.chatboot.common.bean.msg;
+package com.lesterlaucn.chatboot.protoc.msg;
 message ProtoMsg {
 
 

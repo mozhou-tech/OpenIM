@@ -1,8 +1,8 @@
 package com.lesterlaucn.chatboot.codec;
 
 
-import com.lesterlaucn.chatboot.common.ProtoInstant;
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.ProtoInstant;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;

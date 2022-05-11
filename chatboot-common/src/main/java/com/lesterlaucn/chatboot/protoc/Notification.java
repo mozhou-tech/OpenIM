@@ -1,4 +1,4 @@
-package com.lesterlaucn.chatboot.common.bean;
+package com.lesterlaucn.chatboot.protoc;
 
 import lombok.Data;
 

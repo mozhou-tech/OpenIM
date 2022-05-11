@@ -3,8 +3,8 @@ package com.lesterlaucn.chatboot.client.clientHandler;
 
 import com.lesterlaucn.chatboot.client.client.ClientSession;
 import com.lesterlaucn.chatboot.client.client.CommandController;
-import com.lesterlaucn.chatboot.common.ProtoInstant;
-import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.ProtoInstant;
+import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
