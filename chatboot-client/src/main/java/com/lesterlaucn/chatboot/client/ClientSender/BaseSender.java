@@ -5,7 +5,7 @@ import com.lesterlaucn.chatboot.client.client.CommandController;
 import com.lesterlaucn.chatboot.cocurrent.CallbackTask;
 import com.lesterlaucn.chatboot.cocurrent.CallbackTaskScheduler;
 import com.lesterlaucn.chatboot.protoc.UserDTO;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import io.netty.channel.ChannelFuture;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;

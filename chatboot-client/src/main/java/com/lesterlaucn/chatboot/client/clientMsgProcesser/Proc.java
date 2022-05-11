@@ -2,7 +2,7 @@ package com.lesterlaucn.chatboot.client.clientMsgProcesser;
 
 
 import com.lesterlaucn.chatboot.client.client.ClientSession;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 
 /**
  * 操作类

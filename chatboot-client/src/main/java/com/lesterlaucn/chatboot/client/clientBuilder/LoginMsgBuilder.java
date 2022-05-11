@@ -6,7 +6,7 @@ package com.lesterlaucn.chatboot.client.clientBuilder;
 
 import com.lesterlaucn.chatboot.client.client.ClientSession;
 import com.lesterlaucn.chatboot.protoc.UserDTO;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 
 
 /**

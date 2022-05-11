@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.client.client;
 
 import com.lesterlaucn.chatboot.protoc.UserDTO;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;

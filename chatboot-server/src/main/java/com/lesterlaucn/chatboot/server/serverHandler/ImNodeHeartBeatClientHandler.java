@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.server.serverHandler;
 
 
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import com.lesterlaucn.chatboot.server.distributed.ImWorker;
 import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.netty.channel.ChannelHandler;

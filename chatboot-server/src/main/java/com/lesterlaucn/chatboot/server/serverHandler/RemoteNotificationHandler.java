@@ -4,7 +4,7 @@ import com.google.gson.reflect.TypeToken;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.protoc.Notification;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import com.lesterlaucn.chatboot.server.server.session.LocalSession;
 import com.lesterlaucn.chatboot.server.server.session.service.SessionManger;
 import com.lesterlaucn.chatboot.utils.JsonUtil;

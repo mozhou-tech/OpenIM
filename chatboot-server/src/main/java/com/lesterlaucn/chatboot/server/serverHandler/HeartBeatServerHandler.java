@@ -2,7 +2,7 @@ package com.lesterlaucn.chatboot.server.serverHandler;
 
 import com.lesterlaucn.chatboot.cocurrent.FutureTaskScheduler;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import com.lesterlaucn.chatboot.server.server.session.service.SessionManger;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.timeout.IdleStateEvent;

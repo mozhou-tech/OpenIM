@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.client.protoBuilder;
 
 import com.lesterlaucn.chatboot.client.client.ClientSession;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 
 /**
  * 基础 Builder

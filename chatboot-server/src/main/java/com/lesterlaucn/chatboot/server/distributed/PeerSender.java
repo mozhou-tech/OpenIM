@@ -5,7 +5,7 @@ import com.lesterlaucn.chatboot.codec.ProtobufEncoder;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.protoc.Notification;
 import com.lesterlaucn.chatboot.protoc.UserDTO;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import com.lesterlaucn.chatboot.server.protoBuilder.NotificationMsgBuilder;
 import com.lesterlaucn.chatboot.server.serverHandler.ImNodeExceptionHandler;
 import com.lesterlaucn.chatboot.server.serverHandler.ImNodeHeartBeatClientHandler;

@@ -2,17 +2,15 @@ package com.lesterlaucn.chatboot.client.ClientSender;
 
 import com.lesterlaucn.chatboot.client.clientBuilder.ChatMsgBuilder;
 import com.lesterlaucn.chatboot.protoc.ChatMsg;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import com.lesterlaucn.chatboot.utils.Logger;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service("ChatSender")
-public class ChatSender extends BaseSender
-{
-    public void sendChatMsg(String touid, String content)
-    {
+@Service
+public class ChatSender extends BaseSender {
+    public void sendChatMsg(String touid, String content) {
         ChatMsg chatMsg = new ChatMsg(getUser());
         chatMsg.setContent(content);
         chatMsg.setMsgType(ChatMsg.MSGTYPE.TEXT);
@@ -25,10 +23,7 @@ public class ChatSender extends BaseSender
     }
 
     @Override
-    protected void sendSucced(ProtoMsg.Message message)
-    {
-
-
+    protected void sendSucced(ProtoMsg.Message message) {
         Logger.tcfo("单聊发送成功:"
                 + message.getMessageRequest().getContent()
                 + "->"
@@ -37,8 +32,7 @@ public class ChatSender extends BaseSender
     }
 
     @Override
-    protected void sendException(ProtoMsg.Message message)
-    {
+    protected void sendException(ProtoMsg.Message message) {
         Logger.tcfo("单聊发送异常:"
                 + message.getMessageRequest().getContent()
                 + "->"
@@ -47,8 +41,7 @@ public class ChatSender extends BaseSender
     }
 
     @Override
-    protected void sendfailed(ProtoMsg.Message message)
-    {
+    protected void sendfailed(ProtoMsg.Message message) {
         Logger.tcfo("单聊发送失败:"
                 + message.getMessageRequest().getContent()
                 + "->"

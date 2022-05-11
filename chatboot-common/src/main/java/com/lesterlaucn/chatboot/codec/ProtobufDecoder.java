@@ -2,7 +2,7 @@ package com.lesterlaucn.chatboot.codec;
 
 import com.lesterlaucn.chatboot.exception.InvalidFrameException;
 import com.lesterlaucn.chatboot.protoc.ProtoInstant;
-import com.lesterlaucn.chatboot.protoc.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.protoc.message.ProtoMsg;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
