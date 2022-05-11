@@ -7,7 +7,7 @@ import com.lesterlaucn.chatboot.constants.ServerConstants;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.server.server.session.LocalSession;
 import com.lesterlaucn.chatboot.server.server.session.service.SessionManger;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

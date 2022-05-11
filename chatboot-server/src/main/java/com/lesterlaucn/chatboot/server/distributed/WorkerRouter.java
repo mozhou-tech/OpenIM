@@ -1,13 +1,13 @@
 package com.lesterlaucn.chatboot.server.distributed;
 
+import com.lesterlaucn.chatboot.cluster.CuratorZKClient;
 import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.server.protoBuilder.NotificationMsgBuilder;
-import com.lesterlaucn.chatboot.util.JsonUtil;
-import com.lesterlaucn.chatboot.util.ObjectUtil;
-import com.lesterlaucn.chatboot.util.ThreadUtil;
-import com.lesterlaucn.chatboot.zk.CuratorZKclient;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
+import com.lesterlaucn.chatboot.utils.ObjectUtil;
+import com.lesterlaucn.chatboot.utils.ThreadUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
@@ -75,7 +75,7 @@ public class WorkerRouter {
 
         try {
             if (null == client) {
-                this.client = CuratorZKclient.instance.getClient();
+                this.client = CuratorZKClient.instance.getClient();
 
             }
 

@@ -7,7 +7,7 @@ import com.lesterlaucn.chatboot.entity.LoginBack;
 import com.lesterlaucn.chatboot.infrastructure.ImLoadBalance;
 import com.lesterlaucn.chatboot.infrastructure.mybatis.entity.UserPO;
 import com.lesterlaucn.chatboot.service.UserService;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;

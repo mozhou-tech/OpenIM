@@ -10,8 +10,7 @@ import java.util.Objects;
  * create by lesterlaucn
  **/
 @Data
-public class ImNode implements Comparable<ImNode>, Serializable
-{
+public class ImNode implements Comparable<ImNode>, Serializable {
     private static final long serialVersionUID = -499010884211304846L;
 
     //worker 的Id,zookeeper负责生成
@@ -21,25 +20,22 @@ public class ImNode implements Comparable<ImNode>, Serializable
     private Integer balance = 0;
 
     //Netty 服务 IP
-    private String host="127.0.0.1";
+    private String host = "127.0.0.1";
 
     //Netty 服务 端口
-    private Integer port=8081;
+    private Integer port = 8081;
 
-    public ImNode()
-    {
+    public ImNode() {
     }
 
-    public ImNode(String host, Integer port)
-    {
+    public ImNode(String host, Integer port) {
         this.host = host;
         this.port = port;
     }
 
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "ImNode{" +
                 "id='" + id + '\'' +
                 "host='" + host + '\'' +
@@ -49,8 +45,7 @@ public class ImNode implements Comparable<ImNode>, Serializable
     }
 
     @Override
-    public boolean equals(Object o)
-    {
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ImNode node = (ImNode) o;
@@ -60,36 +55,30 @@ public class ImNode implements Comparable<ImNode>, Serializable
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         return Objects.hash(id, host, port);
     }
 
     /**
      * 升序排列
      */
-    public int compareTo(ImNode o)
-    {
+    public int compareTo(ImNode o) {
         int weight1 = this.balance;
         int weight2 = o.balance;
-        if (weight1 > weight2)
-        {
+        if (weight1 > weight2) {
             return 1;
-        } else if (weight1 < weight2)
-        {
+        } else if (weight1 < weight2) {
             return -1;
         }
         return 0;
     }
 
 
-    public void incrementBalance()
-    {
+    public void incrementBalance() {
         balance++;
     }
 
-    public void decrementBalance()
-    {
+    public void decrementBalance() {
         balance--;
     }
 }

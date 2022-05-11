@@ -1,7 +1,6 @@
 package com.lesterlaucn.chatboot.common;
 
-public class ProtoInstant
-{
+public class ProtoInstant {
 
     /**
      * 魔数，可以通过配置获取
@@ -16,33 +15,32 @@ public class ProtoInstant
     /**
      * 客户端平台
      */
-    public interface Platform
-    {
+    public interface Platform {
         /**
-         * windwos
+         * windows
          */
-        public static final int WINDOWS = 1;
+        int WINDOWS = 1;
 
         /**
          * mac
          */
-        public static final int MAC = 2;
+        int MAC = 2;
         /**
          * android端
          */
-        public static final int ANDROID = 3;
+        int ANDROID = 3;
         /**
          * IOS端
          */
-        public static final int IOS = 4;
+        int IOS = 4;
         /**
          * WEB端
          */
-        public static final int WEB = 5;
+        int WEB = 5;
         /**
          * 未知
          */
-        public static final int UNKNOWN = 6;
+        int UNKNOWN = 6;
 
 
     }
@@ -51,8 +49,7 @@ public class ProtoInstant
     /**
      * 返回码枚举类
      */
-    public enum ResultCodeEnum
-    {
+    public enum ResultCodeEnum {
 
         SUCCESS(0, "Success"),  // 成功
         AUTH_FAILED(1, "登录失败"),
@@ -63,19 +60,16 @@ public class ProtoInstant
         private Integer code;
         private String desc;
 
-        ResultCodeEnum(Integer code, String desc)
-        {
+        ResultCodeEnum(Integer code, String desc) {
             this.code = code;
             this.desc = desc;
         }
 
-        public Integer getCode()
-        {
+        public Integer getCode() {
             return code;
         }
 
-        public String getDesc()
-        {
+        public String getDesc() {
             return desc;
         }
 

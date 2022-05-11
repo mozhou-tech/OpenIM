@@ -1,4 +1,4 @@
-package com.lesterlaucn.chatboot.common.codec;
+package com.lesterlaucn.chatboot.codec;
 
 
 import com.lesterlaucn.chatboot.common.ProtoInstant;

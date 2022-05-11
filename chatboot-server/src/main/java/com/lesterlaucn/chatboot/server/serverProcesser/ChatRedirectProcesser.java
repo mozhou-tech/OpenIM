@@ -4,7 +4,7 @@ import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.server.server.session.LocalSession;
 import com.lesterlaucn.chatboot.server.server.session.ServerSession;
 import com.lesterlaucn.chatboot.server.server.session.service.SessionManger;
-import com.lesterlaucn.chatboot.util.Logger;
+import com.lesterlaucn.chatboot.utils.Logger;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,7 @@
  * Created by lesterlaucn
  * Time: 下午4:50
  */
-package com.lesterlaucn.chatboot.util;
+package com.lesterlaucn.chatboot.utils;
 
 
 public class Logger

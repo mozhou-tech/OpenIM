@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.server.distributed;
 
+import com.lesterlaucn.chatboot.cluster.CuratorZKClient;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
-import com.lesterlaucn.chatboot.zk.CuratorZKclient;
 import lombok.Data;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.atomic.AtomicValue;
@@ -33,7 +33,7 @@ public class OnlineCounter
         if (null == singleInstance)
         {
             singleInstance = new OnlineCounter();
-            singleInstance.client = CuratorZKclient.instance.getClient();
+            singleInstance.client = CuratorZKClient.instance.getClient();
             singleInstance.init();
         }
         return singleInstance;

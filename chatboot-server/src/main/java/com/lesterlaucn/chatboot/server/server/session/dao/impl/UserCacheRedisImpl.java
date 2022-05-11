@@ -4,7 +4,7 @@ package com.lesterlaucn.chatboot.server.server.session.dao.impl;
 import com.lesterlaucn.chatboot.server.server.session.dao.UserCacheDAO;
 import com.lesterlaucn.chatboot.server.server.session.entity.SessionCache;
 import com.lesterlaucn.chatboot.server.server.session.entity.UserCache;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Repository;

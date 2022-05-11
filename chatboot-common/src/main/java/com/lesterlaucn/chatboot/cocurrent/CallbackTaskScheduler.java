@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.cocurrent;
 
 import com.google.common.util.concurrent.*;
-import com.lesterlaucn.chatboot.util.ThreadUtil;
+import com.lesterlaucn.chatboot.utils.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.Callable;

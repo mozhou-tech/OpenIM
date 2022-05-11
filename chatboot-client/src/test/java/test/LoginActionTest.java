@@ -3,7 +3,7 @@ package test;
 import com.lesterlaucn.chatboot.client.feignClient.UserAction;
 import com.lesterlaucn.chatboot.client.feignClient.WebOperator;
 import com.lesterlaucn.chatboot.entity.LoginBack;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import feign.Feign;
 import feign.codec.StringDecoder;
 import org.junit.Test;

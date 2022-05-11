@@ -2,7 +2,7 @@ package com.lesterlaucn.chatboot.client.feignClient;
 
 import com.lesterlaucn.chatboot.constants.ServerConstants;
 import com.lesterlaucn.chatboot.entity.LoginBack;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import feign.Feign;
 import feign.codec.StringDecoder;
 

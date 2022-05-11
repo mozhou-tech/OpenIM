@@ -3,7 +3,7 @@
  * Date: 17-12-30
  * Time: 下午4:50
  */
-package com.lesterlaucn.chatboot.util;
+package com.lesterlaucn.chatboot.utils;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +24,6 @@ public class IOUtil
     public static String getUserHomeResourcePath(String resName)
     {
         String p = System.getProperty("user.dir") + File.separator + resName;
-
         return p;
     }
 

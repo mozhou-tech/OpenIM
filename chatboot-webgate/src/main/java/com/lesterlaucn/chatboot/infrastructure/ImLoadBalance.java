@@ -1,9 +1,9 @@
 package com.lesterlaucn.chatboot.infrastructure;
 
+import com.lesterlaucn.chatboot.cluster.CuratorZKClient;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
 import com.lesterlaucn.chatboot.entity.ImNode;
-import com.lesterlaucn.chatboot.util.JsonUtil;
-import com.lesterlaucn.chatboot.zk.CuratorZKclient;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
@@ -24,7 +24,7 @@ public class ImLoadBalance {
     private String managerPath;
 
 
-    public ImLoadBalance(CuratorZKclient curatorZKClient) {
+    public ImLoadBalance(CuratorZKClient curatorZKClient) {
         this.client = curatorZKClient.getClient();
         managerPath = ServerConstants.MANAGE_PATH;
     }

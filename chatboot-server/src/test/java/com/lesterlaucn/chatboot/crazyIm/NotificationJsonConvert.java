@@ -3,7 +3,7 @@ package com.lesterlaucn.chatboot.crazyIm;
 import com.google.gson.reflect.TypeToken;
 import com.lesterlaucn.chatboot.common.bean.Notification;
 import com.lesterlaucn.chatboot.entity.ImNode;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import org.junit.Test;
 
 public class NotificationJsonConvert

@@ -3,7 +3,7 @@ package com.lesterlaucn.chatboot.client.ClientSender;
 import com.lesterlaucn.chatboot.client.clientBuilder.ChatMsgBuilder;
 import com.lesterlaucn.chatboot.common.bean.ChatMsg;
 import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
-import com.lesterlaucn.chatboot.util.Logger;
+import com.lesterlaucn.chatboot.utils.Logger;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

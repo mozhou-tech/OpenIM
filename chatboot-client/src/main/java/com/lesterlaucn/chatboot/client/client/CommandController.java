@@ -8,7 +8,7 @@ import com.lesterlaucn.chatboot.cocurrent.FutureTaskScheduler;
 import com.lesterlaucn.chatboot.common.bean.UserDTO;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.entity.LoginBack;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoop;

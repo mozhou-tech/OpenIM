@@ -5,13 +5,11 @@ import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
 @Data
-public class ChatMsg
-{
+public class ChatMsg {
 
 
     //消息类型  1：纯文本  2：音频 3：视频 4：地理位置 5：其他
-    public enum MSGTYPE
-    {
+    public enum MSGTYPE {
         TEXT,
         AUDIO,
         VIDEO,
@@ -19,10 +17,8 @@ public class ChatMsg
         OTHER;
     }
 
-    public ChatMsg(UserDTO user)
-    {
-        if (null == user)
-        {
+    public ChatMsg(UserDTO user) {
+        if (null == user) {
             return;
         }
         this.user = user;
@@ -46,47 +42,36 @@ public class ChatMsg
     private String json;         //附加的json串
 
 
-    public void fillMsg(ProtoMsg.MessageRequest.Builder cb)
-    {
-        if (msgId > 0)
-        {
+    public void fillMsg(ProtoMsg.MessageRequest.Builder cb) {
+        if (msgId > 0) {
             cb.setMsgId(msgId);
         }
-        if (StringUtils.isNotEmpty(from))
-        {
+        if (StringUtils.isNotEmpty(from)) {
             cb.setFrom(from);
         }
-        if (StringUtils.isNotEmpty(to))
-        {
+        if (StringUtils.isNotEmpty(to)) {
             cb.setTo(to);
         }
-        if (time > 0)
-        {
+        if (time > 0) {
             cb.setTime(time);
         }
-        if (msgType != null)
-        {
+        if (msgType != null) {
             cb.setMsgType(msgType.ordinal());
         }
-        if (StringUtils.isNotEmpty(content))
-        {
+        if (StringUtils.isNotEmpty(content)) {
             cb.setContent(content);
         }
-        if (StringUtils.isNotEmpty(url))
-        {
+        if (StringUtils.isNotEmpty(url)) {
             cb.setUrl(url);
         }
-        if (StringUtils.isNotEmpty(property))
-        {
+        if (StringUtils.isNotEmpty(property)) {
             cb.setProperty(property);
         }
-        if (StringUtils.isNotEmpty(fromNick))
-        {
+        if (StringUtils.isNotEmpty(fromNick)) {
             cb.setFromNick(fromNick);
         }
 
-        if (StringUtils.isNotEmpty(json))
-        {
+        if (StringUtils.isNotEmpty(json)) {
             cb.setJson(json);
         }
     }

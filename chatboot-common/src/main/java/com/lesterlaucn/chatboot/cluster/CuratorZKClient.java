@@ -1,6 +1,6 @@
-package com.lesterlaucn.chatboot.zk;
+package com.lesterlaucn.chatboot.cluster;
 
-import com.lesterlaucn.chatboot.util.SpringContextUtil;
+import com.lesterlaucn.chatboot.utils.SpringContextUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
@@ -13,8 +13,7 @@ import org.apache.zookeeper.data.Stat;
  **/
 @Slf4j
 @Data
-public class CuratorZKclient {
-
+public class CuratorZKClient {
 
     private final String zkSessionTimeout;
     private CuratorFramework client;
@@ -22,36 +21,32 @@ public class CuratorZKclient {
 
     //Zk集群地址
     private String zkAddress = "127.0.0.1:2181";
-    public static CuratorZKclient instance = null;
+    public static CuratorZKClient instance = null;
 
 
-    private static CuratorZKclient singleton = null;
+    private static CuratorZKClient singleton = null;
 
-    public static CuratorZKclient getSingleton() {
+    public static CuratorZKClient getSingleton() {
         if (null == singleton) {
             singleton = SpringContextUtil.getBean("curatorZKClient");
-
         }
         return singleton;
     }
 
-    public CuratorZKclient(String zkConnect, String zkSessionTimeout) {
+    public CuratorZKClient(String zkConnect, String zkSessionTimeout) {
         this.zkAddress = zkConnect;
         this.zkSessionTimeout = zkSessionTimeout;
         init();
     }
 
     public void init() {
-
         if (null != client) {
             return;
         }
         //创建客户端
         client = ClientFactory.createSimple(zkAddress, zkSessionTimeout);
-
         //启动客户端实例,连接服务器
         client.start();
-
         instance = this;
     }
 

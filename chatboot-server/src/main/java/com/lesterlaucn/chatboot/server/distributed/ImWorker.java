@@ -1,9 +1,9 @@
 package com.lesterlaucn.chatboot.server.distributed;
 
+import com.lesterlaucn.chatboot.cluster.CuratorZKClient;
 import com.lesterlaucn.chatboot.constants.ServerConstants;
 import com.lesterlaucn.chatboot.entity.ImNode;
-import com.lesterlaucn.chatboot.util.JsonUtil;
-import com.lesterlaucn.chatboot.zk.CuratorZKclient;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
@@ -54,7 +54,7 @@ public class ImWorker {
         }
         inited = true;
         if (null == client) {
-            this.client = CuratorZKclient.instance.getClient();
+            this.client = CuratorZKClient.instance.getClient();
         }
         if (null == localNode) {
             localNode = new ImNode();

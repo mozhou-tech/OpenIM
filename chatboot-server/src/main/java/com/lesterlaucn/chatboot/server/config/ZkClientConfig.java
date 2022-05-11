@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.server.config;
 
-import com.lesterlaucn.chatboot.util.SpringContextUtil;
-import com.lesterlaucn.chatboot.zk.CuratorZKclient;
+import com.lesterlaucn.chatboot.cluster.CuratorZKClient;
+import com.lesterlaucn.chatboot.utils.SpringContextUtil;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,10 +35,10 @@ public class ZkClientConfig implements ApplicationContextAware
 
 
     @Bean(name = "curatorZKClient")
-    public CuratorZKclient curatorZKClient()
+    public CuratorZKClient curatorZKClient()
     {
 
-        return new CuratorZKclient(zkConnect,zkSessionTimeout);
+        return new CuratorZKClient(zkConnect,zkSessionTimeout);
     }
 
 

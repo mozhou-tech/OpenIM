@@ -3,7 +3,7 @@ package com.lesterlaucn.chatboot.crazyIm;
 import com.lesterlaucn.chatboot.WebGateSpringApplication;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.infrastructure.ImLoadBalance;
-import com.lesterlaucn.chatboot.util.ThreadUtil;
+import com.lesterlaucn.chatboot.utils.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

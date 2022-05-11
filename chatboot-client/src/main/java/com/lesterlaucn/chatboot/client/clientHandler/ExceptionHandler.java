@@ -1,8 +1,8 @@
 package com.lesterlaucn.chatboot.client.clientHandler;
 
 import com.lesterlaucn.chatboot.client.client.CommandController;
-import com.lesterlaucn.chatboot.common.exception.BusinessException;
-import com.lesterlaucn.chatboot.common.exception.InvalidFrameException;
+import com.lesterlaucn.chatboot.exception.BizzException;
+import com.lesterlaucn.chatboot.exception.InvalidFrameException;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -24,7 +24,7 @@ public class ExceptionHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        if (cause instanceof BusinessException) {
+        if (cause instanceof BizzException) {
             //业务异常，通知客户端
         } else if (cause instanceof InvalidFrameException) {
             //报文异常

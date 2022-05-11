@@ -3,7 +3,7 @@
  * Date: 17-12-30
  * Time: 下午4:50
  */
-package com.lesterlaucn.chatboot.util;
+package com.lesterlaucn.chatboot.utils;
 
 
 import java.io.*;

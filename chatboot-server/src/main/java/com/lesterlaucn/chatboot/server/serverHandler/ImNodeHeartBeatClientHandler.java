@@ -3,7 +3,7 @@ package com.lesterlaucn.chatboot.server.serverHandler;
 
 import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.server.distributed.ImWorker;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

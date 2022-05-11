@@ -1,4 +1,4 @@
-package com.lesterlaucn.chatboot.util;
+package com.lesterlaucn.chatboot.utils;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;

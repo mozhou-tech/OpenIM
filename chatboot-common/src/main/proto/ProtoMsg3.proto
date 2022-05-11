@@ -2,78 +2,77 @@ syntax = "proto3";
 package com.lesterlaucn.chatboot.common.bean.msg;
 message ProtoMsg {
 
+  enum HeadType {
+    LOGIN_REQUEST = 0; //登陆请求
+    LOGIN_RESPONSE = 1; //登录响应
+    LOGOUT_REQUEST = 2; //登出请求
+    LOGOUT_RESPONSE = 3;  //登出响应
+    KEEPALIVE_REQUEST = 4;  //心跳请求
+    KEEPALIVE_RESPONSE = 5;  //心跳响应
+    MESSAGE_REQUEST = 6; //聊天消息请求
+    MESSAGE_RESPONSE = 7;  //聊天消息响应
+    MESSAGE_NOTIFICATION = 8;  //服务器通知
+  }
 
-    enum HeadType {
-        LOGIN_REQUEST = 0; //登陆请求
-        LOGIN_RESPONSE = 1; //登录响应
-        LOGOUT_REQUEST = 2; //登出请求
-        LOGOUT_RESPONSE = 3;  //登出响应
-        KEEPALIVE_REQUEST = 4;  //心跳请求
-        KEEPALIVE_RESPONSE = 5;  //心跳响应
-        MESSAGE_REQUEST = 6; //聊天消息请求
-        MESSAGE_RESPONSE = 7;  //聊天消息响应
-        MESSAGE_NOTIFICATION = 8;  //服务器通知
-    }
+  /*登录请求信息*/
+  message LoginRequest {
+    string uid = 1;   // 用户唯一id
+    string deviceId = 2;  // 设备ID
+    string token = 3;    // 用户token
+    uint32 platform = 4; //客户端平台 windows、mac、android、ios、web
+    string appVersion = 5;  // APP版本号
+  }
 
-    /*登录请求信息*/
-    message LoginRequest {
-        string uid = 1;   // 用户唯一id
-        string deviceId = 2;  // 设备ID
-        string token = 3;    // 用户token
-        uint32 platform = 4; //客户端平台 windows、mac、android、ios、web
-        string appVersion = 5;  // APP版本号
-    }
-
-    message LoginResponse {
-        bool result = 1;
-        uint32 code = 2;
-        string info = 3;
-        uint32 expose = 4;
-    }
-
-
-    message MessageRequest {
-        uint64 msgId = 1;
-        string from = 2;
-        string to = 3;
-        uint64 time = 4;
-        uint32 msgType = 5;
-        string content = 6;
-        string url = 8;
-        string property = 9;
-        string fromNick = 10;
-        string json = 11;
-    }
-
-    /*聊天响应*/
-    message MessageResponse {
-        bool result = 1;  //true表示发送成功，false表示发送失败
-        uint32 code = 2;  //错误码
-        string info = 3;  //错误描述
-        uint32 expose = 4;   //错误描述是否提示给用户:1 提示; 0 不提示
-        bool lastBlock = 5;  //是否为最后的应答
-        fixed32 blockIndex = 6;  //应答的序号
-    }
+  message LoginResponse {
+    bool result = 1;
+    uint32 code = 2;
+    string info = 3;
+    uint32 expose = 4;
+  }
 
 
-    message MessageNotification {
-        uint32 msgType = 1;
-        bytes sender = 2;
-        string json = 3;
-        string timestamp = 4;
-    }
+  message MessageRequest {
+    uint64 msgId = 1;
+    string from = 2;
+    string to = 3;
+    uint64 time = 4;
+    uint32 msgType = 5;
+    string content = 6;
+    string url = 8;
+    string property = 9;
+    string fromNick = 10;
+    string json = 11;
+  }
 
-    /*外层消息*/
-    message Message {
-        HeadType type = 1; //消息类型
-        uint64 sequence = 2;  //序列号
-        string sessionId = 3;   //会话id
-        LoginRequest loginRequest = 4;  //登录请求
-        LoginResponse loginResponse = 5;  //登录响应
-        MessageRequest messageRequest = 6; // 聊天请求
-        MessageResponse messageResponse = 7;  // 聊天响应
-        MessageNotification notification = 8;   //  通知消息
-    }
+  /*聊天响应*/
+  message MessageResponse {
+    bool result = 1;  //true表示发送成功，false表示发送失败
+    uint32 code = 2;  //错误码
+    string info = 3;  //错误描述
+    uint32 expose = 4;   //错误描述是否提示给用户:1 提示; 0 不提示
+    bool lastBlock = 5;  //是否为最后的应答
+    fixed32 blockIndex = 6;  //应答的序号
+  }
+
+
+  message MessageNotification {
+    uint32 msgType = 1;
+    bytes sender = 2;
+    string json = 3;
+    string timestamp = 4;
+  }
+
+  /*外层消息*/
+  message Message {
+    HeadType type = 1; //消息类型
+    uint64 sequence = 2;  //序列号
+    string sessionId = 3;   //会话id
+    LoginRequest loginRequest = 4;  //登录请求
+    LoginResponse loginResponse = 5;  //登录响应
+    MessageRequest messageRequest = 6; // 聊天请求
+    MessageResponse messageResponse = 7;  // 聊天响应
+    MessageNotification notification = 8;   //  通知消息
+  }
 
 
 }

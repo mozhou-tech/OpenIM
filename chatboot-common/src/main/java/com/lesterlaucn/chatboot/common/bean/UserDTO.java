@@ -6,8 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Data
-public class UserDTO
-{
+public class UserDTO {
 
     String userId;
     String userName;
@@ -17,21 +16,17 @@ public class UserDTO
     PLATTYPE platform = PLATTYPE.WINDOWS;
 
     // windows,mac,android, ios, web , other
-    public enum PLATTYPE
-    {
+    public enum PLATTYPE {
         WINDOWS, MAC, ANDROID, IOS, WEB, OTHER;
     }
 
     private String sessionId;
 
 
-    public void setPlatform(int platform)
-    {
+    public void setPlatform(int platform) {
         PLATTYPE[] values = PLATTYPE.values();
-        for (int i = 0; i < values.length; i++)
-        {
-            if (values[i].ordinal() == platform)
-            {
+        for (int i = 0; i < values.length; i++) {
+            if (values[i].ordinal() == platform) {
                 this.platform = values[i];
             }
         }
@@ -40,8 +35,7 @@ public class UserDTO
 
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "User{" +
                 "uid='" + userId + '\'' +
                 ", devId='" + devId + '\'' +
@@ -51,14 +45,13 @@ public class UserDTO
                 '}';
     }
 
-    public static UserDTO fromMsg(ProtoMsg.LoginRequest info)
-    {
+    public static UserDTO fromMsg(ProtoMsg.LoginRequest info) {
         UserDTO user = new UserDTO();
-        user.userId = new String(info.getUid());
-        user.devId = new String(info.getDeviceId());
-        user.token = new String(info.getToken());
+        user.userId = info.getUid();
+        user.devId = info.getDeviceId();
+        user.token = info.getToken();
         user.setPlatform(info.getPlatform());
-        log.info("登录中: {}", user.toString());
+        log.info("登录中: {}", user);
         return user;
 
     }

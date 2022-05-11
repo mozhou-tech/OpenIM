@@ -1,15 +1,15 @@
 package com.lesterlaucn.chatboot.server.server;
 
 import com.lesterlaucn.chatboot.cocurrent.FutureTaskScheduler;
-import com.lesterlaucn.chatboot.common.codec.ProtobufDecoder;
-import com.lesterlaucn.chatboot.common.codec.ProtobufEncoder;
+import com.lesterlaucn.chatboot.codec.ProtobufDecoder;
+import com.lesterlaucn.chatboot.codec.ProtobufEncoder;
 import com.lesterlaucn.chatboot.server.distributed.ImWorker;
 import com.lesterlaucn.chatboot.server.distributed.WorkerRouter;
 import com.lesterlaucn.chatboot.server.serverHandler.ChatRedirectHandler;
 import com.lesterlaucn.chatboot.server.serverHandler.LoginRequestHandler;
 import com.lesterlaucn.chatboot.server.serverHandler.RemoteNotificationHandler;
 import com.lesterlaucn.chatboot.server.serverHandler.ServerExceptionHandler;
-import com.lesterlaucn.chatboot.util.IOUtil;
+import com.lesterlaucn.chatboot.utils.IOUtil;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.ChannelFuture;

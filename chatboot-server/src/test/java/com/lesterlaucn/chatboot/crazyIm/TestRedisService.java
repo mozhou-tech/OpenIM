@@ -5,7 +5,7 @@ import com.lesterlaucn.chatboot.server.server.session.dao.SessionCacheDAO;
 import com.lesterlaucn.chatboot.server.server.session.dao.UserCacheDAO;
 import com.lesterlaucn.chatboot.server.server.session.entity.SessionCache;
 import com.lesterlaucn.chatboot.server.server.session.entity.UserCache;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

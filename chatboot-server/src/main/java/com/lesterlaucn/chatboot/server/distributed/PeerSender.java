@@ -1,15 +1,15 @@
 package com.lesterlaucn.chatboot.server.distributed;
 
+import com.lesterlaucn.chatboot.codec.ProtobufDecoder;
+import com.lesterlaucn.chatboot.codec.ProtobufEncoder;
 import com.lesterlaucn.chatboot.common.bean.Notification;
 import com.lesterlaucn.chatboot.common.bean.UserDTO;
 import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
-import com.lesterlaucn.chatboot.common.codec.ProtobufDecoder;
-import com.lesterlaucn.chatboot.common.codec.ProtobufEncoder;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.server.protoBuilder.NotificationMsgBuilder;
 import com.lesterlaucn.chatboot.server.serverHandler.ImNodeExceptionHandler;
 import com.lesterlaucn.chatboot.server.serverHandler.ImNodeHeartBeatClientHandler;
-import com.lesterlaucn.chatboot.util.JsonUtil;
+import com.lesterlaucn.chatboot.utils.JsonUtil;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.*;

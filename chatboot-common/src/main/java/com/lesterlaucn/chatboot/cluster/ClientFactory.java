@@ -1,4 +1,4 @@
-package com.lesterlaucn.chatboot.zk;
+package com.lesterlaucn.chatboot.cluster;
 
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
@@ -8,15 +8,13 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 /**
  * create by lesterlaucn
  **/
-public class ClientFactory
-{
+public class ClientFactory {
 
     /**
      * @param connectionString zk的连接地址
      * @return CuratorFramework 实例
      */
-    public static CuratorFramework createSimple(String connectionString,String timeout)
-    {
+    public static CuratorFramework createSimple(String connectionString, String timeout) {
         // 重试策略:第一次重试等待1s，第二次重试等待2s，第三次重试等待4s
         // 第一个参数：等待时间的基础单位，单位为毫秒
         // 第二个参数：最大重试次数
@@ -29,7 +27,7 @@ public class ClientFactory
 //        return CuratorFrameworkFactory.newClient(connectionString, retryPolicy);
 
         return CuratorFrameworkFactory.newClient(connectionString,
-              Integer.parseInt(timeout)  ,  Integer.parseInt(timeout)  , retryPolicy);
+                Integer.parseInt(timeout), Integer.parseInt(timeout), retryPolicy);
 
     }
 
@@ -42,8 +40,7 @@ public class ClientFactory
      */
     public static CuratorFramework createWithOptions(
             String connectionString, RetryPolicy retryPolicy,
-            int connectionTimeoutMs, int sessionTimeoutMs)
-    {
+            int connectionTimeoutMs, int sessionTimeoutMs) {
 
         // builder 模式创建 CuratorFramework 实例
         return CuratorFrameworkFactory.builder()

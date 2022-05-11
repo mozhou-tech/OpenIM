@@ -1,7 +1,7 @@
 /**
  * Created by lesterlaucn
  */
-package com.lesterlaucn.chatboot.util;
+package com.lesterlaucn.chatboot.utils;
 
 
 import java.util.concurrent.*;

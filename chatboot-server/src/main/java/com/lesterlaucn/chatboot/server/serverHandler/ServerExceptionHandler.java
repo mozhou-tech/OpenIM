@@ -1,6 +1,6 @@
 package com.lesterlaucn.chatboot.server.serverHandler;
 
-import com.lesterlaucn.chatboot.common.exception.InvalidFrameException;
+import com.lesterlaucn.chatboot.exception.InvalidFrameException;
 import com.lesterlaucn.chatboot.server.server.session.service.SessionManger;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

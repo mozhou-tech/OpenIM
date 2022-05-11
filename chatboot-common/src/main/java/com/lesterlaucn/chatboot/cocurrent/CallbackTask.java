@@ -5,8 +5,7 @@
 package com.lesterlaucn.chatboot.cocurrent;
 
 
-public interface CallbackTask<R>
-{
+public interface CallbackTask<R> {
 
     R execute() throws Exception;
 

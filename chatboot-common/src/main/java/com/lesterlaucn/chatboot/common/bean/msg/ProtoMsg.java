@@ -4,8989 +4,9807 @@
 package com.lesterlaucn.chatboot.common.bean.msg;
 
 public final class ProtoMsg {
-  private ProtoMsg() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
+    private ProtoMsg() {
+    }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  /**
-   * <pre>
-   *消息的枚举类型
-   * </pre>
-   *
-   * Protobuf enum {@code com.lesterlaucn.chatboot.common.bean.msg.HeadType}
-   */
-  public enum HeadType
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <pre>
-     *登录
-     * </pre>
-     *
-     * <code>LOGIN_REQUEST = 0;</code>
-     */
-    LOGIN_REQUEST(0),
-    /**
-     * <code>LOGIN_RESPONSE = 1;</code>
-     */
-    LOGIN_RESPONSE(1),
-    /**
-     * <pre>
-     *退出
-     * </pre>
-     *
-     * <code>LOGOUT_REQUEST = 2;</code>
-     */
-    LOGOUT_REQUEST(2),
-    /**
-     * <code>LOGOUT_RESPONSE = 3;</code>
-     */
-    LOGOUT_RESPONSE(3),
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>HEART_BEAT = 4;</code>
-     */
-    HEART_BEAT(4),
-    /**
-     * <pre>
-     *IM
-     * </pre>
-     *
-     * <code>MESSAGE_REQUEST = 5;</code>
-     */
-    MESSAGE_REQUEST(5),
-    /**
-     * <code>MESSAGE_RESPONSE = 6;</code>
-     */
-    MESSAGE_RESPONSE(6),
-    /**
-     * <pre>
-     *通知
-     * </pre>
-     *
-     * <code>MESSAGE_NOTIFICATION = 7;</code>
-     */
-    MESSAGE_NOTIFICATION(7),
-    UNRECOGNIZED(-1),
-    ;
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistryLite registry) {
+    }
 
-    /**
-     * <pre>
-     *登录
-     * </pre>
-     *
-     * <code>LOGIN_REQUEST = 0;</code>
-     */
-    public static final int LOGIN_REQUEST_VALUE = 0;
-    /**
-     * <code>LOGIN_RESPONSE = 1;</code>
-     */
-    public static final int LOGIN_RESPONSE_VALUE = 1;
-    /**
-     * <pre>
-     *退出
-     * </pre>
-     *
-     * <code>LOGOUT_REQUEST = 2;</code>
-     */
-    public static final int LOGOUT_REQUEST_VALUE = 2;
-    /**
-     * <code>LOGOUT_RESPONSE = 3;</code>
-     */
-    public static final int LOGOUT_RESPONSE_VALUE = 3;
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>HEART_BEAT = 4;</code>
-     */
-    public static final int HEART_BEAT_VALUE = 4;
-    /**
-     * <pre>
-     *IM
-     * </pre>
-     *
-     * <code>MESSAGE_REQUEST = 5;</code>
-     */
-    public static final int MESSAGE_REQUEST_VALUE = 5;
-    /**
-     * <code>MESSAGE_RESPONSE = 6;</code>
-     */
-    public static final int MESSAGE_RESPONSE_VALUE = 6;
-    /**
-     * <pre>
-     *通知
-     * </pre>
-     *
-     * <code>MESSAGE_NOTIFICATION = 7;</code>
-     */
-    public static final int MESSAGE_NOTIFICATION_VALUE = 7;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions(
+                (com.google.protobuf.ExtensionRegistryLite) registry);
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
+     * <pre>
+     * 消息的枚举类型
+     * </pre>
+     * <p>
+     * Protobuf enum {@code com.lesterlaucn.chatboot.common.bean.msg.HeadType}
      */
-    @java.lang.Deprecated
-    public static HeadType valueOf(int value) {
-      return forNumber(value);
-    }
+    public enum HeadType
+            implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <pre>
+         * 登录
+         * </pre>
+         *
+         * <code>LOGIN_REQUEST = 0;</code>
+         */
+        LOGIN_REQUEST(0),
+        /**
+         * <code>LOGIN_RESPONSE = 1;</code>
+         */
+        LOGIN_RESPONSE(1),
+        /**
+         * <pre>
+         * 退出
+         * </pre>
+         *
+         * <code>LOGOUT_REQUEST = 2;</code>
+         */
+        LOGOUT_REQUEST(2),
+        /**
+         * <code>LOGOUT_RESPONSE = 3;</code>
+         */
+        LOGOUT_RESPONSE(3),
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>HEART_BEAT = 4;</code>
+         */
+        HEART_BEAT(4),
+        /**
+         * <pre>
+         * IM
+         * </pre>
+         *
+         * <code>MESSAGE_REQUEST = 5;</code>
+         */
+        MESSAGE_REQUEST(5),
+        /**
+         * <code>MESSAGE_RESPONSE = 6;</code>
+         */
+        MESSAGE_RESPONSE(6),
+        /**
+         * <pre>
+         * 通知
+         * </pre>
+         *
+         * <code>MESSAGE_NOTIFICATION = 7;</code>
+         */
+        MESSAGE_NOTIFICATION(7),
+        UNRECOGNIZED(-1),
+        ;
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static HeadType forNumber(int value) {
-      switch (value) {
-        case 0: return LOGIN_REQUEST;
-        case 1: return LOGIN_RESPONSE;
-        case 2: return LOGOUT_REQUEST;
-        case 3: return LOGOUT_RESPONSE;
-        case 4: return HEART_BEAT;
-        case 5: return MESSAGE_REQUEST;
-        case 6: return MESSAGE_RESPONSE;
-        case 7: return MESSAGE_NOTIFICATION;
-        default: return null;
-      }
-    }
+        /**
+         * <pre>
+         * 登录
+         * </pre>
+         *
+         * <code>LOGIN_REQUEST = 0;</code>
+         */
+        public static final int LOGIN_REQUEST_VALUE = 0;
+        /**
+         * <code>LOGIN_RESPONSE = 1;</code>
+         */
+        public static final int LOGIN_RESPONSE_VALUE = 1;
+        /**
+         * <pre>
+         * 退出
+         * </pre>
+         *
+         * <code>LOGOUT_REQUEST = 2;</code>
+         */
+        public static final int LOGOUT_REQUEST_VALUE = 2;
+        /**
+         * <code>LOGOUT_RESPONSE = 3;</code>
+         */
+        public static final int LOGOUT_RESPONSE_VALUE = 3;
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>HEART_BEAT = 4;</code>
+         */
+        public static final int HEART_BEAT_VALUE = 4;
+        /**
+         * <pre>
+         * IM
+         * </pre>
+         *
+         * <code>MESSAGE_REQUEST = 5;</code>
+         */
+        public static final int MESSAGE_REQUEST_VALUE = 5;
+        /**
+         * <code>MESSAGE_RESPONSE = 6;</code>
+         */
+        public static final int MESSAGE_RESPONSE_VALUE = 6;
+        /**
+         * <pre>
+         * 通知
+         * </pre>
+         *
+         * <code>MESSAGE_NOTIFICATION = 7;</code>
+         */
+        public static final int MESSAGE_NOTIFICATION_VALUE = 7;
 
-    public static com.google.protobuf.Internal.EnumLiteMap<HeadType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        HeadType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<HeadType>() {
-            public HeadType findValueByNumber(int number) {
-              return HeadType.forNumber(number);
+
+        public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalArgumentException(
+                        "Can't get the number of an unknown enum value.");
             }
-          };
+            return value;
+        }
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static HeadType valueOf(int value) {
+            return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static HeadType forNumber(int value) {
+            switch (value) {
+                case 0:
+                    return LOGIN_REQUEST;
+                case 1:
+                    return LOGIN_RESPONSE;
+                case 2:
+                    return LOGOUT_REQUEST;
+                case 3:
+                    return LOGOUT_RESPONSE;
+                case 4:
+                    return HEART_BEAT;
+                case 5:
+                    return MESSAGE_REQUEST;
+                case 6:
+                    return MESSAGE_RESPONSE;
+                case 7:
+                    return MESSAGE_NOTIFICATION;
+                default:
+                    return null;
+            }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<HeadType>
+        internalGetValueMap() {
+            return internalValueMap;
+        }
+
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+                HeadType> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<HeadType>() {
+                    public HeadType findValueByNumber(int number) {
+                        return HeadType.forNumber(number);
+                    }
+                };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+            if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalStateException(
+                        "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+        }
+
+        public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+            return getDescriptor();
+        }
+
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.getDescriptor().getEnumTypes().get(0);
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final HeadType[] VALUES = values();
+
+        public static HeadType valueOf(
+                com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+                throw new java.lang.IllegalArgumentException(
+                        "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+                return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private HeadType(int value) {
+            this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:com.lesterlaucn.chatboot.common.bean.msg.HeadType)
     }
 
-    private static final HeadType[] VALUES = values();
+    public interface LoginRequestOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
+            com.google.protobuf.MessageOrBuilder {
 
-    public static HeadType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+        /**
+         * <pre>
+         * 用户唯一id
+         * </pre>
+         *
+         * <code>string uid = 1;</code>
+         *
+         * @return The uid.
+         */
+        java.lang.String getUid();
 
-    private final int value;
-
-    private HeadType(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:com.lesterlaucn.chatboot.common.bean.msg.HeadType)
-  }
-
-  public interface LoginRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 用户唯一id
-     * </pre>
-     *
-     * <code>string uid = 1;</code>
-     * @return The uid.
-     */
-    java.lang.String getUid();
-    /**
-     * <pre>
-     * 用户唯一id
-     * </pre>
-     *
-     * <code>string uid = 1;</code>
-     * @return The bytes for uid.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * 用户唯一id
+         * </pre>
+         *
+         * <code>string uid = 1;</code>
+         *
+         * @return The bytes for uid.
+         */
+        com.google.protobuf.ByteString
         getUidBytes();
 
-    /**
-     * <pre>
-     * 设备ID
-     * </pre>
-     *
-     * <code>string deviceId = 2;</code>
-     * @return The deviceId.
-     */
-    java.lang.String getDeviceId();
-    /**
-     * <pre>
-     * 设备ID
-     * </pre>
-     *
-     * <code>string deviceId = 2;</code>
-     * @return The bytes for deviceId.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * 设备ID
+         * </pre>
+         *
+         * <code>string deviceId = 2;</code>
+         *
+         * @return The deviceId.
+         */
+        java.lang.String getDeviceId();
+
+        /**
+         * <pre>
+         * 设备ID
+         * </pre>
+         *
+         * <code>string deviceId = 2;</code>
+         *
+         * @return The bytes for deviceId.
+         */
+        com.google.protobuf.ByteString
         getDeviceIdBytes();
 
-    /**
-     * <pre>
-     * 用户token
-     * </pre>
-     *
-     * <code>string token = 3;</code>
-     * @return The token.
-     */
-    java.lang.String getToken();
-    /**
-     * <pre>
-     * 用户token
-     * </pre>
-     *
-     * <code>string token = 3;</code>
-     * @return The bytes for token.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * 用户token
+         * </pre>
+         *
+         * <code>string token = 3;</code>
+         *
+         * @return The token.
+         */
+        java.lang.String getToken();
+
+        /**
+         * <pre>
+         * 用户token
+         * </pre>
+         *
+         * <code>string token = 3;</code>
+         *
+         * @return The bytes for token.
+         */
+        com.google.protobuf.ByteString
         getTokenBytes();
 
-    /**
-     * <pre>
-     *客户端平台 windows、mac、android、ios、web
-     * </pre>
-     *
-     * <code>uint32 platform = 4;</code>
-     * @return The platform.
-     */
-    int getPlatform();
+        /**
+         * <pre>
+         * 客户端平台 windows、mac、android、ios、web
+         * </pre>
+         *
+         * <code>uint32 platform = 4;</code>
+         *
+         * @return The platform.
+         */
+        int getPlatform();
 
-    /**
-     * <pre>
-     * APP版本号
-     * </pre>
-     *
-     * <code>string app_version = 5;</code>
-     * @return The appVersion.
-     */
-    java.lang.String getAppVersion();
-    /**
-     * <pre>
-     * APP版本号
-     * </pre>
-     *
-     * <code>string app_version = 5;</code>
-     * @return The bytes for appVersion.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * APP版本号
+         * </pre>
+         *
+         * <code>string app_version = 5;</code>
+         *
+         * @return The appVersion.
+         */
+        java.lang.String getAppVersion();
+
+        /**
+         * <pre>
+         * APP版本号
+         * </pre>
+         *
+         * <code>string app_version = 5;</code>
+         *
+         * @return The bytes for appVersion.
+         */
+        com.google.protobuf.ByteString
         getAppVersionBytes();
-  }
-  /**
-   * <pre>
-   * LoginRequest对应的HeadType为LOGIN_REQUEST
-   * 消息名称去掉下划线，更加符合Java 的类名规范
-   * </pre>
-   *
-   * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.LoginRequest}
-   */
-  public static final class LoginRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
-      LoginRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LoginRequest.newBuilder() to construct.
-    private LoginRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LoginRequest() {
-      uid_ = "";
-      deviceId_ = "";
-      token_ = "";
-      appVersion_ = "";
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LoginRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LoginRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uid_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deviceId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              token_ = s;
-              break;
-            }
-            case 32: {
-
-              platform_ = input.readUInt32();
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              appVersion_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder.class);
-    }
-
-    public static final int UID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uid_;
-    /**
-     * <pre>
-     * 用户唯一id
-     * </pre>
-     *
-     * <code>string uid = 1;</code>
-     * @return The uid.
-     */
-    @java.lang.Override
-    public java.lang.String getUid() {
-      java.lang.Object ref = uid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 用户唯一id
-     * </pre>
-     *
-     * <code>string uid = 1;</code>
-     * @return The bytes for uid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUidBytes() {
-      java.lang.Object ref = uid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DEVICEID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object deviceId_;
-    /**
-     * <pre>
-     * 设备ID
-     * </pre>
-     *
-     * <code>string deviceId = 2;</code>
-     * @return The deviceId.
-     */
-    @java.lang.Override
-    public java.lang.String getDeviceId() {
-      java.lang.Object ref = deviceId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        deviceId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 设备ID
-     * </pre>
-     *
-     * <code>string deviceId = 2;</code>
-     * @return The bytes for deviceId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDeviceIdBytes() {
-      java.lang.Object ref = deviceId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        deviceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TOKEN_FIELD_NUMBER = 3;
-    private volatile java.lang.Object token_;
-    /**
-     * <pre>
-     * 用户token
-     * </pre>
-     *
-     * <code>string token = 3;</code>
-     * @return The token.
-     */
-    @java.lang.Override
-    public java.lang.String getToken() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        token_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 用户token
-     * </pre>
-     *
-     * <code>string token = 3;</code>
-     * @return The bytes for token.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTokenBytes() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        token_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PLATFORM_FIELD_NUMBER = 4;
-    private int platform_;
-    /**
-     * <pre>
-     *客户端平台 windows、mac、android、ios、web
-     * </pre>
-     *
-     * <code>uint32 platform = 4;</code>
-     * @return The platform.
-     */
-    @java.lang.Override
-    public int getPlatform() {
-      return platform_;
-    }
-
-    public static final int APP_VERSION_FIELD_NUMBER = 5;
-    private volatile java.lang.Object appVersion_;
-    /**
-     * <pre>
-     * APP版本号
-     * </pre>
-     *
-     * <code>string app_version = 5;</code>
-     * @return The appVersion.
-     */
-    @java.lang.Override
-    public java.lang.String getAppVersion() {
-      java.lang.Object ref = appVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        appVersion_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * APP版本号
-     * </pre>
-     *
-     * <code>string app_version = 5;</code>
-     * @return The bytes for appVersion.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAppVersionBytes() {
-      java.lang.Object ref = appVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        appVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
-      }
-      if (!getDeviceIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deviceId_);
-      }
-      if (!getTokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
-      }
-      if (platform_ != 0) {
-        output.writeUInt32(4, platform_);
-      }
-      if (!getAppVersionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, appVersion_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
-      }
-      if (!getDeviceIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deviceId_);
-      }
-      if (!getTokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
-      }
-      if (platform_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, platform_);
-      }
-      if (!getAppVersionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, appVersion_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest)) {
-        return super.equals(obj);
-      }
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest) obj;
-
-      if (!getUid()
-          .equals(other.getUid())) return false;
-      if (!getDeviceId()
-          .equals(other.getDeviceId())) return false;
-      if (!getToken()
-          .equals(other.getToken())) return false;
-      if (getPlatform()
-          != other.getPlatform()) return false;
-      if (!getAppVersion()
-          .equals(other.getAppVersion())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UID_FIELD_NUMBER;
-      hash = (53 * hash) + getUid().hashCode();
-      hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
-      hash = (53 * hash) + getDeviceId().hashCode();
-      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getToken().hashCode();
-      hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
-      hash = (53 * hash) + getPlatform();
-      hash = (37 * hash) + APP_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getAppVersion().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * LoginRequest对应的HeadType为LOGIN_REQUEST
      * 消息名称去掉下划线，更加符合Java 的类名规范
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.LoginRequest}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
-      }
+    public static final class LoginRequest extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
+            LoginRequestOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder.class);
-      }
-
-      // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use LoginRequest.newBuilder() to construct.
+        private LoginRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        uid_ = "";
 
-        deviceId_ = "";
-
-        token_ = "";
-
-        platform_ = 0;
-
-        appVersion_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getDefaultInstanceForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest build() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private LoginRequest() {
+            uid_ = "";
+            deviceId_ = "";
+            token_ = "";
+            appVersion_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest buildPartial() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest(this);
-        result.uid_ = uid_;
-        result.deviceId_ = deviceId_;
-        result.token_ = token_;
-        result.platform_ = platform_;
-        result.appVersion_ = appVersion_;
-        onBuilt();
-        return result;
-      }
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new LoginRequest();
+        }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest) {
-          return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
         }
-      }
 
-      public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest other) {
-        if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance()) return this;
-        if (!other.getUid().isEmpty()) {
-          uid_ = other.uid_;
-          onChanged();
-        }
-        if (!other.getDeviceId().isEmpty()) {
-          deviceId_ = other.deviceId_;
-          onChanged();
-        }
-        if (!other.getToken().isEmpty()) {
-          token_ = other.token_;
-          onChanged();
-        }
-        if (other.getPlatform() != 0) {
-          setPlatform(other.getPlatform());
-        }
-        if (!other.getAppVersion().isEmpty()) {
-          appVersion_ = other.appVersion_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
+        private LoginRequest(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 10: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+                            uid_ = s;
+                            break;
+                        }
+                        case 18: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
+                            deviceId_ = s;
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private java.lang.Object uid_ = "";
-      /**
-       * <pre>
-       * 用户唯一id
-       * </pre>
-       *
-       * <code>string uid = 1;</code>
-       * @return The uid.
-       */
-      public java.lang.String getUid() {
-        java.lang.Object ref = uid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 用户唯一id
-       * </pre>
-       *
-       * <code>string uid = 1;</code>
-       * @return The bytes for uid.
-       */
-      public com.google.protobuf.ByteString
-          getUidBytes() {
-        java.lang.Object ref = uid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 用户唯一id
-       * </pre>
-       *
-       * <code>string uid = 1;</code>
-       * @param value The uid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 用户唯一id
-       * </pre>
-       *
-       * <code>string uid = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUid() {
-        
-        uid_ = getDefaultInstance().getUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 用户唯一id
-       * </pre>
-       *
-       * <code>string uid = 1;</code>
-       * @param value The bytes for uid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uid_ = value;
-        onChanged();
-        return this;
-      }
+                            token_ = s;
+                            break;
+                        }
+                        case 32: {
 
-      private java.lang.Object deviceId_ = "";
-      /**
-       * <pre>
-       * 设备ID
-       * </pre>
-       *
-       * <code>string deviceId = 2;</code>
-       * @return The deviceId.
-       */
-      public java.lang.String getDeviceId() {
-        java.lang.Object ref = deviceId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          deviceId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 设备ID
-       * </pre>
-       *
-       * <code>string deviceId = 2;</code>
-       * @return The bytes for deviceId.
-       */
-      public com.google.protobuf.ByteString
-          getDeviceIdBytes() {
-        java.lang.Object ref = deviceId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          deviceId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 设备ID
-       * </pre>
-       *
-       * <code>string deviceId = 2;</code>
-       * @param value The deviceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDeviceId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        deviceId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备ID
-       * </pre>
-       *
-       * <code>string deviceId = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDeviceId() {
-        
-        deviceId_ = getDefaultInstance().getDeviceId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备ID
-       * </pre>
-       *
-       * <code>string deviceId = 2;</code>
-       * @param value The bytes for deviceId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDeviceIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        deviceId_ = value;
-        onChanged();
-        return this;
-      }
+                            platform_ = input.readUInt32();
+                            break;
+                        }
+                        case 42: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private java.lang.Object token_ = "";
-      /**
-       * <pre>
-       * 用户token
-       * </pre>
-       *
-       * <code>string token = 3;</code>
-       * @return The token.
-       */
-      public java.lang.String getToken() {
-        java.lang.Object ref = token_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          token_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+                            appVersion_ = s;
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-      }
-      /**
-       * <pre>
-       * 用户token
-       * </pre>
-       *
-       * <code>string token = 3;</code>
-       * @return The bytes for token.
-       */
-      public com.google.protobuf.ByteString
-          getTokenBytes() {
-        java.lang.Object ref = token_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          token_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
         }
-      }
-      /**
-       * <pre>
-       * 用户token
-       * </pre>
-       *
-       * <code>string token = 3;</code>
-       * @param value The token to set.
-       * @return This builder for chaining.
-       */
-      public Builder setToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        token_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 用户token
-       * </pre>
-       *
-       * <code>string token = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearToken() {
-        
-        token_ = getDefaultInstance().getToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 用户token
-       * </pre>
-       *
-       * <code>string token = 3;</code>
-       * @param value The bytes for token to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        token_ = value;
-        onChanged();
-        return this;
-      }
 
-      private int platform_ ;
-      /**
-       * <pre>
-       *客户端平台 windows、mac、android、ios、web
-       * </pre>
-       *
-       * <code>uint32 platform = 4;</code>
-       * @return The platform.
-       */
-      @java.lang.Override
-      public int getPlatform() {
-        return platform_;
-      }
-      /**
-       * <pre>
-       *客户端平台 windows、mac、android、ios、web
-       * </pre>
-       *
-       * <code>uint32 platform = 4;</code>
-       * @param value The platform to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPlatform(int value) {
-        
-        platform_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *客户端平台 windows、mac、android、ios、web
-       * </pre>
-       *
-       * <code>uint32 platform = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPlatform() {
-        
-        platform_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object appVersion_ = "";
-      /**
-       * <pre>
-       * APP版本号
-       * </pre>
-       *
-       * <code>string app_version = 5;</code>
-       * @return The appVersion.
-       */
-      public java.lang.String getAppVersion() {
-        java.lang.Object ref = appVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          appVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder.class);
         }
-      }
-      /**
-       * <pre>
-       * APP版本号
-       * </pre>
-       *
-       * <code>string app_version = 5;</code>
-       * @return The bytes for appVersion.
-       */
-      public com.google.protobuf.ByteString
-          getAppVersionBytes() {
-        java.lang.Object ref = appVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          appVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int UID_FIELD_NUMBER = 1;
+        private volatile java.lang.Object uid_;
+
+        /**
+         * <pre>
+         * 用户唯一id
+         * </pre>
+         *
+         * <code>string uid = 1;</code>
+         *
+         * @return The uid.
+         */
+        @java.lang.Override
+        public java.lang.String getUid() {
+            java.lang.Object ref = uid_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                uid_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <pre>
-       * APP版本号
-       * </pre>
-       *
-       * <code>string app_version = 5;</code>
-       * @param value The appVersion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppVersion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        appVersion_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * APP版本号
-       * </pre>
-       *
-       * <code>string app_version = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAppVersion() {
-        
-        appVersion_ = getDefaultInstance().getAppVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * APP版本号
-       * </pre>
-       *
-       * <code>string app_version = 5;</code>
-       * @param value The bytes for appVersion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        appVersion_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <pre>
+         * 用户唯一id
+         * </pre>
+         *
+         * <code>string uid = 1;</code>
+         *
+         * @return The bytes for uid.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getUidBytes() {
+            java.lang.Object ref = uid_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                uid_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int DEVICEID_FIELD_NUMBER = 2;
+        private volatile java.lang.Object deviceId_;
+
+        /**
+         * <pre>
+         * 设备ID
+         * </pre>
+         *
+         * <code>string deviceId = 2;</code>
+         *
+         * @return The deviceId.
+         */
+        @java.lang.Override
+        public java.lang.String getDeviceId() {
+            java.lang.Object ref = deviceId_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                deviceId_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 设备ID
+         * </pre>
+         *
+         * <code>string deviceId = 2;</code>
+         *
+         * @return The bytes for deviceId.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getDeviceIdBytes() {
+            java.lang.Object ref = deviceId_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                deviceId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int TOKEN_FIELD_NUMBER = 3;
+        private volatile java.lang.Object token_;
+
+        /**
+         * <pre>
+         * 用户token
+         * </pre>
+         *
+         * <code>string token = 3;</code>
+         *
+         * @return The token.
+         */
+        @java.lang.Override
+        public java.lang.String getToken() {
+            java.lang.Object ref = token_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                token_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 用户token
+         * </pre>
+         *
+         * <code>string token = 3;</code>
+         *
+         * @return The bytes for token.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getTokenBytes() {
+            java.lang.Object ref = token_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                token_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int PLATFORM_FIELD_NUMBER = 4;
+        private int platform_;
+
+        /**
+         * <pre>
+         * 客户端平台 windows、mac、android、ios、web
+         * </pre>
+         *
+         * <code>uint32 platform = 4;</code>
+         *
+         * @return The platform.
+         */
+        @java.lang.Override
+        public int getPlatform() {
+            return platform_;
+        }
+
+        public static final int APP_VERSION_FIELD_NUMBER = 5;
+        private volatile java.lang.Object appVersion_;
+
+        /**
+         * <pre>
+         * APP版本号
+         * </pre>
+         *
+         * <code>string app_version = 5;</code>
+         *
+         * @return The appVersion.
+         */
+        @java.lang.Override
+        public java.lang.String getAppVersion() {
+            java.lang.Object ref = appVersion_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                appVersion_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * APP版本号
+         * </pre>
+         *
+         * <code>string app_version = 5;</code>
+         *
+         * @return The bytes for appVersion.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getAppVersionBytes() {
+            java.lang.Object ref = appVersion_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                appVersion_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getUidBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
+            }
+            if (!getDeviceIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deviceId_);
+            }
+            if (!getTokenBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
+            }
+            if (platform_ != 0) {
+                output.writeUInt32(4, platform_);
+            }
+            if (!getAppVersionBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 5, appVersion_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getUidBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
+            }
+            if (!getDeviceIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deviceId_);
+            }
+            if (!getTokenBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
+            }
+            if (platform_ != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt32Size(4, platform_);
+            }
+            if (!getAppVersionBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, appVersion_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest)) {
+                return super.equals(obj);
+            }
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest) obj;
+
+            if (!getUid()
+                    .equals(other.getUid())) return false;
+            if (!getDeviceId()
+                    .equals(other.getDeviceId())) return false;
+            if (!getToken()
+                    .equals(other.getToken())) return false;
+            if (getPlatform()
+                    != other.getPlatform()) return false;
+            if (!getAppVersion()
+                    .equals(other.getAppVersion())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + UID_FIELD_NUMBER;
+            hash = (53 * hash) + getUid().hashCode();
+            hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
+            hash = (53 * hash) + getDeviceId().hashCode();
+            hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+            hash = (53 * hash) + getToken().hashCode();
+            hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
+            hash = (53 * hash) + getPlatform();
+            hash = (37 * hash) + APP_VERSION_FIELD_NUMBER;
+            hash = (53 * hash) + getAppVersion().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * LoginRequest对应的HeadType为LOGIN_REQUEST
+         * 消息名称去掉下划线，更加符合Java 的类名规范
+         * </pre>
+         * <p>
+         * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.LoginRequest}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder.class);
+            }
+
+            // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                uid_ = "";
+
+                deviceId_ = "";
+
+                token_ = "";
+
+                platform_ = 0;
+
+                appVersion_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getDefaultInstanceForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest build() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest buildPartial() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest(this);
+                result.uid_ = uid_;
+                result.deviceId_ = deviceId_;
+                result.token_ = token_;
+                result.platform_ = platform_;
+                result.appVersion_ = appVersion_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest) {
+                    return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest other) {
+                if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance())
+                    return this;
+                if (!other.getUid().isEmpty()) {
+                    uid_ = other.uid_;
+                    onChanged();
+                }
+                if (!other.getDeviceId().isEmpty()) {
+                    deviceId_ = other.deviceId_;
+                    onChanged();
+                }
+                if (!other.getToken().isEmpty()) {
+                    token_ = other.token_;
+                    onChanged();
+                }
+                if (other.getPlatform() != 0) {
+                    setPlatform(other.getPlatform());
+                }
+                if (!other.getAppVersion().isEmpty()) {
+                    appVersion_ = other.appVersion_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object uid_ = "";
+
+            /**
+             * <pre>
+             * 用户唯一id
+             * </pre>
+             *
+             * <code>string uid = 1;</code>
+             *
+             * @return The uid.
+             */
+            public java.lang.String getUid() {
+                java.lang.Object ref = uid_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    uid_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 用户唯一id
+             * </pre>
+             *
+             * <code>string uid = 1;</code>
+             *
+             * @return The bytes for uid.
+             */
+            public com.google.protobuf.ByteString
+            getUidBytes() {
+                java.lang.Object ref = uid_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    uid_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 用户唯一id
+             * </pre>
+             *
+             * <code>string uid = 1;</code>
+             *
+             * @param value The uid to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUid(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                uid_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 用户唯一id
+             * </pre>
+             *
+             * <code>string uid = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearUid() {
+
+                uid_ = getDefaultInstance().getUid();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 用户唯一id
+             * </pre>
+             *
+             * <code>string uid = 1;</code>
+             *
+             * @param value The bytes for uid to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUidBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                uid_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object deviceId_ = "";
+
+            /**
+             * <pre>
+             * 设备ID
+             * </pre>
+             *
+             * <code>string deviceId = 2;</code>
+             *
+             * @return The deviceId.
+             */
+            public java.lang.String getDeviceId() {
+                java.lang.Object ref = deviceId_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    deviceId_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 设备ID
+             * </pre>
+             *
+             * <code>string deviceId = 2;</code>
+             *
+             * @return The bytes for deviceId.
+             */
+            public com.google.protobuf.ByteString
+            getDeviceIdBytes() {
+                java.lang.Object ref = deviceId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    deviceId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 设备ID
+             * </pre>
+             *
+             * <code>string deviceId = 2;</code>
+             *
+             * @param value The deviceId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setDeviceId(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                deviceId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 设备ID
+             * </pre>
+             *
+             * <code>string deviceId = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearDeviceId() {
+
+                deviceId_ = getDefaultInstance().getDeviceId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 设备ID
+             * </pre>
+             *
+             * <code>string deviceId = 2;</code>
+             *
+             * @param value The bytes for deviceId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setDeviceIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                deviceId_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object token_ = "";
+
+            /**
+             * <pre>
+             * 用户token
+             * </pre>
+             *
+             * <code>string token = 3;</code>
+             *
+             * @return The token.
+             */
+            public java.lang.String getToken() {
+                java.lang.Object ref = token_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    token_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 用户token
+             * </pre>
+             *
+             * <code>string token = 3;</code>
+             *
+             * @return The bytes for token.
+             */
+            public com.google.protobuf.ByteString
+            getTokenBytes() {
+                java.lang.Object ref = token_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    token_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 用户token
+             * </pre>
+             *
+             * <code>string token = 3;</code>
+             *
+             * @param value The token to set.
+             * @return This builder for chaining.
+             */
+            public Builder setToken(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                token_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 用户token
+             * </pre>
+             *
+             * <code>string token = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearToken() {
+
+                token_ = getDefaultInstance().getToken();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 用户token
+             * </pre>
+             *
+             * <code>string token = 3;</code>
+             *
+             * @param value The bytes for token to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTokenBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                token_ = value;
+                onChanged();
+                return this;
+            }
+
+            private int platform_;
+
+            /**
+             * <pre>
+             * 客户端平台 windows、mac、android、ios、web
+             * </pre>
+             *
+             * <code>uint32 platform = 4;</code>
+             *
+             * @return The platform.
+             */
+            @java.lang.Override
+            public int getPlatform() {
+                return platform_;
+            }
+
+            /**
+             * <pre>
+             * 客户端平台 windows、mac、android、ios、web
+             * </pre>
+             *
+             * <code>uint32 platform = 4;</code>
+             *
+             * @param value The platform to set.
+             * @return This builder for chaining.
+             */
+            public Builder setPlatform(int value) {
+
+                platform_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 客户端平台 windows、mac、android、ios、web
+             * </pre>
+             *
+             * <code>uint32 platform = 4;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearPlatform() {
+
+                platform_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object appVersion_ = "";
+
+            /**
+             * <pre>
+             * APP版本号
+             * </pre>
+             *
+             * <code>string app_version = 5;</code>
+             *
+             * @return The appVersion.
+             */
+            public java.lang.String getAppVersion() {
+                java.lang.Object ref = appVersion_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    appVersion_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * APP版本号
+             * </pre>
+             *
+             * <code>string app_version = 5;</code>
+             *
+             * @return The bytes for appVersion.
+             */
+            public com.google.protobuf.ByteString
+            getAppVersionBytes() {
+                java.lang.Object ref = appVersion_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    appVersion_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * APP版本号
+             * </pre>
+             *
+             * <code>string app_version = 5;</code>
+             *
+             * @param value The appVersion to set.
+             * @return This builder for chaining.
+             */
+            public Builder setAppVersion(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                appVersion_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * APP版本号
+             * </pre>
+             *
+             * <code>string app_version = 5;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearAppVersion() {
+
+                appVersion_ = getDefaultInstance().getAppVersion();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * APP版本号
+             * </pre>
+             *
+             * <code>string app_version = 5;</code>
+             *
+             * @param value The bytes for appVersion to set.
+             * @return This builder for chaining.
+             */
+            public Builder setAppVersionBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                appVersion_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
+            // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
+        private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest DEFAULT_INSTANCE;
+
+        static {
+            DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest();
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<LoginRequest>
+                PARSER = new com.google.protobuf.AbstractParser<LoginRequest>() {
+            @java.lang.Override
+            public LoginRequest parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new LoginRequest(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<LoginRequest> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<LoginRequest> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginRequest)
-    private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest();
-    }
+    public interface LoginResponseOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
+            com.google.protobuf.MessageOrBuilder {
 
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <pre>
+         * true表示发送成功，false表示发送失败
+         * </pre>
+         *
+         * <code>bool result = 1;</code>
+         *
+         * @return The result.
+         */
+        boolean getResult();
 
-    private static final com.google.protobuf.Parser<LoginRequest>
-        PARSER = new com.google.protobuf.AbstractParser<LoginRequest>() {
-      @java.lang.Override
-      public LoginRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LoginRequest(input, extensionRegistry);
-      }
-    };
+        /**
+         * <pre>
+         * 错误码
+         * </pre>
+         *
+         * <code>uint32 code = 2;</code>
+         *
+         * @return The code.
+         */
+        int getCode();
 
-    public static com.google.protobuf.Parser<LoginRequest> parser() {
-      return PARSER;
-    }
+        /**
+         * <pre>
+         * 错误描述
+         * </pre>
+         *
+         * <code>string info = 3;</code>
+         *
+         * @return The info.
+         */
+        java.lang.String getInfo();
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<LoginRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface LoginResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *true表示发送成功，false表示发送失败
-     * </pre>
-     *
-     * <code>bool result = 1;</code>
-     * @return The result.
-     */
-    boolean getResult();
-
-    /**
-     * <pre>
-     *错误码
-     * </pre>
-     *
-     * <code>uint32 code = 2;</code>
-     * @return The code.
-     */
-    int getCode();
-
-    /**
-     * <pre>
-     *错误描述
-     * </pre>
-     *
-     * <code>string info = 3;</code>
-     * @return The info.
-     */
-    java.lang.String getInfo();
-    /**
-     * <pre>
-     *错误描述
-     * </pre>
-     *
-     * <code>string info = 3;</code>
-     * @return The bytes for info.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * 错误描述
+         * </pre>
+         *
+         * <code>string info = 3;</code>
+         *
+         * @return The bytes for info.
+         */
+        com.google.protobuf.ByteString
         getInfoBytes();
 
+        /**
+         * <pre>
+         * 错误描述是否提示给用户:1 提示;0 不提示
+         * </pre>
+         *
+         * <code>uint32 expose = 4;</code>
+         *
+         * @return The expose.
+         */
+        int getExpose();
+    }
+
     /**
      * <pre>
-     *错误描述是否提示给用户:1 提示;0 不提示
+     * 登录响应
      * </pre>
-     *
-     * <code>uint32 expose = 4;</code>
-     * @return The expose.
-     */
-    int getExpose();
-  }
-  /**
-   * <pre>
-   *登录响应
-   * </pre>
-   *
-   * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.LoginResponse}
-   */
-  public static final class LoginResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
-      LoginResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LoginResponse.newBuilder() to construct.
-    private LoginResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LoginResponse() {
-      info_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LoginResponse();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LoginResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              result_ = input.readBool();
-              break;
-            }
-            case 16: {
-
-              code_ = input.readUInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              info_ = s;
-              break;
-            }
-            case 32: {
-
-              expose_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder.class);
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 1;
-    private boolean result_;
-    /**
-     * <pre>
-     *true表示发送成功，false表示发送失败
-     * </pre>
-     *
-     * <code>bool result = 1;</code>
-     * @return The result.
-     */
-    @java.lang.Override
-    public boolean getResult() {
-      return result_;
-    }
-
-    public static final int CODE_FIELD_NUMBER = 2;
-    private int code_;
-    /**
-     * <pre>
-     *错误码
-     * </pre>
-     *
-     * <code>uint32 code = 2;</code>
-     * @return The code.
-     */
-    @java.lang.Override
-    public int getCode() {
-      return code_;
-    }
-
-    public static final int INFO_FIELD_NUMBER = 3;
-    private volatile java.lang.Object info_;
-    /**
-     * <pre>
-     *错误描述
-     * </pre>
-     *
-     * <code>string info = 3;</code>
-     * @return The info.
-     */
-    @java.lang.Override
-    public java.lang.String getInfo() {
-      java.lang.Object ref = info_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        info_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *错误描述
-     * </pre>
-     *
-     * <code>string info = 3;</code>
-     * @return The bytes for info.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getInfoBytes() {
-      java.lang.Object ref = info_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        info_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EXPOSE_FIELD_NUMBER = 4;
-    private int expose_;
-    /**
-     * <pre>
-     *错误描述是否提示给用户:1 提示;0 不提示
-     * </pre>
-     *
-     * <code>uint32 expose = 4;</code>
-     * @return The expose.
-     */
-    @java.lang.Override
-    public int getExpose() {
-      return expose_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (result_ != false) {
-        output.writeBool(1, result_);
-      }
-      if (code_ != 0) {
-        output.writeUInt32(2, code_);
-      }
-      if (!getInfoBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, info_);
-      }
-      if (expose_ != 0) {
-        output.writeUInt32(4, expose_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (result_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, result_);
-      }
-      if (code_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, code_);
-      }
-      if (!getInfoBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, info_);
-      }
-      if (expose_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, expose_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse)) {
-        return super.equals(obj);
-      }
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse) obj;
-
-      if (getResult()
-          != other.getResult()) return false;
-      if (getCode()
-          != other.getCode()) return false;
-      if (!getInfo()
-          .equals(other.getInfo())) return false;
-      if (getExpose()
-          != other.getExpose()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getResult());
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode();
-      hash = (37 * hash) + INFO_FIELD_NUMBER;
-      hash = (53 * hash) + getInfo().hashCode();
-      hash = (37 * hash) + EXPOSE_FIELD_NUMBER;
-      hash = (53 * hash) + getExpose();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     *登录响应
-     * </pre>
-     *
+     * <p>
      * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.LoginResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
-      }
+    public static final class LoginResponse extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
+            LoginResponseOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder.class);
-      }
-
-      // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use LoginResponse.newBuilder() to construct.
+        private LoginResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        result_ = false;
 
-        code_ = 0;
-
-        info_ = "";
-
-        expose_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getDefaultInstanceForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse build() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private LoginResponse() {
+            info_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse buildPartial() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse(this);
-        result.result_ = result_;
-        result.code_ = code_;
-        result.info_ = info_;
-        result.expose_ = expose_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse) {
-          return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new LoginResponse();
         }
-      }
 
-      public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse other) {
-        if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance()) return this;
-        if (other.getResult() != false) {
-          setResult(other.getResult());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getCode() != 0) {
-          setCode(other.getCode());
+
+        private LoginResponse(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 8: {
+
+                            result_ = input.readBool();
+                            break;
+                        }
+                        case 16: {
+
+                            code_ = input.readUInt32();
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            info_ = s;
+                            break;
+                        }
+                        case 32: {
+
+                            expose_ = input.readUInt32();
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        if (!other.getInfo().isEmpty()) {
-          info_ = other.info_;
-          onChanged();
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
         }
-        if (other.getExpose() != 0) {
-          setExpose(other.getExpose());
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder.class);
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+        public static final int RESULT_FIELD_NUMBER = 1;
+        private boolean result_;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        /**
+         * <pre>
+         * true表示发送成功，false表示发送失败
+         * </pre>
+         *
+         * <code>bool result = 1;</code>
+         *
+         * @return The result.
+         */
+        @java.lang.Override
+        public boolean getResult() {
+            return result_;
         }
-        return this;
-      }
 
-      private boolean result_ ;
-      /**
-       * <pre>
-       *true表示发送成功，false表示发送失败
-       * </pre>
-       *
-       * <code>bool result = 1;</code>
-       * @return The result.
-       */
-      @java.lang.Override
-      public boolean getResult() {
-        return result_;
-      }
-      /**
-       * <pre>
-       *true表示发送成功，false表示发送失败
-       * </pre>
-       *
-       * <code>bool result = 1;</code>
-       * @param value The result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResult(boolean value) {
-        
-        result_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *true表示发送成功，false表示发送失败
-       * </pre>
-       *
-       * <code>bool result = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResult() {
-        
-        result_ = false;
-        onChanged();
-        return this;
-      }
+        public static final int CODE_FIELD_NUMBER = 2;
+        private int code_;
 
-      private int code_ ;
-      /**
-       * <pre>
-       *错误码
-       * </pre>
-       *
-       * <code>uint32 code = 2;</code>
-       * @return The code.
-       */
-      @java.lang.Override
-      public int getCode() {
-        return code_;
-      }
-      /**
-       * <pre>
-       *错误码
-       * </pre>
-       *
-       * <code>uint32 code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(int value) {
-        
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *错误码
-       * </pre>
-       *
-       * <code>uint32 code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object info_ = "";
-      /**
-       * <pre>
-       *错误描述
-       * </pre>
-       *
-       * <code>string info = 3;</code>
-       * @return The info.
-       */
-      public java.lang.String getInfo() {
-        java.lang.Object ref = info_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          info_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <pre>
+         * 错误码
+         * </pre>
+         *
+         * <code>uint32 code = 2;</code>
+         *
+         * @return The code.
+         */
+        @java.lang.Override
+        public int getCode() {
+            return code_;
         }
-      }
-      /**
-       * <pre>
-       *错误描述
-       * </pre>
-       *
-       * <code>string info = 3;</code>
-       * @return The bytes for info.
-       */
-      public com.google.protobuf.ByteString
-          getInfoBytes() {
-        java.lang.Object ref = info_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          info_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int INFO_FIELD_NUMBER = 3;
+        private volatile java.lang.Object info_;
+
+        /**
+         * <pre>
+         * 错误描述
+         * </pre>
+         *
+         * <code>string info = 3;</code>
+         *
+         * @return The info.
+         */
+        @java.lang.Override
+        public java.lang.String getInfo() {
+            java.lang.Object ref = info_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                info_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <pre>
-       *错误描述
-       * </pre>
-       *
-       * <code>string info = 3;</code>
-       * @param value The info to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInfo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        info_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *错误描述
-       * </pre>
-       *
-       * <code>string info = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInfo() {
-        
-        info_ = getDefaultInstance().getInfo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *错误描述
-       * </pre>
-       *
-       * <code>string info = 3;</code>
-       * @param value The bytes for info to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInfoBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        info_ = value;
-        onChanged();
-        return this;
-      }
 
-      private int expose_ ;
-      /**
-       * <pre>
-       *错误描述是否提示给用户:1 提示;0 不提示
-       * </pre>
-       *
-       * <code>uint32 expose = 4;</code>
-       * @return The expose.
-       */
-      @java.lang.Override
-      public int getExpose() {
-        return expose_;
-      }
-      /**
-       * <pre>
-       *错误描述是否提示给用户:1 提示;0 不提示
-       * </pre>
-       *
-       * <code>uint32 expose = 4;</code>
-       * @param value The expose to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExpose(int value) {
-        
-        expose_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *错误描述是否提示给用户:1 提示;0 不提示
-       * </pre>
-       *
-       * <code>uint32 expose = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExpose() {
-        
-        expose_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
+        /**
+         * <pre>
+         * 错误描述
+         * </pre>
+         *
+         * <code>string info = 3;</code>
+         *
+         * @return The bytes for info.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getInfoBytes() {
+            java.lang.Object ref = info_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                info_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        public static final int EXPOSE_FIELD_NUMBER = 4;
+        private int expose_;
+
+        /**
+         * <pre>
+         * 错误描述是否提示给用户:1 提示;0 不提示
+         * </pre>
+         *
+         * <code>uint32 expose = 4;</code>
+         *
+         * @return The expose.
+         */
+        @java.lang.Override
+        public int getExpose() {
+            return expose_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (result_ != false) {
+                output.writeBool(1, result_);
+            }
+            if (code_ != 0) {
+                output.writeUInt32(2, code_);
+            }
+            if (!getInfoBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, info_);
+            }
+            if (expose_ != 0) {
+                output.writeUInt32(4, expose_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (result_ != false) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBoolSize(1, result_);
+            }
+            if (code_ != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt32Size(2, code_);
+            }
+            if (!getInfoBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, info_);
+            }
+            if (expose_ != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt32Size(4, expose_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse)) {
+                return super.equals(obj);
+            }
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse) obj;
+
+            if (getResult()
+                    != other.getResult()) return false;
+            if (getCode()
+                    != other.getCode()) return false;
+            if (!getInfo()
+                    .equals(other.getInfo())) return false;
+            if (getExpose()
+                    != other.getExpose()) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + RESULT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+                    getResult());
+            hash = (37 * hash) + CODE_FIELD_NUMBER;
+            hash = (53 * hash) + getCode();
+            hash = (37 * hash) + INFO_FIELD_NUMBER;
+            hash = (53 * hash) + getInfo().hashCode();
+            hash = (37 * hash) + EXPOSE_FIELD_NUMBER;
+            hash = (53 * hash) + getExpose();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 登录响应
+         * </pre>
+         * <p>
+         * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.LoginResponse}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder.class);
+            }
+
+            // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                result_ = false;
+
+                code_ = 0;
+
+                info_ = "";
+
+                expose_ = 0;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getDefaultInstanceForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse build() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse buildPartial() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse(this);
+                result.result_ = result_;
+                result.code_ = code_;
+                result.info_ = info_;
+                result.expose_ = expose_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse) {
+                    return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse other) {
+                if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance())
+                    return this;
+                if (other.getResult() != false) {
+                    setResult(other.getResult());
+                }
+                if (other.getCode() != 0) {
+                    setCode(other.getCode());
+                }
+                if (!other.getInfo().isEmpty()) {
+                    info_ = other.info_;
+                    onChanged();
+                }
+                if (other.getExpose() != 0) {
+                    setExpose(other.getExpose());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private boolean result_;
+
+            /**
+             * <pre>
+             * true表示发送成功，false表示发送失败
+             * </pre>
+             *
+             * <code>bool result = 1;</code>
+             *
+             * @return The result.
+             */
+            @java.lang.Override
+            public boolean getResult() {
+                return result_;
+            }
+
+            /**
+             * <pre>
+             * true表示发送成功，false表示发送失败
+             * </pre>
+             *
+             * <code>bool result = 1;</code>
+             *
+             * @param value The result to set.
+             * @return This builder for chaining.
+             */
+            public Builder setResult(boolean value) {
+
+                result_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * true表示发送成功，false表示发送失败
+             * </pre>
+             *
+             * <code>bool result = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearResult() {
+
+                result_ = false;
+                onChanged();
+                return this;
+            }
+
+            private int code_;
+
+            /**
+             * <pre>
+             * 错误码
+             * </pre>
+             *
+             * <code>uint32 code = 2;</code>
+             *
+             * @return The code.
+             */
+            @java.lang.Override
+            public int getCode() {
+                return code_;
+            }
+
+            /**
+             * <pre>
+             * 错误码
+             * </pre>
+             *
+             * <code>uint32 code = 2;</code>
+             *
+             * @param value The code to set.
+             * @return This builder for chaining.
+             */
+            public Builder setCode(int value) {
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 错误码
+             * </pre>
+             *
+             * <code>uint32 code = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearCode() {
+
+                code_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object info_ = "";
+
+            /**
+             * <pre>
+             * 错误描述
+             * </pre>
+             *
+             * <code>string info = 3;</code>
+             *
+             * @return The info.
+             */
+            public java.lang.String getInfo() {
+                java.lang.Object ref = info_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    info_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 错误描述
+             * </pre>
+             *
+             * <code>string info = 3;</code>
+             *
+             * @return The bytes for info.
+             */
+            public com.google.protobuf.ByteString
+            getInfoBytes() {
+                java.lang.Object ref = info_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    info_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 错误描述
+             * </pre>
+             *
+             * <code>string info = 3;</code>
+             *
+             * @param value The info to set.
+             * @return This builder for chaining.
+             */
+            public Builder setInfo(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                info_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 错误描述
+             * </pre>
+             *
+             * <code>string info = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearInfo() {
+
+                info_ = getDefaultInstance().getInfo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 错误描述
+             * </pre>
+             *
+             * <code>string info = 3;</code>
+             *
+             * @param value The bytes for info to set.
+             * @return This builder for chaining.
+             */
+            public Builder setInfoBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                info_ = value;
+                onChanged();
+                return this;
+            }
+
+            private int expose_;
+
+            /**
+             * <pre>
+             * 错误描述是否提示给用户:1 提示;0 不提示
+             * </pre>
+             *
+             * <code>uint32 expose = 4;</code>
+             *
+             * @return The expose.
+             */
+            @java.lang.Override
+            public int getExpose() {
+                return expose_;
+            }
+
+            /**
+             * <pre>
+             * 错误描述是否提示给用户:1 提示;0 不提示
+             * </pre>
+             *
+             * <code>uint32 expose = 4;</code>
+             *
+             * @param value The expose to set.
+             * @return This builder for chaining.
+             */
+            public Builder setExpose(int value) {
+
+                expose_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 错误描述是否提示给用户:1 提示;0 不提示
+             * </pre>
+             *
+             * <code>uint32 expose = 4;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearExpose() {
+
+                expose_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
+            // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
+        private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse DEFAULT_INSTANCE;
+
+        static {
+            DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse();
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<LoginResponse>
+                PARSER = new com.google.protobuf.AbstractParser<LoginResponse>() {
+            @java.lang.Override
+            public LoginResponse parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new LoginResponse(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<LoginResponse> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<LoginResponse> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.LoginResponse)
-    private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse();
-    }
+    public interface MessageRequestOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
+            com.google.protobuf.MessageOrBuilder {
 
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <code>uint64 msg_id = 1;</code>
+         *
+         * @return The msgId.
+         */
+        long getMsgId();
 
-    private static final com.google.protobuf.Parser<LoginResponse>
-        PARSER = new com.google.protobuf.AbstractParser<LoginResponse>() {
-      @java.lang.Override
-      public LoginResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LoginResponse(input, extensionRegistry);
-      }
-    };
+        /**
+         * <code>string from = 2;</code>
+         *
+         * @return The from.
+         */
+        java.lang.String getFrom();
 
-    public static com.google.protobuf.Parser<LoginResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LoginResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MessageRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>uint64 msg_id = 1;</code>
-     * @return The msgId.
-     */
-    long getMsgId();
-
-    /**
-     * <code>string from = 2;</code>
-     * @return The from.
-     */
-    java.lang.String getFrom();
-    /**
-     * <code>string from = 2;</code>
-     * @return The bytes for from.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string from = 2;</code>
+         *
+         * @return The bytes for from.
+         */
+        com.google.protobuf.ByteString
         getFromBytes();
 
-    /**
-     * <code>string to = 3;</code>
-     * @return The to.
-     */
-    java.lang.String getTo();
-    /**
-     * <code>string to = 3;</code>
-     * @return The bytes for to.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string to = 3;</code>
+         *
+         * @return The to.
+         */
+        java.lang.String getTo();
+
+        /**
+         * <code>string to = 3;</code>
+         *
+         * @return The bytes for to.
+         */
+        com.google.protobuf.ByteString
         getToBytes();
 
-    /**
-     * <code>uint64 time = 4;</code>
-     * @return The time.
-     */
-    long getTime();
+        /**
+         * <code>uint64 time = 4;</code>
+         *
+         * @return The time.
+         */
+        long getTime();
 
-    /**
-     * <code>uint32 msg_type = 5;</code>
-     * @return The msgType.
-     */
-    int getMsgType();
+        /**
+         * <code>uint32 msg_type = 5;</code>
+         *
+         * @return The msgType.
+         */
+        int getMsgType();
 
-    /**
-     * <code>string content = 6;</code>
-     * @return The content.
-     */
-    java.lang.String getContent();
-    /**
-     * <code>string content = 6;</code>
-     * @return The bytes for content.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string content = 6;</code>
+         *
+         * @return The content.
+         */
+        java.lang.String getContent();
+
+        /**
+         * <code>string content = 6;</code>
+         *
+         * @return The bytes for content.
+         */
+        com.google.protobuf.ByteString
         getContentBytes();
 
-    /**
-     * <code>string url = 8;</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <code>string url = 8;</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string url = 8;</code>
+         *
+         * @return The url.
+         */
+        java.lang.String getUrl();
+
+        /**
+         * <code>string url = 8;</code>
+         *
+         * @return The bytes for url.
+         */
+        com.google.protobuf.ByteString
         getUrlBytes();
 
-    /**
-     * <code>string property = 9;</code>
-     * @return The property.
-     */
-    java.lang.String getProperty();
-    /**
-     * <code>string property = 9;</code>
-     * @return The bytes for property.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string property = 9;</code>
+         *
+         * @return The property.
+         */
+        java.lang.String getProperty();
+
+        /**
+         * <code>string property = 9;</code>
+         *
+         * @return The bytes for property.
+         */
+        com.google.protobuf.ByteString
         getPropertyBytes();
 
-    /**
-     * <code>string from_nick = 10;</code>
-     * @return The fromNick.
-     */
-    java.lang.String getFromNick();
-    /**
-     * <code>string from_nick = 10;</code>
-     * @return The bytes for fromNick.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string from_nick = 10;</code>
+         *
+         * @return The fromNick.
+         */
+        java.lang.String getFromNick();
+
+        /**
+         * <code>string from_nick = 10;</code>
+         *
+         * @return The bytes for fromNick.
+         */
+        com.google.protobuf.ByteString
         getFromNickBytes();
 
-    /**
-     * <code>string json = 11;</code>
-     * @return The json.
-     */
-    java.lang.String getJson();
-    /**
-     * <code>string json = 11;</code>
-     * @return The bytes for json.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string json = 11;</code>
+         *
+         * @return The json.
+         */
+        java.lang.String getJson();
+
+        /**
+         * <code>string json = 11;</code>
+         *
+         * @return The bytes for json.
+         */
+        com.google.protobuf.ByteString
         getJsonBytes();
-  }
-  /**
-   * <pre>
-   *聊天消息
-   * </pre>
-   *
-   * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageRequest}
-   */
-  public static final class MessageRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
-      MessageRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MessageRequest.newBuilder() to construct.
-    private MessageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MessageRequest() {
-      from_ = "";
-      to_ = "";
-      content_ = "";
-      url_ = "";
-      property_ = "";
-      fromNick_ = "";
-      json_ = "";
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MessageRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MessageRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              msgId_ = input.readUInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              from_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              to_ = s;
-              break;
-            }
-            case 32: {
-
-              time_ = input.readUInt64();
-              break;
-            }
-            case 40: {
-
-              msgType_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              content_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              property_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              fromNick_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              json_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder.class);
-    }
-
-    public static final int MSG_ID_FIELD_NUMBER = 1;
-    private long msgId_;
-    /**
-     * <code>uint64 msg_id = 1;</code>
-     * @return The msgId.
-     */
-    @java.lang.Override
-    public long getMsgId() {
-      return msgId_;
-    }
-
-    public static final int FROM_FIELD_NUMBER = 2;
-    private volatile java.lang.Object from_;
-    /**
-     * <code>string from = 2;</code>
-     * @return The from.
-     */
-    @java.lang.Override
-    public java.lang.String getFrom() {
-      java.lang.Object ref = from_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        from_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string from = 2;</code>
-     * @return The bytes for from.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFromBytes() {
-      java.lang.Object ref = from_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        from_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TO_FIELD_NUMBER = 3;
-    private volatile java.lang.Object to_;
-    /**
-     * <code>string to = 3;</code>
-     * @return The to.
-     */
-    @java.lang.Override
-    public java.lang.String getTo() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        to_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string to = 3;</code>
-     * @return The bytes for to.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getToBytes() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        to_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TIME_FIELD_NUMBER = 4;
-    private long time_;
-    /**
-     * <code>uint64 time = 4;</code>
-     * @return The time.
-     */
-    @java.lang.Override
-    public long getTime() {
-      return time_;
-    }
-
-    public static final int MSG_TYPE_FIELD_NUMBER = 5;
-    private int msgType_;
-    /**
-     * <code>uint32 msg_type = 5;</code>
-     * @return The msgType.
-     */
-    @java.lang.Override
-    public int getMsgType() {
-      return msgType_;
-    }
-
-    public static final int CONTENT_FIELD_NUMBER = 6;
-    private volatile java.lang.Object content_;
-    /**
-     * <code>string content = 6;</code>
-     * @return The content.
-     */
-    @java.lang.Override
-    public java.lang.String getContent() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        content_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string content = 6;</code>
-     * @return The bytes for content.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getContentBytes() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        content_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int URL_FIELD_NUMBER = 8;
-    private volatile java.lang.Object url_;
-    /**
-     * <code>string url = 8;</code>
-     * @return The url.
-     */
-    @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string url = 8;</code>
-     * @return The bytes for url.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PROPERTY_FIELD_NUMBER = 9;
-    private volatile java.lang.Object property_;
-    /**
-     * <code>string property = 9;</code>
-     * @return The property.
-     */
-    @java.lang.Override
-    public java.lang.String getProperty() {
-      java.lang.Object ref = property_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        property_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string property = 9;</code>
-     * @return The bytes for property.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPropertyBytes() {
-      java.lang.Object ref = property_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        property_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FROM_NICK_FIELD_NUMBER = 10;
-    private volatile java.lang.Object fromNick_;
-    /**
-     * <code>string from_nick = 10;</code>
-     * @return The fromNick.
-     */
-    @java.lang.Override
-    public java.lang.String getFromNick() {
-      java.lang.Object ref = fromNick_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fromNick_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string from_nick = 10;</code>
-     * @return The bytes for fromNick.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFromNickBytes() {
-      java.lang.Object ref = fromNick_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fromNick_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int JSON_FIELD_NUMBER = 11;
-    private volatile java.lang.Object json_;
-    /**
-     * <code>string json = 11;</code>
-     * @return The json.
-     */
-    @java.lang.Override
-    public java.lang.String getJson() {
-      java.lang.Object ref = json_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        json_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string json = 11;</code>
-     * @return The bytes for json.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getJsonBytes() {
-      java.lang.Object ref = json_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        json_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (msgId_ != 0L) {
-        output.writeUInt64(1, msgId_);
-      }
-      if (!getFromBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, from_);
-      }
-      if (!getToBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, to_);
-      }
-      if (time_ != 0L) {
-        output.writeUInt64(4, time_);
-      }
-      if (msgType_ != 0) {
-        output.writeUInt32(5, msgType_);
-      }
-      if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, content_);
-      }
-      if (!getUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, url_);
-      }
-      if (!getPropertyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, property_);
-      }
-      if (!getFromNickBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, fromNick_);
-      }
-      if (!getJsonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, json_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (msgId_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, msgId_);
-      }
-      if (!getFromBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, from_);
-      }
-      if (!getToBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, to_);
-      }
-      if (time_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, time_);
-      }
-      if (msgType_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, msgType_);
-      }
-      if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, content_);
-      }
-      if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, url_);
-      }
-      if (!getPropertyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, property_);
-      }
-      if (!getFromNickBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, fromNick_);
-      }
-      if (!getJsonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, json_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest)) {
-        return super.equals(obj);
-      }
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest) obj;
-
-      if (getMsgId()
-          != other.getMsgId()) return false;
-      if (!getFrom()
-          .equals(other.getFrom())) return false;
-      if (!getTo()
-          .equals(other.getTo())) return false;
-      if (getTime()
-          != other.getTime()) return false;
-      if (getMsgType()
-          != other.getMsgType()) return false;
-      if (!getContent()
-          .equals(other.getContent())) return false;
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (!getProperty()
-          .equals(other.getProperty())) return false;
-      if (!getFromNick()
-          .equals(other.getFromNick())) return false;
-      if (!getJson()
-          .equals(other.getJson())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getMsgId());
-      hash = (37 * hash) + FROM_FIELD_NUMBER;
-      hash = (53 * hash) + getFrom().hashCode();
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getTo().hashCode();
-      hash = (37 * hash) + TIME_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getTime());
-      hash = (37 * hash) + MSG_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMsgType();
-      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getContent().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      hash = (37 * hash) + PROPERTY_FIELD_NUMBER;
-      hash = (53 * hash) + getProperty().hashCode();
-      hash = (37 * hash) + FROM_NICK_FIELD_NUMBER;
-      hash = (53 * hash) + getFromNick().hashCode();
-      hash = (37 * hash) + JSON_FIELD_NUMBER;
-      hash = (53 * hash) + getJson().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *聊天消息
+     * 聊天消息
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageRequest}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
-      }
+    public static final class MessageRequest extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
+            MessageRequestOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder.class);
-      }
-
-      // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use MessageRequest.newBuilder() to construct.
+        private MessageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        msgId_ = 0L;
 
-        from_ = "";
-
-        to_ = "";
-
-        time_ = 0L;
-
-        msgType_ = 0;
-
-        content_ = "";
-
-        url_ = "";
-
-        property_ = "";
-
-        fromNick_ = "";
-
-        json_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getDefaultInstanceForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest build() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private MessageRequest() {
+            from_ = "";
+            to_ = "";
+            content_ = "";
+            url_ = "";
+            property_ = "";
+            fromNick_ = "";
+            json_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest buildPartial() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest(this);
-        result.msgId_ = msgId_;
-        result.from_ = from_;
-        result.to_ = to_;
-        result.time_ = time_;
-        result.msgType_ = msgType_;
-        result.content_ = content_;
-        result.url_ = url_;
-        result.property_ = property_;
-        result.fromNick_ = fromNick_;
-        result.json_ = json_;
-        onBuilt();
-        return result;
-      }
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new MessageRequest();
+        }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest) {
-          return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
         }
-      }
 
-      public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest other) {
-        if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance()) return this;
-        if (other.getMsgId() != 0L) {
-          setMsgId(other.getMsgId());
-        }
-        if (!other.getFrom().isEmpty()) {
-          from_ = other.from_;
-          onChanged();
-        }
-        if (!other.getTo().isEmpty()) {
-          to_ = other.to_;
-          onChanged();
-        }
-        if (other.getTime() != 0L) {
-          setTime(other.getTime());
-        }
-        if (other.getMsgType() != 0) {
-          setMsgType(other.getMsgType());
-        }
-        if (!other.getContent().isEmpty()) {
-          content_ = other.content_;
-          onChanged();
-        }
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          onChanged();
-        }
-        if (!other.getProperty().isEmpty()) {
-          property_ = other.property_;
-          onChanged();
-        }
-        if (!other.getFromNick().isEmpty()) {
-          fromNick_ = other.fromNick_;
-          onChanged();
-        }
-        if (!other.getJson().isEmpty()) {
-          json_ = other.json_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
+        private MessageRequest(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 8: {
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+                            msgId_ = input.readUInt64();
+                            break;
+                        }
+                        case 18: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
+                            from_ = s;
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private long msgId_ ;
-      /**
-       * <code>uint64 msg_id = 1;</code>
-       * @return The msgId.
-       */
-      @java.lang.Override
-      public long getMsgId() {
-        return msgId_;
-      }
-      /**
-       * <code>uint64 msg_id = 1;</code>
-       * @param value The msgId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMsgId(long value) {
-        
-        msgId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 msg_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMsgId() {
-        
-        msgId_ = 0L;
-        onChanged();
-        return this;
-      }
+                            to_ = s;
+                            break;
+                        }
+                        case 32: {
 
-      private java.lang.Object from_ = "";
-      /**
-       * <code>string from = 2;</code>
-       * @return The from.
-       */
-      public java.lang.String getFrom() {
-        java.lang.Object ref = from_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          from_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string from = 2;</code>
-       * @return The bytes for from.
-       */
-      public com.google.protobuf.ByteString
-          getFromBytes() {
-        java.lang.Object ref = from_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          from_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string from = 2;</code>
-       * @param value The from to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFrom(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        from_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string from = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFrom() {
-        
-        from_ = getDefaultInstance().getFrom();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string from = 2;</code>
-       * @param value The bytes for from to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFromBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        from_ = value;
-        onChanged();
-        return this;
-      }
+                            time_ = input.readUInt64();
+                            break;
+                        }
+                        case 40: {
 
-      private java.lang.Object to_ = "";
-      /**
-       * <code>string to = 3;</code>
-       * @return The to.
-       */
-      public java.lang.String getTo() {
-        java.lang.Object ref = to_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          to_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string to = 3;</code>
-       * @return The bytes for to.
-       */
-      public com.google.protobuf.ByteString
-          getToBytes() {
-        java.lang.Object ref = to_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          to_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string to = 3;</code>
-       * @param value The to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTo() {
-        
-        to_ = getDefaultInstance().getTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 3;</code>
-       * @param value The bytes for to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        to_ = value;
-        onChanged();
-        return this;
-      }
+                            msgType_ = input.readUInt32();
+                            break;
+                        }
+                        case 50: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private long time_ ;
-      /**
-       * <code>uint64 time = 4;</code>
-       * @return The time.
-       */
-      @java.lang.Override
-      public long getTime() {
-        return time_;
-      }
-      /**
-       * <code>uint64 time = 4;</code>
-       * @param value The time to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTime(long value) {
-        
-        time_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 time = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTime() {
-        
-        time_ = 0L;
-        onChanged();
-        return this;
-      }
+                            content_ = s;
+                            break;
+                        }
+                        case 66: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private int msgType_ ;
-      /**
-       * <code>uint32 msg_type = 5;</code>
-       * @return The msgType.
-       */
-      @java.lang.Override
-      public int getMsgType() {
-        return msgType_;
-      }
-      /**
-       * <code>uint32 msg_type = 5;</code>
-       * @param value The msgType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMsgType(int value) {
-        
-        msgType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 msg_type = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMsgType() {
-        
-        msgType_ = 0;
-        onChanged();
-        return this;
-      }
+                            url_ = s;
+                            break;
+                        }
+                        case 74: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private java.lang.Object content_ = "";
-      /**
-       * <code>string content = 6;</code>
-       * @return The content.
-       */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          content_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string content = 6;</code>
-       * @return The bytes for content.
-       */
-      public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string content = 6;</code>
-       * @param value The content to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContent(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        content_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string content = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearContent() {
-        
-        content_ = getDefaultInstance().getContent();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string content = 6;</code>
-       * @param value The bytes for content to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContentBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        content_ = value;
-        onChanged();
-        return this;
-      }
+                            property_ = s;
+                            break;
+                        }
+                        case 82: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private java.lang.Object url_ = "";
-      /**
-       * <code>string url = 8;</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string url = 8;</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string url = 8;</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string url = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string url = 8;</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        url_ = value;
-        onChanged();
-        return this;
-      }
+                            fromNick_ = s;
+                            break;
+                        }
+                        case 90: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private java.lang.Object property_ = "";
-      /**
-       * <code>string property = 9;</code>
-       * @return The property.
-       */
-      public java.lang.String getProperty() {
-        java.lang.Object ref = property_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          property_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+                            json_ = s;
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-      }
-      /**
-       * <code>string property = 9;</code>
-       * @return The bytes for property.
-       */
-      public com.google.protobuf.ByteString
-          getPropertyBytes() {
-        java.lang.Object ref = property_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          property_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string property = 9;</code>
-       * @param value The property to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProperty(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        property_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string property = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProperty() {
-        
-        property_ = getDefaultInstance().getProperty();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string property = 9;</code>
-       * @param value The bytes for property to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPropertyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        property_ = value;
-        onChanged();
-        return this;
-      }
 
-      private java.lang.Object fromNick_ = "";
-      /**
-       * <code>string from_nick = 10;</code>
-       * @return The fromNick.
-       */
-      public java.lang.String getFromNick() {
-        java.lang.Object ref = fromNick_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fromNick_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
         }
-      }
-      /**
-       * <code>string from_nick = 10;</code>
-       * @return The bytes for fromNick.
-       */
-      public com.google.protobuf.ByteString
-          getFromNickBytes() {
-        java.lang.Object ref = fromNick_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fromNick_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder.class);
         }
-      }
-      /**
-       * <code>string from_nick = 10;</code>
-       * @param value The fromNick to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFromNick(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        fromNick_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string from_nick = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFromNick() {
-        
-        fromNick_ = getDefaultInstance().getFromNick();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string from_nick = 10;</code>
-       * @param value The bytes for fromNick to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFromNickBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        fromNick_ = value;
-        onChanged();
-        return this;
-      }
 
-      private java.lang.Object json_ = "";
-      /**
-       * <code>string json = 11;</code>
-       * @return The json.
-       */
-      public java.lang.String getJson() {
-        java.lang.Object ref = json_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          json_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        public static final int MSG_ID_FIELD_NUMBER = 1;
+        private long msgId_;
+
+        /**
+         * <code>uint64 msg_id = 1;</code>
+         *
+         * @return The msgId.
+         */
+        @java.lang.Override
+        public long getMsgId() {
+            return msgId_;
         }
-      }
-      /**
-       * <code>string json = 11;</code>
-       * @return The bytes for json.
-       */
-      public com.google.protobuf.ByteString
-          getJsonBytes() {
-        java.lang.Object ref = json_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          json_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int FROM_FIELD_NUMBER = 2;
+        private volatile java.lang.Object from_;
+
+        /**
+         * <code>string from = 2;</code>
+         *
+         * @return The from.
+         */
+        @java.lang.Override
+        public java.lang.String getFrom() {
+            java.lang.Object ref = from_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                from_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string json = 11;</code>
-       * @param value The json to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJson(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        json_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJson() {
-        
-        json_ = getDefaultInstance().getJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json = 11;</code>
-       * @param value The bytes for json to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        json_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>string from = 2;</code>
+         *
+         * @return The bytes for from.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getFromBytes() {
+            java.lang.Object ref = from_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                from_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int TO_FIELD_NUMBER = 3;
+        private volatile java.lang.Object to_;
+
+        /**
+         * <code>string to = 3;</code>
+         *
+         * @return The to.
+         */
+        @java.lang.Override
+        public java.lang.String getTo() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                to_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string to = 3;</code>
+         *
+         * @return The bytes for to.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getToBytes() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                to_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int TIME_FIELD_NUMBER = 4;
+        private long time_;
+
+        /**
+         * <code>uint64 time = 4;</code>
+         *
+         * @return The time.
+         */
+        @java.lang.Override
+        public long getTime() {
+            return time_;
+        }
+
+        public static final int MSG_TYPE_FIELD_NUMBER = 5;
+        private int msgType_;
+
+        /**
+         * <code>uint32 msg_type = 5;</code>
+         *
+         * @return The msgType.
+         */
+        @java.lang.Override
+        public int getMsgType() {
+            return msgType_;
+        }
+
+        public static final int CONTENT_FIELD_NUMBER = 6;
+        private volatile java.lang.Object content_;
+
+        /**
+         * <code>string content = 6;</code>
+         *
+         * @return The content.
+         */
+        @java.lang.Override
+        public java.lang.String getContent() {
+            java.lang.Object ref = content_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                content_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string content = 6;</code>
+         *
+         * @return The bytes for content.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getContentBytes() {
+            java.lang.Object ref = content_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                content_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int URL_FIELD_NUMBER = 8;
+        private volatile java.lang.Object url_;
+
+        /**
+         * <code>string url = 8;</code>
+         *
+         * @return The url.
+         */
+        @java.lang.Override
+        public java.lang.String getUrl() {
+            java.lang.Object ref = url_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                url_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string url = 8;</code>
+         *
+         * @return The bytes for url.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getUrlBytes() {
+            java.lang.Object ref = url_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                url_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int PROPERTY_FIELD_NUMBER = 9;
+        private volatile java.lang.Object property_;
+
+        /**
+         * <code>string property = 9;</code>
+         *
+         * @return The property.
+         */
+        @java.lang.Override
+        public java.lang.String getProperty() {
+            java.lang.Object ref = property_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                property_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string property = 9;</code>
+         *
+         * @return The bytes for property.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getPropertyBytes() {
+            java.lang.Object ref = property_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                property_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int FROM_NICK_FIELD_NUMBER = 10;
+        private volatile java.lang.Object fromNick_;
+
+        /**
+         * <code>string from_nick = 10;</code>
+         *
+         * @return The fromNick.
+         */
+        @java.lang.Override
+        public java.lang.String getFromNick() {
+            java.lang.Object ref = fromNick_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                fromNick_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string from_nick = 10;</code>
+         *
+         * @return The bytes for fromNick.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getFromNickBytes() {
+            java.lang.Object ref = fromNick_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                fromNick_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int JSON_FIELD_NUMBER = 11;
+        private volatile java.lang.Object json_;
+
+        /**
+         * <code>string json = 11;</code>
+         *
+         * @return The json.
+         */
+        @java.lang.Override
+        public java.lang.String getJson() {
+            java.lang.Object ref = json_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                json_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string json = 11;</code>
+         *
+         * @return The bytes for json.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getJsonBytes() {
+            java.lang.Object ref = json_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                json_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (msgId_ != 0L) {
+                output.writeUInt64(1, msgId_);
+            }
+            if (!getFromBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, from_);
+            }
+            if (!getToBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, to_);
+            }
+            if (time_ != 0L) {
+                output.writeUInt64(4, time_);
+            }
+            if (msgType_ != 0) {
+                output.writeUInt32(5, msgType_);
+            }
+            if (!getContentBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 6, content_);
+            }
+            if (!getUrlBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 8, url_);
+            }
+            if (!getPropertyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 9, property_);
+            }
+            if (!getFromNickBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 10, fromNick_);
+            }
+            if (!getJsonBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 11, json_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (msgId_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(1, msgId_);
+            }
+            if (!getFromBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, from_);
+            }
+            if (!getToBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, to_);
+            }
+            if (time_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(4, time_);
+            }
+            if (msgType_ != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt32Size(5, msgType_);
+            }
+            if (!getContentBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, content_);
+            }
+            if (!getUrlBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, url_);
+            }
+            if (!getPropertyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, property_);
+            }
+            if (!getFromNickBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, fromNick_);
+            }
+            if (!getJsonBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, json_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest)) {
+                return super.equals(obj);
+            }
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest) obj;
+
+            if (getMsgId()
+                    != other.getMsgId()) return false;
+            if (!getFrom()
+                    .equals(other.getFrom())) return false;
+            if (!getTo()
+                    .equals(other.getTo())) return false;
+            if (getTime()
+                    != other.getTime()) return false;
+            if (getMsgType()
+                    != other.getMsgType()) return false;
+            if (!getContent()
+                    .equals(other.getContent())) return false;
+            if (!getUrl()
+                    .equals(other.getUrl())) return false;
+            if (!getProperty()
+                    .equals(other.getProperty())) return false;
+            if (!getFromNick()
+                    .equals(other.getFromNick())) return false;
+            if (!getJson()
+                    .equals(other.getJson())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                    getMsgId());
+            hash = (37 * hash) + FROM_FIELD_NUMBER;
+            hash = (53 * hash) + getFrom().hashCode();
+            hash = (37 * hash) + TO_FIELD_NUMBER;
+            hash = (53 * hash) + getTo().hashCode();
+            hash = (37 * hash) + TIME_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                    getTime());
+            hash = (37 * hash) + MSG_TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + getMsgType();
+            hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+            hash = (53 * hash) + getContent().hashCode();
+            hash = (37 * hash) + URL_FIELD_NUMBER;
+            hash = (53 * hash) + getUrl().hashCode();
+            hash = (37 * hash) + PROPERTY_FIELD_NUMBER;
+            hash = (53 * hash) + getProperty().hashCode();
+            hash = (37 * hash) + FROM_NICK_FIELD_NUMBER;
+            hash = (53 * hash) + getFromNick().hashCode();
+            hash = (37 * hash) + JSON_FIELD_NUMBER;
+            hash = (53 * hash) + getJson().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 聊天消息
+         * </pre>
+         * <p>
+         * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageRequest}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder.class);
+            }
+
+            // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                msgId_ = 0L;
+
+                from_ = "";
+
+                to_ = "";
+
+                time_ = 0L;
+
+                msgType_ = 0;
+
+                content_ = "";
+
+                url_ = "";
+
+                property_ = "";
+
+                fromNick_ = "";
+
+                json_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getDefaultInstanceForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest build() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest buildPartial() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest(this);
+                result.msgId_ = msgId_;
+                result.from_ = from_;
+                result.to_ = to_;
+                result.time_ = time_;
+                result.msgType_ = msgType_;
+                result.content_ = content_;
+                result.url_ = url_;
+                result.property_ = property_;
+                result.fromNick_ = fromNick_;
+                result.json_ = json_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest) {
+                    return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest other) {
+                if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance())
+                    return this;
+                if (other.getMsgId() != 0L) {
+                    setMsgId(other.getMsgId());
+                }
+                if (!other.getFrom().isEmpty()) {
+                    from_ = other.from_;
+                    onChanged();
+                }
+                if (!other.getTo().isEmpty()) {
+                    to_ = other.to_;
+                    onChanged();
+                }
+                if (other.getTime() != 0L) {
+                    setTime(other.getTime());
+                }
+                if (other.getMsgType() != 0) {
+                    setMsgType(other.getMsgType());
+                }
+                if (!other.getContent().isEmpty()) {
+                    content_ = other.content_;
+                    onChanged();
+                }
+                if (!other.getUrl().isEmpty()) {
+                    url_ = other.url_;
+                    onChanged();
+                }
+                if (!other.getProperty().isEmpty()) {
+                    property_ = other.property_;
+                    onChanged();
+                }
+                if (!other.getFromNick().isEmpty()) {
+                    fromNick_ = other.fromNick_;
+                    onChanged();
+                }
+                if (!other.getJson().isEmpty()) {
+                    json_ = other.json_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private long msgId_;
+
+            /**
+             * <code>uint64 msg_id = 1;</code>
+             *
+             * @return The msgId.
+             */
+            @java.lang.Override
+            public long getMsgId() {
+                return msgId_;
+            }
+
+            /**
+             * <code>uint64 msg_id = 1;</code>
+             *
+             * @param value The msgId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setMsgId(long value) {
+
+                msgId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>uint64 msg_id = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearMsgId() {
+
+                msgId_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object from_ = "";
+
+            /**
+             * <code>string from = 2;</code>
+             *
+             * @return The from.
+             */
+            public java.lang.String getFrom() {
+                java.lang.Object ref = from_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    from_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string from = 2;</code>
+             *
+             * @return The bytes for from.
+             */
+            public com.google.protobuf.ByteString
+            getFromBytes() {
+                java.lang.Object ref = from_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    from_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string from = 2;</code>
+             *
+             * @param value The from to set.
+             * @return This builder for chaining.
+             */
+            public Builder setFrom(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                from_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string from = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearFrom() {
+
+                from_ = getDefaultInstance().getFrom();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string from = 2;</code>
+             *
+             * @param value The bytes for from to set.
+             * @return This builder for chaining.
+             */
+            public Builder setFromBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                from_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object to_ = "";
+
+            /**
+             * <code>string to = 3;</code>
+             *
+             * @return The to.
+             */
+            public java.lang.String getTo() {
+                java.lang.Object ref = to_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    to_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 3;</code>
+             *
+             * @return The bytes for to.
+             */
+            public com.google.protobuf.ByteString
+            getToBytes() {
+                java.lang.Object ref = to_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    to_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 3;</code>
+             *
+             * @param value The to to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTo(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearTo() {
+
+                to_ = getDefaultInstance().getTo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 3;</code>
+             *
+             * @param value The bytes for to to set.
+             * @return This builder for chaining.
+             */
+            public Builder setToBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            private long time_;
+
+            /**
+             * <code>uint64 time = 4;</code>
+             *
+             * @return The time.
+             */
+            @java.lang.Override
+            public long getTime() {
+                return time_;
+            }
+
+            /**
+             * <code>uint64 time = 4;</code>
+             *
+             * @param value The time to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTime(long value) {
+
+                time_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>uint64 time = 4;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearTime() {
+
+                time_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private int msgType_;
+
+            /**
+             * <code>uint32 msg_type = 5;</code>
+             *
+             * @return The msgType.
+             */
+            @java.lang.Override
+            public int getMsgType() {
+                return msgType_;
+            }
+
+            /**
+             * <code>uint32 msg_type = 5;</code>
+             *
+             * @param value The msgType to set.
+             * @return This builder for chaining.
+             */
+            public Builder setMsgType(int value) {
+
+                msgType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>uint32 msg_type = 5;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearMsgType() {
+
+                msgType_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object content_ = "";
+
+            /**
+             * <code>string content = 6;</code>
+             *
+             * @return The content.
+             */
+            public java.lang.String getContent() {
+                java.lang.Object ref = content_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    content_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string content = 6;</code>
+             *
+             * @return The bytes for content.
+             */
+            public com.google.protobuf.ByteString
+            getContentBytes() {
+                java.lang.Object ref = content_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    content_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string content = 6;</code>
+             *
+             * @param value The content to set.
+             * @return This builder for chaining.
+             */
+            public Builder setContent(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                content_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string content = 6;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearContent() {
+
+                content_ = getDefaultInstance().getContent();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string content = 6;</code>
+             *
+             * @param value The bytes for content to set.
+             * @return This builder for chaining.
+             */
+            public Builder setContentBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                content_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object url_ = "";
+
+            /**
+             * <code>string url = 8;</code>
+             *
+             * @return The url.
+             */
+            public java.lang.String getUrl() {
+                java.lang.Object ref = url_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    url_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string url = 8;</code>
+             *
+             * @return The bytes for url.
+             */
+            public com.google.protobuf.ByteString
+            getUrlBytes() {
+                java.lang.Object ref = url_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    url_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string url = 8;</code>
+             *
+             * @param value The url to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUrl(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                url_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string url = 8;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearUrl() {
+
+                url_ = getDefaultInstance().getUrl();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string url = 8;</code>
+             *
+             * @param value The bytes for url to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUrlBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                url_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object property_ = "";
+
+            /**
+             * <code>string property = 9;</code>
+             *
+             * @return The property.
+             */
+            public java.lang.String getProperty() {
+                java.lang.Object ref = property_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    property_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string property = 9;</code>
+             *
+             * @return The bytes for property.
+             */
+            public com.google.protobuf.ByteString
+            getPropertyBytes() {
+                java.lang.Object ref = property_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    property_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string property = 9;</code>
+             *
+             * @param value The property to set.
+             * @return This builder for chaining.
+             */
+            public Builder setProperty(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                property_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string property = 9;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearProperty() {
+
+                property_ = getDefaultInstance().getProperty();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string property = 9;</code>
+             *
+             * @param value The bytes for property to set.
+             * @return This builder for chaining.
+             */
+            public Builder setPropertyBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                property_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object fromNick_ = "";
+
+            /**
+             * <code>string from_nick = 10;</code>
+             *
+             * @return The fromNick.
+             */
+            public java.lang.String getFromNick() {
+                java.lang.Object ref = fromNick_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    fromNick_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string from_nick = 10;</code>
+             *
+             * @return The bytes for fromNick.
+             */
+            public com.google.protobuf.ByteString
+            getFromNickBytes() {
+                java.lang.Object ref = fromNick_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    fromNick_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string from_nick = 10;</code>
+             *
+             * @param value The fromNick to set.
+             * @return This builder for chaining.
+             */
+            public Builder setFromNick(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                fromNick_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string from_nick = 10;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearFromNick() {
+
+                fromNick_ = getDefaultInstance().getFromNick();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string from_nick = 10;</code>
+             *
+             * @param value The bytes for fromNick to set.
+             * @return This builder for chaining.
+             */
+            public Builder setFromNickBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                fromNick_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object json_ = "";
+
+            /**
+             * <code>string json = 11;</code>
+             *
+             * @return The json.
+             */
+            public java.lang.String getJson() {
+                java.lang.Object ref = json_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    json_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string json = 11;</code>
+             *
+             * @return The bytes for json.
+             */
+            public com.google.protobuf.ByteString
+            getJsonBytes() {
+                java.lang.Object ref = json_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    json_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string json = 11;</code>
+             *
+             * @param value The json to set.
+             * @return This builder for chaining.
+             */
+            public Builder setJson(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                json_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string json = 11;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearJson() {
+
+                json_ = getDefaultInstance().getJson();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string json = 11;</code>
+             *
+             * @param value The bytes for json to set.
+             * @return This builder for chaining.
+             */
+            public Builder setJsonBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                json_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
+            // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
+        private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest DEFAULT_INSTANCE;
+
+        static {
+            DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest();
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<MessageRequest>
+                PARSER = new com.google.protobuf.AbstractParser<MessageRequest>() {
+            @java.lang.Override
+            public MessageRequest parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new MessageRequest(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<MessageRequest> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<MessageRequest> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageRequest)
-    private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest();
-    }
+    public interface MessageResponseOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
+            com.google.protobuf.MessageOrBuilder {
 
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <code>bool result = 1;</code>
+         *
+         * @return The result.
+         */
+        boolean getResult();
 
-    private static final com.google.protobuf.Parser<MessageRequest>
-        PARSER = new com.google.protobuf.AbstractParser<MessageRequest>() {
-      @java.lang.Override
-      public MessageRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MessageRequest(input, extensionRegistry);
-      }
-    };
+        /**
+         * <code>uint32 code = 2;</code>
+         *
+         * @return The code.
+         */
+        int getCode();
 
-    public static com.google.protobuf.Parser<MessageRequest> parser() {
-      return PARSER;
-    }
+        /**
+         * <code>string info = 3;</code>
+         *
+         * @return The info.
+         */
+        java.lang.String getInfo();
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<MessageRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MessageResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bool result = 1;</code>
-     * @return The result.
-     */
-    boolean getResult();
-
-    /**
-     * <code>uint32 code = 2;</code>
-     * @return The code.
-     */
-    int getCode();
-
-    /**
-     * <code>string info = 3;</code>
-     * @return The info.
-     */
-    java.lang.String getInfo();
-    /**
-     * <code>string info = 3;</code>
-     * @return The bytes for info.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string info = 3;</code>
+         *
+         * @return The bytes for info.
+         */
+        com.google.protobuf.ByteString
         getInfoBytes();
 
-    /**
-     * <code>uint32 expose = 4;</code>
-     * @return The expose.
-     */
-    int getExpose();
-  }
-  /**
-   * <pre>
-   *聊天响应
-   * </pre>
-   *
-   * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageResponse}
-   */
-  public static final class MessageResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
-      MessageResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MessageResponse.newBuilder() to construct.
-    private MessageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MessageResponse() {
-      info_ = "";
+        /**
+         * <code>uint32 expose = 4;</code>
+         *
+         * @return The expose.
+         */
+        int getExpose();
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MessageResponse();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MessageResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              result_ = input.readBool();
-              break;
-            }
-            case 16: {
-
-              code_ = input.readUInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              info_ = s;
-              break;
-            }
-            case 32: {
-
-              expose_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder.class);
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 1;
-    private boolean result_;
-    /**
-     * <code>bool result = 1;</code>
-     * @return The result.
-     */
-    @java.lang.Override
-    public boolean getResult() {
-      return result_;
-    }
-
-    public static final int CODE_FIELD_NUMBER = 2;
-    private int code_;
-    /**
-     * <code>uint32 code = 2;</code>
-     * @return The code.
-     */
-    @java.lang.Override
-    public int getCode() {
-      return code_;
-    }
-
-    public static final int INFO_FIELD_NUMBER = 3;
-    private volatile java.lang.Object info_;
-    /**
-     * <code>string info = 3;</code>
-     * @return The info.
-     */
-    @java.lang.Override
-    public java.lang.String getInfo() {
-      java.lang.Object ref = info_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        info_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string info = 3;</code>
-     * @return The bytes for info.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getInfoBytes() {
-      java.lang.Object ref = info_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        info_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EXPOSE_FIELD_NUMBER = 4;
-    private int expose_;
-    /**
-     * <code>uint32 expose = 4;</code>
-     * @return The expose.
-     */
-    @java.lang.Override
-    public int getExpose() {
-      return expose_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (result_ != false) {
-        output.writeBool(1, result_);
-      }
-      if (code_ != 0) {
-        output.writeUInt32(2, code_);
-      }
-      if (!getInfoBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, info_);
-      }
-      if (expose_ != 0) {
-        output.writeUInt32(4, expose_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (result_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, result_);
-      }
-      if (code_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, code_);
-      }
-      if (!getInfoBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, info_);
-      }
-      if (expose_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, expose_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse)) {
-        return super.equals(obj);
-      }
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse) obj;
-
-      if (getResult()
-          != other.getResult()) return false;
-      if (getCode()
-          != other.getCode()) return false;
-      if (!getInfo()
-          .equals(other.getInfo())) return false;
-      if (getExpose()
-          != other.getExpose()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getResult());
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode();
-      hash = (37 * hash) + INFO_FIELD_NUMBER;
-      hash = (53 * hash) + getInfo().hashCode();
-      hash = (37 * hash) + EXPOSE_FIELD_NUMBER;
-      hash = (53 * hash) + getExpose();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *聊天响应
+     * 聊天响应
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
-      }
+    public static final class MessageResponse extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
+            MessageResponseOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder.class);
-      }
-
-      // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use MessageResponse.newBuilder() to construct.
+        private MessageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        result_ = false;
 
-        code_ = 0;
-
-        info_ = "";
-
-        expose_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getDefaultInstanceForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse build() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private MessageResponse() {
+            info_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse buildPartial() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse(this);
-        result.result_ = result_;
-        result.code_ = code_;
-        result.info_ = info_;
-        result.expose_ = expose_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse) {
-          return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new MessageResponse();
         }
-      }
 
-      public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse other) {
-        if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance()) return this;
-        if (other.getResult() != false) {
-          setResult(other.getResult());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getCode() != 0) {
-          setCode(other.getCode());
+
+        private MessageResponse(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 8: {
+
+                            result_ = input.readBool();
+                            break;
+                        }
+                        case 16: {
+
+                            code_ = input.readUInt32();
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            info_ = s;
+                            break;
+                        }
+                        case 32: {
+
+                            expose_ = input.readUInt32();
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        if (!other.getInfo().isEmpty()) {
-          info_ = other.info_;
-          onChanged();
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
         }
-        if (other.getExpose() != 0) {
-          setExpose(other.getExpose());
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder.class);
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+        public static final int RESULT_FIELD_NUMBER = 1;
+        private boolean result_;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        /**
+         * <code>bool result = 1;</code>
+         *
+         * @return The result.
+         */
+        @java.lang.Override
+        public boolean getResult() {
+            return result_;
         }
-        return this;
-      }
 
-      private boolean result_ ;
-      /**
-       * <code>bool result = 1;</code>
-       * @return The result.
-       */
-      @java.lang.Override
-      public boolean getResult() {
-        return result_;
-      }
-      /**
-       * <code>bool result = 1;</code>
-       * @param value The result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResult(boolean value) {
-        
-        result_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool result = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResult() {
-        
-        result_ = false;
-        onChanged();
-        return this;
-      }
+        public static final int CODE_FIELD_NUMBER = 2;
+        private int code_;
 
-      private int code_ ;
-      /**
-       * <code>uint32 code = 2;</code>
-       * @return The code.
-       */
-      @java.lang.Override
-      public int getCode() {
-        return code_;
-      }
-      /**
-       * <code>uint32 code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(int value) {
-        
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object info_ = "";
-      /**
-       * <code>string info = 3;</code>
-       * @return The info.
-       */
-      public java.lang.String getInfo() {
-        java.lang.Object ref = info_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          info_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <code>uint32 code = 2;</code>
+         *
+         * @return The code.
+         */
+        @java.lang.Override
+        public int getCode() {
+            return code_;
         }
-      }
-      /**
-       * <code>string info = 3;</code>
-       * @return The bytes for info.
-       */
-      public com.google.protobuf.ByteString
-          getInfoBytes() {
-        java.lang.Object ref = info_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          info_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int INFO_FIELD_NUMBER = 3;
+        private volatile java.lang.Object info_;
+
+        /**
+         * <code>string info = 3;</code>
+         *
+         * @return The info.
+         */
+        @java.lang.Override
+        public java.lang.String getInfo() {
+            java.lang.Object ref = info_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                info_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string info = 3;</code>
-       * @param value The info to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInfo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        info_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string info = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInfo() {
-        
-        info_ = getDefaultInstance().getInfo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string info = 3;</code>
-       * @param value The bytes for info to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInfoBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        info_ = value;
-        onChanged();
-        return this;
-      }
 
-      private int expose_ ;
-      /**
-       * <code>uint32 expose = 4;</code>
-       * @return The expose.
-       */
-      @java.lang.Override
-      public int getExpose() {
-        return expose_;
-      }
-      /**
-       * <code>uint32 expose = 4;</code>
-       * @param value The expose to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExpose(int value) {
-        
-        expose_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 expose = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExpose() {
-        
-        expose_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
+        /**
+         * <code>string info = 3;</code>
+         *
+         * @return The bytes for info.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getInfoBytes() {
+            java.lang.Object ref = info_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                info_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        public static final int EXPOSE_FIELD_NUMBER = 4;
+        private int expose_;
+
+        /**
+         * <code>uint32 expose = 4;</code>
+         *
+         * @return The expose.
+         */
+        @java.lang.Override
+        public int getExpose() {
+            return expose_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (result_ != false) {
+                output.writeBool(1, result_);
+            }
+            if (code_ != 0) {
+                output.writeUInt32(2, code_);
+            }
+            if (!getInfoBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, info_);
+            }
+            if (expose_ != 0) {
+                output.writeUInt32(4, expose_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (result_ != false) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBoolSize(1, result_);
+            }
+            if (code_ != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt32Size(2, code_);
+            }
+            if (!getInfoBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, info_);
+            }
+            if (expose_ != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt32Size(4, expose_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse)) {
+                return super.equals(obj);
+            }
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse) obj;
+
+            if (getResult()
+                    != other.getResult()) return false;
+            if (getCode()
+                    != other.getCode()) return false;
+            if (!getInfo()
+                    .equals(other.getInfo())) return false;
+            if (getExpose()
+                    != other.getExpose()) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + RESULT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+                    getResult());
+            hash = (37 * hash) + CODE_FIELD_NUMBER;
+            hash = (53 * hash) + getCode();
+            hash = (37 * hash) + INFO_FIELD_NUMBER;
+            hash = (53 * hash) + getInfo().hashCode();
+            hash = (37 * hash) + EXPOSE_FIELD_NUMBER;
+            hash = (53 * hash) + getExpose();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 聊天响应
+         * </pre>
+         * <p>
+         * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageResponse}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder.class);
+            }
+
+            // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                result_ = false;
+
+                code_ = 0;
+
+                info_ = "";
+
+                expose_ = 0;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getDefaultInstanceForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse build() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse buildPartial() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse(this);
+                result.result_ = result_;
+                result.code_ = code_;
+                result.info_ = info_;
+                result.expose_ = expose_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse) {
+                    return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse other) {
+                if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance())
+                    return this;
+                if (other.getResult() != false) {
+                    setResult(other.getResult());
+                }
+                if (other.getCode() != 0) {
+                    setCode(other.getCode());
+                }
+                if (!other.getInfo().isEmpty()) {
+                    info_ = other.info_;
+                    onChanged();
+                }
+                if (other.getExpose() != 0) {
+                    setExpose(other.getExpose());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private boolean result_;
+
+            /**
+             * <code>bool result = 1;</code>
+             *
+             * @return The result.
+             */
+            @java.lang.Override
+            public boolean getResult() {
+                return result_;
+            }
+
+            /**
+             * <code>bool result = 1;</code>
+             *
+             * @param value The result to set.
+             * @return This builder for chaining.
+             */
+            public Builder setResult(boolean value) {
+
+                result_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bool result = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearResult() {
+
+                result_ = false;
+                onChanged();
+                return this;
+            }
+
+            private int code_;
+
+            /**
+             * <code>uint32 code = 2;</code>
+             *
+             * @return The code.
+             */
+            @java.lang.Override
+            public int getCode() {
+                return code_;
+            }
+
+            /**
+             * <code>uint32 code = 2;</code>
+             *
+             * @param value The code to set.
+             * @return This builder for chaining.
+             */
+            public Builder setCode(int value) {
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>uint32 code = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearCode() {
+
+                code_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object info_ = "";
+
+            /**
+             * <code>string info = 3;</code>
+             *
+             * @return The info.
+             */
+            public java.lang.String getInfo() {
+                java.lang.Object ref = info_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    info_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string info = 3;</code>
+             *
+             * @return The bytes for info.
+             */
+            public com.google.protobuf.ByteString
+            getInfoBytes() {
+                java.lang.Object ref = info_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    info_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string info = 3;</code>
+             *
+             * @param value The info to set.
+             * @return This builder for chaining.
+             */
+            public Builder setInfo(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                info_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string info = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearInfo() {
+
+                info_ = getDefaultInstance().getInfo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string info = 3;</code>
+             *
+             * @param value The bytes for info to set.
+             * @return This builder for chaining.
+             */
+            public Builder setInfoBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                info_ = value;
+                onChanged();
+                return this;
+            }
+
+            private int expose_;
+
+            /**
+             * <code>uint32 expose = 4;</code>
+             *
+             * @return The expose.
+             */
+            @java.lang.Override
+            public int getExpose() {
+                return expose_;
+            }
+
+            /**
+             * <code>uint32 expose = 4;</code>
+             *
+             * @param value The expose to set.
+             * @return This builder for chaining.
+             */
+            public Builder setExpose(int value) {
+
+                expose_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>uint32 expose = 4;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearExpose() {
+
+                expose_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
+            // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
+        private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse DEFAULT_INSTANCE;
+
+        static {
+            DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse();
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<MessageResponse>
+                PARSER = new com.google.protobuf.AbstractParser<MessageResponse>() {
+            @java.lang.Override
+            public MessageResponse parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new MessageResponse(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<MessageResponse> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<MessageResponse> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageResponse)
-    private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse();
-    }
+    public interface MessageNotificationOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
+            com.google.protobuf.MessageOrBuilder {
 
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <code>uint64 no_id = 1;</code>
+         *
+         * @return The noId.
+         */
+        long getNoId();
 
-    private static final com.google.protobuf.Parser<MessageResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MessageResponse>() {
-      @java.lang.Override
-      public MessageResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MessageResponse(input, extensionRegistry);
-      }
-    };
+        /**
+         * <code>string json = 2;</code>
+         *
+         * @return The json.
+         */
+        java.lang.String getJson();
 
-    public static com.google.protobuf.Parser<MessageResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MessageResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MessageNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>uint64 no_id = 1;</code>
-     * @return The noId.
-     */
-    long getNoId();
-
-    /**
-     * <code>string json = 2;</code>
-     * @return The json.
-     */
-    java.lang.String getJson();
-    /**
-     * <code>string json = 2;</code>
-     * @return The bytes for json.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string json = 2;</code>
+         *
+         * @return The bytes for json.
+         */
+        com.google.protobuf.ByteString
         getJsonBytes();
 
-    /**
-     * <code>string timestamp = 3;</code>
-     * @return The timestamp.
-     */
-    java.lang.String getTimestamp();
-    /**
-     * <code>string timestamp = 3;</code>
-     * @return The bytes for timestamp.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string timestamp = 3;</code>
+         *
+         * @return The timestamp.
+         */
+        java.lang.String getTimestamp();
+
+        /**
+         * <code>string timestamp = 3;</code>
+         *
+         * @return The bytes for timestamp.
+         */
+        com.google.protobuf.ByteString
         getTimestampBytes();
-  }
-  /**
-   * <pre>
-   *通知
-   * </pre>
-   *
-   * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageNotification}
-   */
-  public static final class MessageNotification extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
-      MessageNotificationOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MessageNotification.newBuilder() to construct.
-    private MessageNotification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MessageNotification() {
-      json_ = "";
-      timestamp_ = "";
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MessageNotification();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MessageNotification(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              noId_ = input.readUInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              json_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              timestamp_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder.class);
-    }
-
-    public static final int NO_ID_FIELD_NUMBER = 1;
-    private long noId_;
-    /**
-     * <code>uint64 no_id = 1;</code>
-     * @return The noId.
-     */
-    @java.lang.Override
-    public long getNoId() {
-      return noId_;
-    }
-
-    public static final int JSON_FIELD_NUMBER = 2;
-    private volatile java.lang.Object json_;
-    /**
-     * <code>string json = 2;</code>
-     * @return The json.
-     */
-    @java.lang.Override
-    public java.lang.String getJson() {
-      java.lang.Object ref = json_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        json_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string json = 2;</code>
-     * @return The bytes for json.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getJsonBytes() {
-      java.lang.Object ref = json_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        json_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TIMESTAMP_FIELD_NUMBER = 3;
-    private volatile java.lang.Object timestamp_;
-    /**
-     * <code>string timestamp = 3;</code>
-     * @return The timestamp.
-     */
-    @java.lang.Override
-    public java.lang.String getTimestamp() {
-      java.lang.Object ref = timestamp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        timestamp_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string timestamp = 3;</code>
-     * @return The bytes for timestamp.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTimestampBytes() {
-      java.lang.Object ref = timestamp_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        timestamp_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (noId_ != 0L) {
-        output.writeUInt64(1, noId_);
-      }
-      if (!getJsonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, json_);
-      }
-      if (!getTimestampBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, timestamp_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (noId_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, noId_);
-      }
-      if (!getJsonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, json_);
-      }
-      if (!getTimestampBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, timestamp_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification)) {
-        return super.equals(obj);
-      }
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification) obj;
-
-      if (getNoId()
-          != other.getNoId()) return false;
-      if (!getJson()
-          .equals(other.getJson())) return false;
-      if (!getTimestamp()
-          .equals(other.getTimestamp())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NO_ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getNoId());
-      hash = (37 * hash) + JSON_FIELD_NUMBER;
-      hash = (53 * hash) + getJson().hashCode();
-      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
-      hash = (53 * hash) + getTimestamp().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *通知
+     * 通知
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageNotification}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
-      }
+    public static final class MessageNotification extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
+            MessageNotificationOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder.class);
-      }
-
-      // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use MessageNotification.newBuilder() to construct.
+        private MessageNotification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        noId_ = 0L;
 
-        json_ = "";
-
-        timestamp_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getDefaultInstanceForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification build() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private MessageNotification() {
+            json_ = "";
+            timestamp_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification buildPartial() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification(this);
-        result.noId_ = noId_;
-        result.json_ = json_;
-        result.timestamp_ = timestamp_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification) {
-          return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new MessageNotification();
         }
-      }
 
-      public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification other) {
-        if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance()) return this;
-        if (other.getNoId() != 0L) {
-          setNoId(other.getNoId());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getJson().isEmpty()) {
-          json_ = other.json_;
-          onChanged();
+
+        private MessageNotification(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 8: {
+
+                            noId_ = input.readUInt64();
+                            break;
+                        }
+                        case 18: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            json_ = s;
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            timestamp_ = s;
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        if (!other.getTimestamp().isEmpty()) {
-          timestamp_ = other.timestamp_;
-          onChanged();
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder.class);
         }
-        return this;
-      }
 
-      private long noId_ ;
-      /**
-       * <code>uint64 no_id = 1;</code>
-       * @return The noId.
-       */
-      @java.lang.Override
-      public long getNoId() {
-        return noId_;
-      }
-      /**
-       * <code>uint64 no_id = 1;</code>
-       * @param value The noId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNoId(long value) {
-        
-        noId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 no_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNoId() {
-        
-        noId_ = 0L;
-        onChanged();
-        return this;
-      }
+        public static final int NO_ID_FIELD_NUMBER = 1;
+        private long noId_;
 
-      private java.lang.Object json_ = "";
-      /**
-       * <code>string json = 2;</code>
-       * @return The json.
-       */
-      public java.lang.String getJson() {
-        java.lang.Object ref = json_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          json_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <code>uint64 no_id = 1;</code>
+         *
+         * @return The noId.
+         */
+        @java.lang.Override
+        public long getNoId() {
+            return noId_;
         }
-      }
-      /**
-       * <code>string json = 2;</code>
-       * @return The bytes for json.
-       */
-      public com.google.protobuf.ByteString
-          getJsonBytes() {
-        java.lang.Object ref = json_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          json_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int JSON_FIELD_NUMBER = 2;
+        private volatile java.lang.Object json_;
+
+        /**
+         * <code>string json = 2;</code>
+         *
+         * @return The json.
+         */
+        @java.lang.Override
+        public java.lang.String getJson() {
+            java.lang.Object ref = json_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                json_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string json = 2;</code>
-       * @param value The json to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJson(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        json_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJson() {
-        
-        json_ = getDefaultInstance().getJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json = 2;</code>
-       * @param value The bytes for json to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        json_ = value;
-        onChanged();
-        return this;
-      }
 
-      private java.lang.Object timestamp_ = "";
-      /**
-       * <code>string timestamp = 3;</code>
-       * @return The timestamp.
-       */
-      public java.lang.String getTimestamp() {
-        java.lang.Object ref = timestamp_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          timestamp_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <code>string json = 2;</code>
+         *
+         * @return The bytes for json.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getJsonBytes() {
+            java.lang.Object ref = json_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                json_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
-      }
-      /**
-       * <code>string timestamp = 3;</code>
-       * @return The bytes for timestamp.
-       */
-      public com.google.protobuf.ByteString
-          getTimestampBytes() {
-        java.lang.Object ref = timestamp_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          timestamp_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int TIMESTAMP_FIELD_NUMBER = 3;
+        private volatile java.lang.Object timestamp_;
+
+        /**
+         * <code>string timestamp = 3;</code>
+         *
+         * @return The timestamp.
+         */
+        @java.lang.Override
+        public java.lang.String getTimestamp() {
+            java.lang.Object ref = timestamp_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                timestamp_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string timestamp = 3;</code>
-       * @param value The timestamp to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTimestamp(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        timestamp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string timestamp = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTimestamp() {
-        
-        timestamp_ = getDefaultInstance().getTimestamp();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string timestamp = 3;</code>
-       * @param value The bytes for timestamp to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTimestampBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        timestamp_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>string timestamp = 3;</code>
+         *
+         * @return The bytes for timestamp.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getTimestampBytes() {
+            java.lang.Object ref = timestamp_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                timestamp_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (noId_ != 0L) {
+                output.writeUInt64(1, noId_);
+            }
+            if (!getJsonBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, json_);
+            }
+            if (!getTimestampBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, timestamp_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (noId_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(1, noId_);
+            }
+            if (!getJsonBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, json_);
+            }
+            if (!getTimestampBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, timestamp_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification)) {
+                return super.equals(obj);
+            }
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification) obj;
+
+            if (getNoId()
+                    != other.getNoId()) return false;
+            if (!getJson()
+                    .equals(other.getJson())) return false;
+            if (!getTimestamp()
+                    .equals(other.getTimestamp())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NO_ID_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                    getNoId());
+            hash = (37 * hash) + JSON_FIELD_NUMBER;
+            hash = (53 * hash) + getJson().hashCode();
+            hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+            hash = (53 * hash) + getTimestamp().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 通知
+         * </pre>
+         * <p>
+         * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageNotification}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder.class);
+            }
+
+            // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                noId_ = 0L;
+
+                json_ = "";
+
+                timestamp_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getDefaultInstanceForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification build() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification buildPartial() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification(this);
+                result.noId_ = noId_;
+                result.json_ = json_;
+                result.timestamp_ = timestamp_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification) {
+                    return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification other) {
+                if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance())
+                    return this;
+                if (other.getNoId() != 0L) {
+                    setNoId(other.getNoId());
+                }
+                if (!other.getJson().isEmpty()) {
+                    json_ = other.json_;
+                    onChanged();
+                }
+                if (!other.getTimestamp().isEmpty()) {
+                    timestamp_ = other.timestamp_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private long noId_;
+
+            /**
+             * <code>uint64 no_id = 1;</code>
+             *
+             * @return The noId.
+             */
+            @java.lang.Override
+            public long getNoId() {
+                return noId_;
+            }
+
+            /**
+             * <code>uint64 no_id = 1;</code>
+             *
+             * @param value The noId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setNoId(long value) {
+
+                noId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>uint64 no_id = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearNoId() {
+
+                noId_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object json_ = "";
+
+            /**
+             * <code>string json = 2;</code>
+             *
+             * @return The json.
+             */
+            public java.lang.String getJson() {
+                java.lang.Object ref = json_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    json_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string json = 2;</code>
+             *
+             * @return The bytes for json.
+             */
+            public com.google.protobuf.ByteString
+            getJsonBytes() {
+                java.lang.Object ref = json_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    json_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string json = 2;</code>
+             *
+             * @param value The json to set.
+             * @return This builder for chaining.
+             */
+            public Builder setJson(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                json_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string json = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearJson() {
+
+                json_ = getDefaultInstance().getJson();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string json = 2;</code>
+             *
+             * @param value The bytes for json to set.
+             * @return This builder for chaining.
+             */
+            public Builder setJsonBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                json_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object timestamp_ = "";
+
+            /**
+             * <code>string timestamp = 3;</code>
+             *
+             * @return The timestamp.
+             */
+            public java.lang.String getTimestamp() {
+                java.lang.Object ref = timestamp_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    timestamp_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string timestamp = 3;</code>
+             *
+             * @return The bytes for timestamp.
+             */
+            public com.google.protobuf.ByteString
+            getTimestampBytes() {
+                java.lang.Object ref = timestamp_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    timestamp_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string timestamp = 3;</code>
+             *
+             * @param value The timestamp to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTimestamp(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                timestamp_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string timestamp = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearTimestamp() {
+
+                timestamp_ = getDefaultInstance().getTimestamp();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string timestamp = 3;</code>
+             *
+             * @param value The bytes for timestamp to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTimestampBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                timestamp_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
+            // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
+        private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification DEFAULT_INSTANCE;
+
+        static {
+            DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification();
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<MessageNotification>
+                PARSER = new com.google.protobuf.AbstractParser<MessageNotification>() {
+            @java.lang.Override
+            public MessageNotification parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new MessageNotification(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<MessageNotification> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<MessageNotification> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageNotification)
-    private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification();
-    }
+    public interface MessageHeartBeatOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
+            com.google.protobuf.MessageOrBuilder {
 
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <code>uint32 seq = 1;</code>
+         *
+         * @return The seq.
+         */
+        int getSeq();
 
-    private static final com.google.protobuf.Parser<MessageNotification>
-        PARSER = new com.google.protobuf.AbstractParser<MessageNotification>() {
-      @java.lang.Override
-      public MessageNotification parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MessageNotification(input, extensionRegistry);
-      }
-    };
+        /**
+         * <code>string uid = 2;</code>
+         *
+         * @return The uid.
+         */
+        java.lang.String getUid();
 
-    public static com.google.protobuf.Parser<MessageNotification> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MessageNotification> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MessageHeartBeatOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>uint32 seq = 1;</code>
-     * @return The seq.
-     */
-    int getSeq();
-
-    /**
-     * <code>string uid = 2;</code>
-     * @return The uid.
-     */
-    java.lang.String getUid();
-    /**
-     * <code>string uid = 2;</code>
-     * @return The bytes for uid.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string uid = 2;</code>
+         *
+         * @return The bytes for uid.
+         */
+        com.google.protobuf.ByteString
         getUidBytes();
 
-    /**
-     * <code>string json = 3;</code>
-     * @return The json.
-     */
-    java.lang.String getJson();
-    /**
-     * <code>string json = 3;</code>
-     * @return The bytes for json.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string json = 3;</code>
+         *
+         * @return The json.
+         */
+        java.lang.String getJson();
+
+        /**
+         * <code>string json = 3;</code>
+         *
+         * @return The bytes for json.
+         */
+        com.google.protobuf.ByteString
         getJsonBytes();
-  }
-  /**
-   * <pre>
-   *心跳
-   * </pre>
-   *
-   * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat}
-   */
-  public static final class MessageHeartBeat extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
-      MessageHeartBeatOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MessageHeartBeat.newBuilder() to construct.
-    private MessageHeartBeat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MessageHeartBeat() {
-      uid_ = "";
-      json_ = "";
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MessageHeartBeat();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MessageHeartBeat(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              seq_ = input.readUInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uid_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              json_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder.class);
-    }
-
-    public static final int SEQ_FIELD_NUMBER = 1;
-    private int seq_;
-    /**
-     * <code>uint32 seq = 1;</code>
-     * @return The seq.
-     */
-    @java.lang.Override
-    public int getSeq() {
-      return seq_;
-    }
-
-    public static final int UID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object uid_;
-    /**
-     * <code>string uid = 2;</code>
-     * @return The uid.
-     */
-    @java.lang.Override
-    public java.lang.String getUid() {
-      java.lang.Object ref = uid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string uid = 2;</code>
-     * @return The bytes for uid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUidBytes() {
-      java.lang.Object ref = uid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int JSON_FIELD_NUMBER = 3;
-    private volatile java.lang.Object json_;
-    /**
-     * <code>string json = 3;</code>
-     * @return The json.
-     */
-    @java.lang.Override
-    public java.lang.String getJson() {
-      java.lang.Object ref = json_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        json_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string json = 3;</code>
-     * @return The bytes for json.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getJsonBytes() {
-      java.lang.Object ref = json_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        json_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (seq_ != 0) {
-        output.writeUInt32(1, seq_);
-      }
-      if (!getUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
-      }
-      if (!getJsonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, json_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (seq_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, seq_);
-      }
-      if (!getUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
-      }
-      if (!getJsonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, json_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat)) {
-        return super.equals(obj);
-      }
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat) obj;
-
-      if (getSeq()
-          != other.getSeq()) return false;
-      if (!getUid()
-          .equals(other.getUid())) return false;
-      if (!getJson()
-          .equals(other.getJson())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SEQ_FIELD_NUMBER;
-      hash = (53 * hash) + getSeq();
-      hash = (37 * hash) + UID_FIELD_NUMBER;
-      hash = (53 * hash) + getUid().hashCode();
-      hash = (37 * hash) + JSON_FIELD_NUMBER;
-      hash = (53 * hash) + getJson().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *心跳
+     * 心跳
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
-      }
+    public static final class MessageHeartBeat extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
+            MessageHeartBeatOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder.class);
-      }
-
-      // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use MessageHeartBeat.newBuilder() to construct.
+        private MessageHeartBeat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        seq_ = 0;
 
-        uid_ = "";
-
-        json_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getDefaultInstanceForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat build() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private MessageHeartBeat() {
+            uid_ = "";
+            json_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat buildPartial() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat(this);
-        result.seq_ = seq_;
-        result.uid_ = uid_;
-        result.json_ = json_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat) {
-          return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new MessageHeartBeat();
         }
-      }
 
-      public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat other) {
-        if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance()) return this;
-        if (other.getSeq() != 0) {
-          setSeq(other.getSeq());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getUid().isEmpty()) {
-          uid_ = other.uid_;
-          onChanged();
+
+        private MessageHeartBeat(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 8: {
+
+                            seq_ = input.readUInt32();
+                            break;
+                        }
+                        case 18: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            uid_ = s;
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            json_ = s;
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        if (!other.getJson().isEmpty()) {
-          json_ = other.json_;
-          onChanged();
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder.class);
         }
-        return this;
-      }
 
-      private int seq_ ;
-      /**
-       * <code>uint32 seq = 1;</code>
-       * @return The seq.
-       */
-      @java.lang.Override
-      public int getSeq() {
-        return seq_;
-      }
-      /**
-       * <code>uint32 seq = 1;</code>
-       * @param value The seq to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSeq(int value) {
-        
-        seq_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 seq = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSeq() {
-        
-        seq_ = 0;
-        onChanged();
-        return this;
-      }
+        public static final int SEQ_FIELD_NUMBER = 1;
+        private int seq_;
 
-      private java.lang.Object uid_ = "";
-      /**
-       * <code>string uid = 2;</code>
-       * @return The uid.
-       */
-      public java.lang.String getUid() {
-        java.lang.Object ref = uid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <code>uint32 seq = 1;</code>
+         *
+         * @return The seq.
+         */
+        @java.lang.Override
+        public int getSeq() {
+            return seq_;
         }
-      }
-      /**
-       * <code>string uid = 2;</code>
-       * @return The bytes for uid.
-       */
-      public com.google.protobuf.ByteString
-          getUidBytes() {
-        java.lang.Object ref = uid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int UID_FIELD_NUMBER = 2;
+        private volatile java.lang.Object uid_;
+
+        /**
+         * <code>string uid = 2;</code>
+         *
+         * @return The uid.
+         */
+        @java.lang.Override
+        public java.lang.String getUid() {
+            java.lang.Object ref = uid_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                uid_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string uid = 2;</code>
-       * @param value The uid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string uid = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUid() {
-        
-        uid_ = getDefaultInstance().getUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string uid = 2;</code>
-       * @param value The bytes for uid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uid_ = value;
-        onChanged();
-        return this;
-      }
 
-      private java.lang.Object json_ = "";
-      /**
-       * <code>string json = 3;</code>
-       * @return The json.
-       */
-      public java.lang.String getJson() {
-        java.lang.Object ref = json_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          json_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <code>string uid = 2;</code>
+         *
+         * @return The bytes for uid.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getUidBytes() {
+            java.lang.Object ref = uid_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                uid_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
-      }
-      /**
-       * <code>string json = 3;</code>
-       * @return The bytes for json.
-       */
-      public com.google.protobuf.ByteString
-          getJsonBytes() {
-        java.lang.Object ref = json_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          json_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int JSON_FIELD_NUMBER = 3;
+        private volatile java.lang.Object json_;
+
+        /**
+         * <code>string json = 3;</code>
+         *
+         * @return The json.
+         */
+        @java.lang.Override
+        public java.lang.String getJson() {
+            java.lang.Object ref = json_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                json_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string json = 3;</code>
-       * @param value The json to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJson(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        json_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJson() {
-        
-        json_ = getDefaultInstance().getJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json = 3;</code>
-       * @param value The bytes for json to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        json_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>string json = 3;</code>
+         *
+         * @return The bytes for json.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getJsonBytes() {
+            java.lang.Object ref = json_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                json_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (seq_ != 0) {
+                output.writeUInt32(1, seq_);
+            }
+            if (!getUidBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
+            }
+            if (!getJsonBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, json_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (seq_ != 0) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt32Size(1, seq_);
+            }
+            if (!getUidBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
+            }
+            if (!getJsonBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, json_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat)) {
+                return super.equals(obj);
+            }
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat) obj;
+
+            if (getSeq()
+                    != other.getSeq()) return false;
+            if (!getUid()
+                    .equals(other.getUid())) return false;
+            if (!getJson()
+                    .equals(other.getJson())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + SEQ_FIELD_NUMBER;
+            hash = (53 * hash) + getSeq();
+            hash = (37 * hash) + UID_FIELD_NUMBER;
+            hash = (53 * hash) + getUid().hashCode();
+            hash = (37 * hash) + JSON_FIELD_NUMBER;
+            hash = (53 * hash) + getJson().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         * <p>
+         * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder.class);
+            }
+
+            // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                seq_ = 0;
+
+                uid_ = "";
+
+                json_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getDefaultInstanceForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat build() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat buildPartial() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat(this);
+                result.seq_ = seq_;
+                result.uid_ = uid_;
+                result.json_ = json_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat) {
+                    return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat other) {
+                if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance())
+                    return this;
+                if (other.getSeq() != 0) {
+                    setSeq(other.getSeq());
+                }
+                if (!other.getUid().isEmpty()) {
+                    uid_ = other.uid_;
+                    onChanged();
+                }
+                if (!other.getJson().isEmpty()) {
+                    json_ = other.json_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int seq_;
+
+            /**
+             * <code>uint32 seq = 1;</code>
+             *
+             * @return The seq.
+             */
+            @java.lang.Override
+            public int getSeq() {
+                return seq_;
+            }
+
+            /**
+             * <code>uint32 seq = 1;</code>
+             *
+             * @param value The seq to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSeq(int value) {
+
+                seq_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>uint32 seq = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearSeq() {
+
+                seq_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object uid_ = "";
+
+            /**
+             * <code>string uid = 2;</code>
+             *
+             * @return The uid.
+             */
+            public java.lang.String getUid() {
+                java.lang.Object ref = uid_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    uid_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string uid = 2;</code>
+             *
+             * @return The bytes for uid.
+             */
+            public com.google.protobuf.ByteString
+            getUidBytes() {
+                java.lang.Object ref = uid_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    uid_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string uid = 2;</code>
+             *
+             * @param value The uid to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUid(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                uid_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string uid = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearUid() {
+
+                uid_ = getDefaultInstance().getUid();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string uid = 2;</code>
+             *
+             * @param value The bytes for uid to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUidBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                uid_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object json_ = "";
+
+            /**
+             * <code>string json = 3;</code>
+             *
+             * @return The json.
+             */
+            public java.lang.String getJson() {
+                java.lang.Object ref = json_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    json_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string json = 3;</code>
+             *
+             * @return The bytes for json.
+             */
+            public com.google.protobuf.ByteString
+            getJsonBytes() {
+                java.lang.Object ref = json_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    json_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string json = 3;</code>
+             *
+             * @param value The json to set.
+             * @return This builder for chaining.
+             */
+            public Builder setJson(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                json_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string json = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearJson() {
+
+                json_ = getDefaultInstance().getJson();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string json = 3;</code>
+             *
+             * @param value The bytes for json to set.
+             * @return This builder for chaining.
+             */
+            public Builder setJsonBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                json_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
+            // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
+        private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat DEFAULT_INSTANCE;
+
+        static {
+            DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat();
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<MessageHeartBeat>
+                PARSER = new com.google.protobuf.AbstractParser<MessageHeartBeat>() {
+            @java.lang.Override
+            public MessageHeartBeat parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new MessageHeartBeat(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<MessageHeartBeat> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<MessageHeartBeat> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat)
-    private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat();
-    }
+    public interface MessageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.Message)
+            com.google.protobuf.MessageOrBuilder {
 
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <pre>
+         * 通用字段: 消息类型
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+         *
+         * @return The enum numeric value on the wire for type.
+         */
+        int getTypeValue();
 
-    private static final com.google.protobuf.Parser<MessageHeartBeat>
-        PARSER = new com.google.protobuf.AbstractParser<MessageHeartBeat>() {
-      @java.lang.Override
-      public MessageHeartBeat parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MessageHeartBeat(input, extensionRegistry);
-      }
-    };
+        /**
+         * <pre>
+         * 通用字段: 消息类型
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+         *
+         * @return The type.
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType getType();
 
-    public static com.google.protobuf.Parser<MessageHeartBeat> parser() {
-      return PARSER;
-    }
+        /**
+         * <pre>
+         * 通用字段：消息序列号
+         * </pre>
+         *
+         * <code>uint64 sequence = 2;</code>
+         *
+         * @return The sequence.
+         */
+        long getSequence();
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<MessageHeartBeat> getParserForType() {
-      return PARSER;
-    }
+        /**
+         * <pre>
+         * 通用字段：会话id
+         * </pre>
+         *
+         * <code>string session_id = 3;</code>
+         *
+         * @return The sessionId.
+         */
+        java.lang.String getSessionId();
 
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.lesterlaucn.chatboot.common.bean.msg.Message)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *通用字段: 消息类型
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    int getTypeValue();
-    /**
-     * <pre>
-     *通用字段: 消息类型
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-     * @return The type.
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType getType();
-
-    /**
-     * <pre>
-     *通用字段：消息序列号
-     * </pre>
-     *
-     * <code>uint64 sequence = 2;</code>
-     * @return The sequence.
-     */
-    long getSequence();
-
-    /**
-     * <pre>
-     *通用字段：会话id
-     * </pre>
-     *
-     * <code>string session_id = 3;</code>
-     * @return The sessionId.
-     */
-    java.lang.String getSessionId();
-    /**
-     * <pre>
-     *通用字段：会话id
-     * </pre>
-     *
-     * <code>string session_id = 3;</code>
-     * @return The bytes for sessionId.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * 通用字段：会话id
+         * </pre>
+         *
+         * <code>string session_id = 3;</code>
+         *
+         * @return The bytes for sessionId.
+         */
+        com.google.protobuf.ByteString
         getSessionIdBytes();
 
-    /**
-     * <pre>
-     *登录请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-     * @return Whether the loginRequest field is set.
-     */
-    boolean hasLoginRequest();
-    /**
-     * <pre>
-     *登录请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-     * @return The loginRequest.
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getLoginRequest();
-    /**
-     * <pre>
-     *登录请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder getLoginRequestOrBuilder();
+        /**
+         * <pre>
+         * 登录请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+         *
+         * @return Whether the loginRequest field is set.
+         */
+        boolean hasLoginRequest();
+
+        /**
+         * <pre>
+         * 登录请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+         *
+         * @return The loginRequest.
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getLoginRequest();
+
+        /**
+         * <pre>
+         * 登录请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder getLoginRequestOrBuilder();
+
+        /**
+         * <pre>
+         * 登录响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+         *
+         * @return Whether the loginResponse field is set.
+         */
+        boolean hasLoginResponse();
+
+        /**
+         * <pre>
+         * 登录响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+         *
+         * @return The loginResponse.
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getLoginResponse();
+
+        /**
+         * <pre>
+         * 登录响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder getLoginResponseOrBuilder();
+
+        /**
+         * <pre>
+         * IM消息请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+         *
+         * @return Whether the messageRequest field is set.
+         */
+        boolean hasMessageRequest();
+
+        /**
+         * <pre>
+         * IM消息请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+         *
+         * @return The messageRequest.
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getMessageRequest();
+
+        /**
+         * <pre>
+         * IM消息请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder getMessageRequestOrBuilder();
+
+        /**
+         * <pre>
+         * IM消息响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+         *
+         * @return Whether the messageResponse field is set.
+         */
+        boolean hasMessageResponse();
+
+        /**
+         * <pre>
+         * IM消息响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+         *
+         * @return The messageResponse.
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getMessageResponse();
+
+        /**
+         * <pre>
+         * IM消息响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder();
+
+        /**
+         * <pre>
+         * 系统通知
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+         *
+         * @return Whether the notification field is set.
+         */
+        boolean hasNotification();
+
+        /**
+         * <pre>
+         * 系统通知
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+         *
+         * @return The notification.
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getNotification();
+
+        /**
+         * <pre>
+         * 系统通知
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder();
+
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+         *
+         * @return Whether the heartBeat field is set.
+         */
+        boolean hasHeartBeat();
+
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+         *
+         * @return The heartBeat.
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getHeartBeat();
+
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+         */
+        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder getHeartBeatOrBuilder();
+    }
 
     /**
      * <pre>
-     *登录响应
+     * 顶层消息是一种嵌套消息，嵌套了各种类型消息
+     * 逻辑上：根据消息类型 type的值，最多只有一个有效
      * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-     * @return Whether the loginResponse field is set.
-     */
-    boolean hasLoginResponse();
-    /**
-     * <pre>
-     *登录响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-     * @return The loginResponse.
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getLoginResponse();
-    /**
-     * <pre>
-     *登录响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder getLoginResponseOrBuilder();
-
-    /**
-     * <pre>
-     *IM消息请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-     * @return Whether the messageRequest field is set.
-     */
-    boolean hasMessageRequest();
-    /**
-     * <pre>
-     *IM消息请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-     * @return The messageRequest.
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getMessageRequest();
-    /**
-     * <pre>
-     *IM消息请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder getMessageRequestOrBuilder();
-
-    /**
-     * <pre>
-     *IM消息响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-     * @return Whether the messageResponse field is set.
-     */
-    boolean hasMessageResponse();
-    /**
-     * <pre>
-     *IM消息响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-     * @return The messageResponse.
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getMessageResponse();
-    /**
-     * <pre>
-     *IM消息响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder();
-
-    /**
-     * <pre>
-     *系统通知
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-     * @return Whether the notification field is set.
-     */
-    boolean hasNotification();
-    /**
-     * <pre>
-     *系统通知
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-     * @return The notification.
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getNotification();
-    /**
-     * <pre>
-     *系统通知
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder();
-
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-     * @return Whether the heartBeat field is set.
-     */
-    boolean hasHeartBeat();
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-     * @return The heartBeat.
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getHeartBeat();
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-     */
-    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder getHeartBeatOrBuilder();
-  }
-  /**
-   * <pre>
-   *顶层消息是一种嵌套消息，嵌套了各种类型消息
-   *逻辑上：根据消息类型 type的值，最多只有一个有效
-   * </pre>
-   *
-   * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.Message}
-   */
-  public static final class Message extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.Message)
-      MessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Message.newBuilder() to construct.
-    private Message(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Message() {
-      type_ = 0;
-      sessionId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Message();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Message(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
-              break;
-            }
-            case 16: {
-
-              sequence_ = input.readUInt64();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sessionId_ = s;
-              break;
-            }
-            case 34: {
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder subBuilder = null;
-              if (loginRequest_ != null) {
-                subBuilder = loginRequest_.toBuilder();
-              }
-              loginRequest_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(loginRequest_);
-                loginRequest_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder subBuilder = null;
-              if (loginResponse_ != null) {
-                subBuilder = loginResponse_.toBuilder();
-              }
-              loginResponse_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(loginResponse_);
-                loginResponse_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder subBuilder = null;
-              if (messageRequest_ != null) {
-                subBuilder = messageRequest_.toBuilder();
-              }
-              messageRequest_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(messageRequest_);
-                messageRequest_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder subBuilder = null;
-              if (messageResponse_ != null) {
-                subBuilder = messageResponse_.toBuilder();
-              }
-              messageResponse_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(messageResponse_);
-                messageResponse_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 66: {
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder subBuilder = null;
-              if (notification_ != null) {
-                subBuilder = notification_.toBuilder();
-              }
-              notification_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(notification_);
-                notification_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 74: {
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder subBuilder = null;
-              if (heartBeat_ != null) {
-                subBuilder = heartBeat_.toBuilder();
-              }
-              heartBeat_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(heartBeat_);
-                heartBeat_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.Builder.class);
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 1;
-    private int type_;
-    /**
-     * <pre>
-     *通用字段: 消息类型
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     *通用字段: 消息类型
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-     * @return The type.
-     */
-    @java.lang.Override public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType getType() {
-      @SuppressWarnings("deprecation")
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType result = com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.valueOf(type_);
-      return result == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.UNRECOGNIZED : result;
-    }
-
-    public static final int SEQUENCE_FIELD_NUMBER = 2;
-    private long sequence_;
-    /**
-     * <pre>
-     *通用字段：消息序列号
-     * </pre>
-     *
-     * <code>uint64 sequence = 2;</code>
-     * @return The sequence.
-     */
-    @java.lang.Override
-    public long getSequence() {
-      return sequence_;
-    }
-
-    public static final int SESSION_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object sessionId_;
-    /**
-     * <pre>
-     *通用字段：会话id
-     * </pre>
-     *
-     * <code>string session_id = 3;</code>
-     * @return The sessionId.
-     */
-    @java.lang.Override
-    public java.lang.String getSessionId() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sessionId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *通用字段：会话id
-     * </pre>
-     *
-     * <code>string session_id = 3;</code>
-     * @return The bytes for sessionId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSessionIdBytes() {
-      java.lang.Object ref = sessionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sessionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LOGINREQUEST_FIELD_NUMBER = 4;
-    private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest loginRequest_;
-    /**
-     * <pre>
-     *登录请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-     * @return Whether the loginRequest field is set.
-     */
-    @java.lang.Override
-    public boolean hasLoginRequest() {
-      return loginRequest_ != null;
-    }
-    /**
-     * <pre>
-     *登录请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-     * @return The loginRequest.
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getLoginRequest() {
-      return loginRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance() : loginRequest_;
-    }
-    /**
-     * <pre>
-     *登录请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder getLoginRequestOrBuilder() {
-      return getLoginRequest();
-    }
-
-    public static final int LOGINRESPONSE_FIELD_NUMBER = 5;
-    private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse loginResponse_;
-    /**
-     * <pre>
-     *登录响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-     * @return Whether the loginResponse field is set.
-     */
-    @java.lang.Override
-    public boolean hasLoginResponse() {
-      return loginResponse_ != null;
-    }
-    /**
-     * <pre>
-     *登录响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-     * @return The loginResponse.
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getLoginResponse() {
-      return loginResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance() : loginResponse_;
-    }
-    /**
-     * <pre>
-     *登录响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder getLoginResponseOrBuilder() {
-      return getLoginResponse();
-    }
-
-    public static final int MESSAGEREQUEST_FIELD_NUMBER = 6;
-    private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest messageRequest_;
-    /**
-     * <pre>
-     *IM消息请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-     * @return Whether the messageRequest field is set.
-     */
-    @java.lang.Override
-    public boolean hasMessageRequest() {
-      return messageRequest_ != null;
-    }
-    /**
-     * <pre>
-     *IM消息请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-     * @return The messageRequest.
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getMessageRequest() {
-      return messageRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance() : messageRequest_;
-    }
-    /**
-     * <pre>
-     *IM消息请求
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder getMessageRequestOrBuilder() {
-      return getMessageRequest();
-    }
-
-    public static final int MESSAGERESPONSE_FIELD_NUMBER = 7;
-    private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse messageResponse_;
-    /**
-     * <pre>
-     *IM消息响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-     * @return Whether the messageResponse field is set.
-     */
-    @java.lang.Override
-    public boolean hasMessageResponse() {
-      return messageResponse_ != null;
-    }
-    /**
-     * <pre>
-     *IM消息响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-     * @return The messageResponse.
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getMessageResponse() {
-      return messageResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance() : messageResponse_;
-    }
-    /**
-     * <pre>
-     *IM消息响应
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder() {
-      return getMessageResponse();
-    }
-
-    public static final int NOTIFICATION_FIELD_NUMBER = 8;
-    private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification notification_;
-    /**
-     * <pre>
-     *系统通知
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-     * @return Whether the notification field is set.
-     */
-    @java.lang.Override
-    public boolean hasNotification() {
-      return notification_ != null;
-    }
-    /**
-     * <pre>
-     *系统通知
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-     * @return The notification.
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getNotification() {
-      return notification_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance() : notification_;
-    }
-    /**
-     * <pre>
-     *系统通知
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder() {
-      return getNotification();
-    }
-
-    public static final int HEARTBEAT_FIELD_NUMBER = 9;
-    private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat heartBeat_;
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-     * @return Whether the heartBeat field is set.
-     */
-    @java.lang.Override
-    public boolean hasHeartBeat() {
-      return heartBeat_ != null;
-    }
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-     * @return The heartBeat.
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getHeartBeat() {
-      return heartBeat_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance() : heartBeat_;
-    }
-    /**
-     * <pre>
-     *心跳
-     * </pre>
-     *
-     * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-     */
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder getHeartBeatOrBuilder() {
-      return getHeartBeat();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (type_ != com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.LOGIN_REQUEST.getNumber()) {
-        output.writeEnum(1, type_);
-      }
-      if (sequence_ != 0L) {
-        output.writeUInt64(2, sequence_);
-      }
-      if (!getSessionIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sessionId_);
-      }
-      if (loginRequest_ != null) {
-        output.writeMessage(4, getLoginRequest());
-      }
-      if (loginResponse_ != null) {
-        output.writeMessage(5, getLoginResponse());
-      }
-      if (messageRequest_ != null) {
-        output.writeMessage(6, getMessageRequest());
-      }
-      if (messageResponse_ != null) {
-        output.writeMessage(7, getMessageResponse());
-      }
-      if (notification_ != null) {
-        output.writeMessage(8, getNotification());
-      }
-      if (heartBeat_ != null) {
-        output.writeMessage(9, getHeartBeat());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (type_ != com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.LOGIN_REQUEST.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, type_);
-      }
-      if (sequence_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, sequence_);
-      }
-      if (!getSessionIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sessionId_);
-      }
-      if (loginRequest_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getLoginRequest());
-      }
-      if (loginResponse_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getLoginResponse());
-      }
-      if (messageRequest_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getMessageRequest());
-      }
-      if (messageResponse_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getMessageResponse());
-      }
-      if (notification_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getNotification());
-      }
-      if (heartBeat_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getHeartBeat());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message)) {
-        return super.equals(obj);
-      }
-      com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message) obj;
-
-      if (type_ != other.type_) return false;
-      if (getSequence()
-          != other.getSequence()) return false;
-      if (!getSessionId()
-          .equals(other.getSessionId())) return false;
-      if (hasLoginRequest() != other.hasLoginRequest()) return false;
-      if (hasLoginRequest()) {
-        if (!getLoginRequest()
-            .equals(other.getLoginRequest())) return false;
-      }
-      if (hasLoginResponse() != other.hasLoginResponse()) return false;
-      if (hasLoginResponse()) {
-        if (!getLoginResponse()
-            .equals(other.getLoginResponse())) return false;
-      }
-      if (hasMessageRequest() != other.hasMessageRequest()) return false;
-      if (hasMessageRequest()) {
-        if (!getMessageRequest()
-            .equals(other.getMessageRequest())) return false;
-      }
-      if (hasMessageResponse() != other.hasMessageResponse()) return false;
-      if (hasMessageResponse()) {
-        if (!getMessageResponse()
-            .equals(other.getMessageResponse())) return false;
-      }
-      if (hasNotification() != other.hasNotification()) return false;
-      if (hasNotification()) {
-        if (!getNotification()
-            .equals(other.getNotification())) return false;
-      }
-      if (hasHeartBeat() != other.hasHeartBeat()) return false;
-      if (hasHeartBeat()) {
-        if (!getHeartBeat()
-            .equals(other.getHeartBeat())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSequence());
-      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSessionId().hashCode();
-      if (hasLoginRequest()) {
-        hash = (37 * hash) + LOGINREQUEST_FIELD_NUMBER;
-        hash = (53 * hash) + getLoginRequest().hashCode();
-      }
-      if (hasLoginResponse()) {
-        hash = (37 * hash) + LOGINRESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + getLoginResponse().hashCode();
-      }
-      if (hasMessageRequest()) {
-        hash = (37 * hash) + MESSAGEREQUEST_FIELD_NUMBER;
-        hash = (53 * hash) + getMessageRequest().hashCode();
-      }
-      if (hasMessageResponse()) {
-        hash = (37 * hash) + MESSAGERESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + getMessageResponse().hashCode();
-      }
-      if (hasNotification()) {
-        hash = (37 * hash) + NOTIFICATION_FIELD_NUMBER;
-        hash = (53 * hash) + getNotification().hashCode();
-      }
-      if (hasHeartBeat()) {
-        hash = (37 * hash) + HEARTBEAT_FIELD_NUMBER;
-        hash = (53 * hash) + getHeartBeat().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     *顶层消息是一种嵌套消息，嵌套了各种类型消息
-     *逻辑上：根据消息类型 type的值，最多只有一个有效
-     * </pre>
-     *
+     * <p>
      * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.Message}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.Message)
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
-      }
+    public static final class Message extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:com.lesterlaucn.chatboot.common.bean.msg.Message)
+            MessageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.Builder.class);
-      }
-
-      // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        type_ = 0;
-
-        sequence_ = 0L;
-
-        sessionId_ = "";
-
-        if (loginRequestBuilder_ == null) {
-          loginRequest_ = null;
-        } else {
-          loginRequest_ = null;
-          loginRequestBuilder_ = null;
-        }
-        if (loginResponseBuilder_ == null) {
-          loginResponse_ = null;
-        } else {
-          loginResponse_ = null;
-          loginResponseBuilder_ = null;
-        }
-        if (messageRequestBuilder_ == null) {
-          messageRequest_ = null;
-        } else {
-          messageRequest_ = null;
-          messageRequestBuilder_ = null;
-        }
-        if (messageResponseBuilder_ == null) {
-          messageResponse_ = null;
-        } else {
-          messageResponse_ = null;
-          messageResponseBuilder_ = null;
-        }
-        if (notificationBuilder_ == null) {
-          notification_ = null;
-        } else {
-          notification_ = null;
-          notificationBuilder_ = null;
-        }
-        if (heartBeatBuilder_ == null) {
-          heartBeat_ = null;
-        } else {
-          heartBeat_ = null;
-          heartBeatBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message getDefaultInstanceForType() {
-        return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message build() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message buildPartial() {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message(this);
-        result.type_ = type_;
-        result.sequence_ = sequence_;
-        result.sessionId_ = sessionId_;
-        if (loginRequestBuilder_ == null) {
-          result.loginRequest_ = loginRequest_;
-        } else {
-          result.loginRequest_ = loginRequestBuilder_.build();
-        }
-        if (loginResponseBuilder_ == null) {
-          result.loginResponse_ = loginResponse_;
-        } else {
-          result.loginResponse_ = loginResponseBuilder_.build();
-        }
-        if (messageRequestBuilder_ == null) {
-          result.messageRequest_ = messageRequest_;
-        } else {
-          result.messageRequest_ = messageRequestBuilder_.build();
-        }
-        if (messageResponseBuilder_ == null) {
-          result.messageResponse_ = messageResponse_;
-        } else {
-          result.messageResponse_ = messageResponseBuilder_.build();
-        }
-        if (notificationBuilder_ == null) {
-          result.notification_ = notification_;
-        } else {
-          result.notification_ = notificationBuilder_.build();
-        }
-        if (heartBeatBuilder_ == null) {
-          result.heartBeat_ = heartBeat_;
-        } else {
-          result.heartBeat_ = heartBeatBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message) {
-          return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message other) {
-        if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.getDefaultInstance()) return this;
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        if (other.getSequence() != 0L) {
-          setSequence(other.getSequence());
-        }
-        if (!other.getSessionId().isEmpty()) {
-          sessionId_ = other.sessionId_;
-          onChanged();
-        }
-        if (other.hasLoginRequest()) {
-          mergeLoginRequest(other.getLoginRequest());
-        }
-        if (other.hasLoginResponse()) {
-          mergeLoginResponse(other.getLoginResponse());
-        }
-        if (other.hasMessageRequest()) {
-          mergeMessageRequest(other.getMessageRequest());
-        }
-        if (other.hasMessageResponse()) {
-          mergeMessageResponse(other.getMessageResponse());
-        }
-        if (other.hasNotification()) {
-          mergeNotification(other.getNotification());
-        }
-        if (other.hasHeartBeat()) {
-          mergeHeartBeat(other.getHeartBeat());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int type_ = 0;
-      /**
-       * <pre>
-       *通用字段: 消息类型
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-       * @return The enum numeric value on the wire for type.
-       */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
-      }
-      /**
-       * <pre>
-       *通用字段: 消息类型
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-       * @param value The enum numeric value on the wire for type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTypeValue(int value) {
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *通用字段: 消息类型
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-       * @return The type.
-       */
-      @java.lang.Override
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType getType() {
-        @SuppressWarnings("deprecation")
-        com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType result = com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.valueOf(type_);
-        return result == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       *通用字段: 消息类型
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setType(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        type_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *通用字段: 消息类型
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearType() {
-        
-        type_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private long sequence_ ;
-      /**
-       * <pre>
-       *通用字段：消息序列号
-       * </pre>
-       *
-       * <code>uint64 sequence = 2;</code>
-       * @return The sequence.
-       */
-      @java.lang.Override
-      public long getSequence() {
-        return sequence_;
-      }
-      /**
-       * <pre>
-       *通用字段：消息序列号
-       * </pre>
-       *
-       * <code>uint64 sequence = 2;</code>
-       * @param value The sequence to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSequence(long value) {
-        
-        sequence_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *通用字段：消息序列号
-       * </pre>
-       *
-       * <code>uint64 sequence = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSequence() {
-        
-        sequence_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sessionId_ = "";
-      /**
-       * <pre>
-       *通用字段：会话id
-       * </pre>
-       *
-       * <code>string session_id = 3;</code>
-       * @return The sessionId.
-       */
-      public java.lang.String getSessionId() {
-        java.lang.Object ref = sessionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sessionId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *通用字段：会话id
-       * </pre>
-       *
-       * <code>string session_id = 3;</code>
-       * @return The bytes for sessionId.
-       */
-      public com.google.protobuf.ByteString
-          getSessionIdBytes() {
-        java.lang.Object ref = sessionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sessionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *通用字段：会话id
-       * </pre>
-       *
-       * <code>string session_id = 3;</code>
-       * @param value The sessionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSessionId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sessionId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *通用字段：会话id
-       * </pre>
-       *
-       * <code>string session_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSessionId() {
-        
-        sessionId_ = getDefaultInstance().getSessionId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *通用字段：会话id
-       * </pre>
-       *
-       * <code>string session_id = 3;</code>
-       * @param value The bytes for sessionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSessionIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sessionId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest loginRequest_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder> loginRequestBuilder_;
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       * @return Whether the loginRequest field is set.
-       */
-      public boolean hasLoginRequest() {
-        return loginRequestBuilder_ != null || loginRequest_ != null;
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       * @return The loginRequest.
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getLoginRequest() {
-        if (loginRequestBuilder_ == null) {
-          return loginRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance() : loginRequest_;
-        } else {
-          return loginRequestBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       */
-      public Builder setLoginRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest value) {
-        if (loginRequestBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          loginRequest_ = value;
-          onChanged();
-        } else {
-          loginRequestBuilder_.setMessage(value);
+        // Use Message.newBuilder() to construct.
+        private Message(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       */
-      public Builder setLoginRequest(
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder builderForValue) {
-        if (loginRequestBuilder_ == null) {
-          loginRequest_ = builderForValue.build();
-          onChanged();
-        } else {
-          loginRequestBuilder_.setMessage(builderForValue.build());
+        private Message() {
+            type_ = 0;
+            sessionId_ = "";
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       */
-      public Builder mergeLoginRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest value) {
-        if (loginRequestBuilder_ == null) {
-          if (loginRequest_ != null) {
-            loginRequest_ =
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.newBuilder(loginRequest_).mergeFrom(value).buildPartial();
-          } else {
-            loginRequest_ = value;
-          }
-          onChanged();
-        } else {
-          loginRequestBuilder_.mergeFrom(value);
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new Message();
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       */
-      public Builder clearLoginRequest() {
-        if (loginRequestBuilder_ == null) {
-          loginRequest_ = null;
-          onChanged();
-        } else {
-          loginRequest_ = null;
-          loginRequestBuilder_ = null;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder getLoginRequestBuilder() {
-        
-        onChanged();
-        return getLoginRequestFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder getLoginRequestOrBuilder() {
-        if (loginRequestBuilder_ != null) {
-          return loginRequestBuilder_.getMessageOrBuilder();
-        } else {
-          return loginRequest_ == null ?
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance() : loginRequest_;
-        }
-      }
-      /**
-       * <pre>
-       *登录请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder> 
-          getLoginRequestFieldBuilder() {
-        if (loginRequestBuilder_ == null) {
-          loginRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder>(
-                  getLoginRequest(),
-                  getParentForChildren(),
-                  isClean());
-          loginRequest_ = null;
-        }
-        return loginRequestBuilder_;
-      }
+        private Message(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 8: {
+                            int rawValue = input.readEnum();
 
-      private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse loginResponse_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder> loginResponseBuilder_;
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       * @return Whether the loginResponse field is set.
-       */
-      public boolean hasLoginResponse() {
-        return loginResponseBuilder_ != null || loginResponse_ != null;
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       * @return The loginResponse.
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getLoginResponse() {
-        if (loginResponseBuilder_ == null) {
-          return loginResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance() : loginResponse_;
-        } else {
-          return loginResponseBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       */
-      public Builder setLoginResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse value) {
-        if (loginResponseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          loginResponse_ = value;
-          onChanged();
-        } else {
-          loginResponseBuilder_.setMessage(value);
-        }
+                            type_ = rawValue;
+                            break;
+                        }
+                        case 16: {
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       */
-      public Builder setLoginResponse(
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder builderForValue) {
-        if (loginResponseBuilder_ == null) {
-          loginResponse_ = builderForValue.build();
-          onChanged();
-        } else {
-          loginResponseBuilder_.setMessage(builderForValue.build());
-        }
+                            sequence_ = input.readUInt64();
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       */
-      public Builder mergeLoginResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse value) {
-        if (loginResponseBuilder_ == null) {
-          if (loginResponse_ != null) {
-            loginResponse_ =
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.newBuilder(loginResponse_).mergeFrom(value).buildPartial();
-          } else {
-            loginResponse_ = value;
-          }
-          onChanged();
-        } else {
-          loginResponseBuilder_.mergeFrom(value);
+                            sessionId_ = s;
+                            break;
+                        }
+                        case 34: {
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder subBuilder = null;
+                            if (loginRequest_ != null) {
+                                subBuilder = loginRequest_.toBuilder();
+                            }
+                            loginRequest_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(loginRequest_);
+                                loginRequest_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                        case 42: {
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder subBuilder = null;
+                            if (loginResponse_ != null) {
+                                subBuilder = loginResponse_.toBuilder();
+                            }
+                            loginResponse_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(loginResponse_);
+                                loginResponse_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                        case 50: {
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder subBuilder = null;
+                            if (messageRequest_ != null) {
+                                subBuilder = messageRequest_.toBuilder();
+                            }
+                            messageRequest_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(messageRequest_);
+                                messageRequest_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                        case 58: {
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder subBuilder = null;
+                            if (messageResponse_ != null) {
+                                subBuilder = messageResponse_.toBuilder();
+                            }
+                            messageResponse_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(messageResponse_);
+                                messageResponse_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                        case 66: {
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder subBuilder = null;
+                            if (notification_ != null) {
+                                subBuilder = notification_.toBuilder();
+                            }
+                            notification_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(notification_);
+                                notification_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                        case 74: {
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder subBuilder = null;
+                            if (heartBeat_ != null) {
+                                subBuilder = heartBeat_.toBuilder();
+                            }
+                            heartBeat_ = input.readMessage(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(heartBeat_);
+                                heartBeat_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       */
-      public Builder clearLoginResponse() {
-        if (loginResponseBuilder_ == null) {
-          loginResponse_ = null;
-          onChanged();
-        } else {
-          loginResponse_ = null;
-          loginResponseBuilder_ = null;
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder getLoginResponseBuilder() {
-        
-        onChanged();
-        return getLoginResponseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder getLoginResponseOrBuilder() {
-        if (loginResponseBuilder_ != null) {
-          return loginResponseBuilder_.getMessageOrBuilder();
-        } else {
-          return loginResponse_ == null ?
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance() : loginResponse_;
-        }
-      }
-      /**
-       * <pre>
-       *登录响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder> 
-          getLoginResponseFieldBuilder() {
-        if (loginResponseBuilder_ == null) {
-          loginResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder>(
-                  getLoginResponse(),
-                  getParentForChildren(),
-                  isClean());
-          loginResponse_ = null;
-        }
-        return loginResponseBuilder_;
-      }
-
-      private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest messageRequest_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder> messageRequestBuilder_;
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       * @return Whether the messageRequest field is set.
-       */
-      public boolean hasMessageRequest() {
-        return messageRequestBuilder_ != null || messageRequest_ != null;
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       * @return The messageRequest.
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getMessageRequest() {
-        if (messageRequestBuilder_ == null) {
-          return messageRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance() : messageRequest_;
-        } else {
-          return messageRequestBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       */
-      public Builder setMessageRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest value) {
-        if (messageRequestBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          messageRequest_ = value;
-          onChanged();
-        } else {
-          messageRequestBuilder_.setMessage(value);
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.Builder.class);
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       */
-      public Builder setMessageRequest(
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder builderForValue) {
-        if (messageRequestBuilder_ == null) {
-          messageRequest_ = builderForValue.build();
-          onChanged();
-        } else {
-          messageRequestBuilder_.setMessage(builderForValue.build());
+        public static final int TYPE_FIELD_NUMBER = 1;
+        private int type_;
+
+        /**
+         * <pre>
+         * 通用字段: 消息类型
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+         *
+         * @return The enum numeric value on the wire for type.
+         */
+        @java.lang.Override
+        public int getTypeValue() {
+            return type_;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       */
-      public Builder mergeMessageRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest value) {
-        if (messageRequestBuilder_ == null) {
-          if (messageRequest_ != null) {
-            messageRequest_ =
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.newBuilder(messageRequest_).mergeFrom(value).buildPartial();
-          } else {
-            messageRequest_ = value;
-          }
-          onChanged();
-        } else {
-          messageRequestBuilder_.mergeFrom(value);
+        /**
+         * <pre>
+         * 通用字段: 消息类型
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+         *
+         * @return The type.
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType getType() {
+            @SuppressWarnings("deprecation")
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType result = com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.valueOf(type_);
+            return result == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.UNRECOGNIZED : result;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       */
-      public Builder clearMessageRequest() {
-        if (messageRequestBuilder_ == null) {
-          messageRequest_ = null;
-          onChanged();
-        } else {
-          messageRequest_ = null;
-          messageRequestBuilder_ = null;
+        public static final int SEQUENCE_FIELD_NUMBER = 2;
+        private long sequence_;
+
+        /**
+         * <pre>
+         * 通用字段：消息序列号
+         * </pre>
+         *
+         * <code>uint64 sequence = 2;</code>
+         *
+         * @return The sequence.
+         */
+        @java.lang.Override
+        public long getSequence() {
+            return sequence_;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder getMessageRequestBuilder() {
-        
-        onChanged();
-        return getMessageRequestFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder getMessageRequestOrBuilder() {
-        if (messageRequestBuilder_ != null) {
-          return messageRequestBuilder_.getMessageOrBuilder();
-        } else {
-          return messageRequest_ == null ?
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance() : messageRequest_;
-        }
-      }
-      /**
-       * <pre>
-       *IM消息请求
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder> 
-          getMessageRequestFieldBuilder() {
-        if (messageRequestBuilder_ == null) {
-          messageRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder>(
-                  getMessageRequest(),
-                  getParentForChildren(),
-                  isClean());
-          messageRequest_ = null;
-        }
-        return messageRequestBuilder_;
-      }
+        public static final int SESSION_ID_FIELD_NUMBER = 3;
+        private volatile java.lang.Object sessionId_;
 
-      private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse messageResponse_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder> messageResponseBuilder_;
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       * @return Whether the messageResponse field is set.
-       */
-      public boolean hasMessageResponse() {
-        return messageResponseBuilder_ != null || messageResponse_ != null;
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       * @return The messageResponse.
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getMessageResponse() {
-        if (messageResponseBuilder_ == null) {
-          return messageResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance() : messageResponse_;
-        } else {
-          return messageResponseBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       */
-      public Builder setMessageResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse value) {
-        if (messageResponseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          messageResponse_ = value;
-          onChanged();
-        } else {
-          messageResponseBuilder_.setMessage(value);
+        /**
+         * <pre>
+         * 通用字段：会话id
+         * </pre>
+         *
+         * <code>string session_id = 3;</code>
+         *
+         * @return The sessionId.
+         */
+        @java.lang.Override
+        public java.lang.String getSessionId() {
+            java.lang.Object ref = sessionId_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                sessionId_ = s;
+                return s;
+            }
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       */
-      public Builder setMessageResponse(
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder builderForValue) {
-        if (messageResponseBuilder_ == null) {
-          messageResponse_ = builderForValue.build();
-          onChanged();
-        } else {
-          messageResponseBuilder_.setMessage(builderForValue.build());
+        /**
+         * <pre>
+         * 通用字段：会话id
+         * </pre>
+         *
+         * <code>string session_id = 3;</code>
+         *
+         * @return The bytes for sessionId.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+            java.lang.Object ref = sessionId_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                sessionId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       */
-      public Builder mergeMessageResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse value) {
-        if (messageResponseBuilder_ == null) {
-          if (messageResponse_ != null) {
-            messageResponse_ =
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.newBuilder(messageResponse_).mergeFrom(value).buildPartial();
-          } else {
-            messageResponse_ = value;
-          }
-          onChanged();
-        } else {
-          messageResponseBuilder_.mergeFrom(value);
+        public static final int LOGINREQUEST_FIELD_NUMBER = 4;
+        private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest loginRequest_;
+
+        /**
+         * <pre>
+         * 登录请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+         *
+         * @return Whether the loginRequest field is set.
+         */
+        @java.lang.Override
+        public boolean hasLoginRequest() {
+            return loginRequest_ != null;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       */
-      public Builder clearMessageResponse() {
-        if (messageResponseBuilder_ == null) {
-          messageResponse_ = null;
-          onChanged();
-        } else {
-          messageResponse_ = null;
-          messageResponseBuilder_ = null;
+        /**
+         * <pre>
+         * 登录请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+         *
+         * @return The loginRequest.
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getLoginRequest() {
+            return loginRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance() : loginRequest_;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder getMessageResponseBuilder() {
-        
-        onChanged();
-        return getMessageResponseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder() {
-        if (messageResponseBuilder_ != null) {
-          return messageResponseBuilder_.getMessageOrBuilder();
-        } else {
-          return messageResponse_ == null ?
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance() : messageResponse_;
-        }
-      }
-      /**
-       * <pre>
-       *IM消息响应
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder> 
-          getMessageResponseFieldBuilder() {
-        if (messageResponseBuilder_ == null) {
-          messageResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder>(
-                  getMessageResponse(),
-                  getParentForChildren(),
-                  isClean());
-          messageResponse_ = null;
-        }
-        return messageResponseBuilder_;
-      }
-
-      private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification notification_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder> notificationBuilder_;
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       * @return Whether the notification field is set.
-       */
-      public boolean hasNotification() {
-        return notificationBuilder_ != null || notification_ != null;
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       * @return The notification.
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getNotification() {
-        if (notificationBuilder_ == null) {
-          return notification_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance() : notification_;
-        } else {
-          return notificationBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       */
-      public Builder setNotification(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification value) {
-        if (notificationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          notification_ = value;
-          onChanged();
-        } else {
-          notificationBuilder_.setMessage(value);
+        /**
+         * <pre>
+         * 登录请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder getLoginRequestOrBuilder() {
+            return getLoginRequest();
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       */
-      public Builder setNotification(
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder builderForValue) {
-        if (notificationBuilder_ == null) {
-          notification_ = builderForValue.build();
-          onChanged();
-        } else {
-          notificationBuilder_.setMessage(builderForValue.build());
+        public static final int LOGINRESPONSE_FIELD_NUMBER = 5;
+        private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse loginResponse_;
+
+        /**
+         * <pre>
+         * 登录响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+         *
+         * @return Whether the loginResponse field is set.
+         */
+        @java.lang.Override
+        public boolean hasLoginResponse() {
+            return loginResponse_ != null;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       */
-      public Builder mergeNotification(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification value) {
-        if (notificationBuilder_ == null) {
-          if (notification_ != null) {
-            notification_ =
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.newBuilder(notification_).mergeFrom(value).buildPartial();
-          } else {
-            notification_ = value;
-          }
-          onChanged();
-        } else {
-          notificationBuilder_.mergeFrom(value);
+        /**
+         * <pre>
+         * 登录响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+         *
+         * @return The loginResponse.
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getLoginResponse() {
+            return loginResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance() : loginResponse_;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       */
-      public Builder clearNotification() {
-        if (notificationBuilder_ == null) {
-          notification_ = null;
-          onChanged();
-        } else {
-          notification_ = null;
-          notificationBuilder_ = null;
+        /**
+         * <pre>
+         * 登录响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder getLoginResponseOrBuilder() {
+            return getLoginResponse();
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder getNotificationBuilder() {
-        
-        onChanged();
-        return getNotificationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder() {
-        if (notificationBuilder_ != null) {
-          return notificationBuilder_.getMessageOrBuilder();
-        } else {
-          return notification_ == null ?
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance() : notification_;
-        }
-      }
-      /**
-       * <pre>
-       *系统通知
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder> 
-          getNotificationFieldBuilder() {
-        if (notificationBuilder_ == null) {
-          notificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder>(
-                  getNotification(),
-                  getParentForChildren(),
-                  isClean());
-          notification_ = null;
-        }
-        return notificationBuilder_;
-      }
+        public static final int MESSAGEREQUEST_FIELD_NUMBER = 6;
+        private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest messageRequest_;
 
-      private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat heartBeat_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder> heartBeatBuilder_;
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       * @return Whether the heartBeat field is set.
-       */
-      public boolean hasHeartBeat() {
-        return heartBeatBuilder_ != null || heartBeat_ != null;
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       * @return The heartBeat.
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getHeartBeat() {
-        if (heartBeatBuilder_ == null) {
-          return heartBeat_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance() : heartBeat_;
-        } else {
-          return heartBeatBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       */
-      public Builder setHeartBeat(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat value) {
-        if (heartBeatBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          heartBeat_ = value;
-          onChanged();
-        } else {
-          heartBeatBuilder_.setMessage(value);
+        /**
+         * <pre>
+         * IM消息请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+         *
+         * @return Whether the messageRequest field is set.
+         */
+        @java.lang.Override
+        public boolean hasMessageRequest() {
+            return messageRequest_ != null;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       */
-      public Builder setHeartBeat(
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder builderForValue) {
-        if (heartBeatBuilder_ == null) {
-          heartBeat_ = builderForValue.build();
-          onChanged();
-        } else {
-          heartBeatBuilder_.setMessage(builderForValue.build());
+        /**
+         * <pre>
+         * IM消息请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+         *
+         * @return The messageRequest.
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getMessageRequest() {
+            return messageRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance() : messageRequest_;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       */
-      public Builder mergeHeartBeat(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat value) {
-        if (heartBeatBuilder_ == null) {
-          if (heartBeat_ != null) {
-            heartBeat_ =
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.newBuilder(heartBeat_).mergeFrom(value).buildPartial();
-          } else {
-            heartBeat_ = value;
-          }
-          onChanged();
-        } else {
-          heartBeatBuilder_.mergeFrom(value);
+        /**
+         * <pre>
+         * IM消息请求
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder getMessageRequestOrBuilder() {
+            return getMessageRequest();
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       */
-      public Builder clearHeartBeat() {
-        if (heartBeatBuilder_ == null) {
-          heartBeat_ = null;
-          onChanged();
-        } else {
-          heartBeat_ = null;
-          heartBeatBuilder_ = null;
+        public static final int MESSAGERESPONSE_FIELD_NUMBER = 7;
+        private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse messageResponse_;
+
+        /**
+         * <pre>
+         * IM消息响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+         *
+         * @return Whether the messageResponse field is set.
+         */
+        @java.lang.Override
+        public boolean hasMessageResponse() {
+            return messageResponse_ != null;
         }
 
-        return this;
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder getHeartBeatBuilder() {
-        
-        onChanged();
-        return getHeartBeatFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       */
-      public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder getHeartBeatOrBuilder() {
-        if (heartBeatBuilder_ != null) {
-          return heartBeatBuilder_.getMessageOrBuilder();
-        } else {
-          return heartBeat_ == null ?
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance() : heartBeat_;
+        /**
+         * <pre>
+         * IM消息响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+         *
+         * @return The messageResponse.
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getMessageResponse() {
+            return messageResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance() : messageResponse_;
         }
-      }
-      /**
-       * <pre>
-       *心跳
-       * </pre>
-       *
-       * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder> 
-          getHeartBeatFieldBuilder() {
-        if (heartBeatBuilder_ == null) {
-          heartBeatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder>(
-                  getHeartBeat(),
-                  getParentForChildren(),
-                  isClean());
-          heartBeat_ = null;
+
+        /**
+         * <pre>
+         * IM消息响应
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder() {
+            return getMessageResponse();
         }
-        return heartBeatBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        public static final int NOTIFICATION_FIELD_NUMBER = 8;
+        private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification notification_;
+
+        /**
+         * <pre>
+         * 系统通知
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+         *
+         * @return Whether the notification field is set.
+         */
+        @java.lang.Override
+        public boolean hasNotification() {
+            return notification_ != null;
+        }
+
+        /**
+         * <pre>
+         * 系统通知
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+         *
+         * @return The notification.
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getNotification() {
+            return notification_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance() : notification_;
+        }
+
+        /**
+         * <pre>
+         * 系统通知
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder() {
+            return getNotification();
+        }
+
+        public static final int HEARTBEAT_FIELD_NUMBER = 9;
+        private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat heartBeat_;
+
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+         *
+         * @return Whether the heartBeat field is set.
+         */
+        @java.lang.Override
+        public boolean hasHeartBeat() {
+            return heartBeat_ != null;
+        }
+
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+         *
+         * @return The heartBeat.
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getHeartBeat() {
+            return heartBeat_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance() : heartBeat_;
+        }
+
+        /**
+         * <pre>
+         * 心跳
+         * </pre>
+         *
+         * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+         */
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder getHeartBeatOrBuilder() {
+            return getHeartBeat();
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (type_ != com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.LOGIN_REQUEST.getNumber()) {
+                output.writeEnum(1, type_);
+            }
+            if (sequence_ != 0L) {
+                output.writeUInt64(2, sequence_);
+            }
+            if (!getSessionIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sessionId_);
+            }
+            if (loginRequest_ != null) {
+                output.writeMessage(4, getLoginRequest());
+            }
+            if (loginResponse_ != null) {
+                output.writeMessage(5, getLoginResponse());
+            }
+            if (messageRequest_ != null) {
+                output.writeMessage(6, getMessageRequest());
+            }
+            if (messageResponse_ != null) {
+                output.writeMessage(7, getMessageResponse());
+            }
+            if (notification_ != null) {
+                output.writeMessage(8, getNotification());
+            }
+            if (heartBeat_ != null) {
+                output.writeMessage(9, getHeartBeat());
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (type_ != com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.LOGIN_REQUEST.getNumber()) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(1, type_);
+            }
+            if (sequence_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(2, sequence_);
+            }
+            if (!getSessionIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sessionId_);
+            }
+            if (loginRequest_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(4, getLoginRequest());
+            }
+            if (loginResponse_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(5, getLoginResponse());
+            }
+            if (messageRequest_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(6, getMessageRequest());
+            }
+            if (messageResponse_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(7, getMessageResponse());
+            }
+            if (notification_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(8, getNotification());
+            }
+            if (heartBeat_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(9, getHeartBeat());
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message)) {
+                return super.equals(obj);
+            }
+            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message other = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message) obj;
+
+            if (type_ != other.type_) return false;
+            if (getSequence()
+                    != other.getSequence()) return false;
+            if (!getSessionId()
+                    .equals(other.getSessionId())) return false;
+            if (hasLoginRequest() != other.hasLoginRequest()) return false;
+            if (hasLoginRequest()) {
+                if (!getLoginRequest()
+                        .equals(other.getLoginRequest())) return false;
+            }
+            if (hasLoginResponse() != other.hasLoginResponse()) return false;
+            if (hasLoginResponse()) {
+                if (!getLoginResponse()
+                        .equals(other.getLoginResponse())) return false;
+            }
+            if (hasMessageRequest() != other.hasMessageRequest()) return false;
+            if (hasMessageRequest()) {
+                if (!getMessageRequest()
+                        .equals(other.getMessageRequest())) return false;
+            }
+            if (hasMessageResponse() != other.hasMessageResponse()) return false;
+            if (hasMessageResponse()) {
+                if (!getMessageResponse()
+                        .equals(other.getMessageResponse())) return false;
+            }
+            if (hasNotification() != other.hasNotification()) return false;
+            if (hasNotification()) {
+                if (!getNotification()
+                        .equals(other.getNotification())) return false;
+            }
+            if (hasHeartBeat() != other.hasHeartBeat()) return false;
+            if (hasHeartBeat()) {
+                if (!getHeartBeat()
+                        .equals(other.getHeartBeat())) return false;
+            }
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + type_;
+            hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                    getSequence());
+            hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+            hash = (53 * hash) + getSessionId().hashCode();
+            if (hasLoginRequest()) {
+                hash = (37 * hash) + LOGINREQUEST_FIELD_NUMBER;
+                hash = (53 * hash) + getLoginRequest().hashCode();
+            }
+            if (hasLoginResponse()) {
+                hash = (37 * hash) + LOGINRESPONSE_FIELD_NUMBER;
+                hash = (53 * hash) + getLoginResponse().hashCode();
+            }
+            if (hasMessageRequest()) {
+                hash = (37 * hash) + MESSAGEREQUEST_FIELD_NUMBER;
+                hash = (53 * hash) + getMessageRequest().hashCode();
+            }
+            if (hasMessageResponse()) {
+                hash = (37 * hash) + MESSAGERESPONSE_FIELD_NUMBER;
+                hash = (53 * hash) + getMessageResponse().hashCode();
+            }
+            if (hasNotification()) {
+                hash = (37 * hash) + NOTIFICATION_FIELD_NUMBER;
+                hash = (53 * hash) + getNotification().hashCode();
+            }
+            if (hasHeartBeat()) {
+                hash = (37 * hash) + HEARTBEAT_FIELD_NUMBER;
+                hash = (53 * hash) + getHeartBeat().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 顶层消息是一种嵌套消息，嵌套了各种类型消息
+         * 逻辑上：根据消息类型 type的值，最多只有一个有效
+         * </pre>
+         * <p>
+         * Protobuf type {@code com.lesterlaucn.chatboot.common.bean.msg.Message}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:com.lesterlaucn.chatboot.common.bean.msg.Message)
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.class, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.Builder.class);
+            }
+
+            // Construct using com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                type_ = 0;
+
+                sequence_ = 0L;
+
+                sessionId_ = "";
+
+                if (loginRequestBuilder_ == null) {
+                    loginRequest_ = null;
+                } else {
+                    loginRequest_ = null;
+                    loginRequestBuilder_ = null;
+                }
+                if (loginResponseBuilder_ == null) {
+                    loginResponse_ = null;
+                } else {
+                    loginResponse_ = null;
+                    loginResponseBuilder_ = null;
+                }
+                if (messageRequestBuilder_ == null) {
+                    messageRequest_ = null;
+                } else {
+                    messageRequest_ = null;
+                    messageRequestBuilder_ = null;
+                }
+                if (messageResponseBuilder_ == null) {
+                    messageResponse_ = null;
+                } else {
+                    messageResponse_ = null;
+                    messageResponseBuilder_ = null;
+                }
+                if (notificationBuilder_ == null) {
+                    notification_ = null;
+                } else {
+                    notification_ = null;
+                    notificationBuilder_ = null;
+                }
+                if (heartBeatBuilder_ == null) {
+                    heartBeat_ = null;
+                } else {
+                    heartBeat_ = null;
+                    heartBeatBuilder_ = null;
+                }
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message getDefaultInstanceForType() {
+                return com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message build() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message buildPartial() {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message result = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message(this);
+                result.type_ = type_;
+                result.sequence_ = sequence_;
+                result.sessionId_ = sessionId_;
+                if (loginRequestBuilder_ == null) {
+                    result.loginRequest_ = loginRequest_;
+                } else {
+                    result.loginRequest_ = loginRequestBuilder_.build();
+                }
+                if (loginResponseBuilder_ == null) {
+                    result.loginResponse_ = loginResponse_;
+                } else {
+                    result.loginResponse_ = loginResponseBuilder_.build();
+                }
+                if (messageRequestBuilder_ == null) {
+                    result.messageRequest_ = messageRequest_;
+                } else {
+                    result.messageRequest_ = messageRequestBuilder_.build();
+                }
+                if (messageResponseBuilder_ == null) {
+                    result.messageResponse_ = messageResponse_;
+                } else {
+                    result.messageResponse_ = messageResponseBuilder_.build();
+                }
+                if (notificationBuilder_ == null) {
+                    result.notification_ = notification_;
+                } else {
+                    result.notification_ = notificationBuilder_.build();
+                }
+                if (heartBeatBuilder_ == null) {
+                    result.heartBeat_ = heartBeat_;
+                } else {
+                    result.heartBeat_ = heartBeatBuilder_.build();
+                }
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message) {
+                    return mergeFrom((com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message other) {
+                if (other == com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message.getDefaultInstance())
+                    return this;
+                if (other.type_ != 0) {
+                    setTypeValue(other.getTypeValue());
+                }
+                if (other.getSequence() != 0L) {
+                    setSequence(other.getSequence());
+                }
+                if (!other.getSessionId().isEmpty()) {
+                    sessionId_ = other.sessionId_;
+                    onChanged();
+                }
+                if (other.hasLoginRequest()) {
+                    mergeLoginRequest(other.getLoginRequest());
+                }
+                if (other.hasLoginResponse()) {
+                    mergeLoginResponse(other.getLoginResponse());
+                }
+                if (other.hasMessageRequest()) {
+                    mergeMessageRequest(other.getMessageRequest());
+                }
+                if (other.hasMessageResponse()) {
+                    mergeMessageResponse(other.getMessageResponse());
+                }
+                if (other.hasNotification()) {
+                    mergeNotification(other.getNotification());
+                }
+                if (other.hasHeartBeat()) {
+                    mergeHeartBeat(other.getHeartBeat());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int type_ = 0;
+
+            /**
+             * <pre>
+             * 通用字段: 消息类型
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+             *
+             * @return The enum numeric value on the wire for type.
+             */
+            @java.lang.Override
+            public int getTypeValue() {
+                return type_;
+            }
+
+            /**
+             * <pre>
+             * 通用字段: 消息类型
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+             *
+             * @param value The enum numeric value on the wire for type to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTypeValue(int value) {
+
+                type_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 通用字段: 消息类型
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+             *
+             * @return The type.
+             */
+            @java.lang.Override
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType getType() {
+                @SuppressWarnings("deprecation")
+                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType result = com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.valueOf(type_);
+                return result == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType.UNRECOGNIZED : result;
+            }
+
+            /**
+             * <pre>
+             * 通用字段: 消息类型
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+             *
+             * @param value The type to set.
+             * @return This builder for chaining.
+             */
+            public Builder setType(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.HeadType value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                type_ = value.getNumber();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 通用字段: 消息类型
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.HeadType type = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearType() {
+
+                type_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private long sequence_;
+
+            /**
+             * <pre>
+             * 通用字段：消息序列号
+             * </pre>
+             *
+             * <code>uint64 sequence = 2;</code>
+             *
+             * @return The sequence.
+             */
+            @java.lang.Override
+            public long getSequence() {
+                return sequence_;
+            }
+
+            /**
+             * <pre>
+             * 通用字段：消息序列号
+             * </pre>
+             *
+             * <code>uint64 sequence = 2;</code>
+             *
+             * @param value The sequence to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSequence(long value) {
+
+                sequence_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 通用字段：消息序列号
+             * </pre>
+             *
+             * <code>uint64 sequence = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearSequence() {
+
+                sequence_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object sessionId_ = "";
+
+            /**
+             * <pre>
+             * 通用字段：会话id
+             * </pre>
+             *
+             * <code>string session_id = 3;</code>
+             *
+             * @return The sessionId.
+             */
+            public java.lang.String getSessionId() {
+                java.lang.Object ref = sessionId_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    sessionId_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 通用字段：会话id
+             * </pre>
+             *
+             * <code>string session_id = 3;</code>
+             *
+             * @return The bytes for sessionId.
+             */
+            public com.google.protobuf.ByteString
+            getSessionIdBytes() {
+                java.lang.Object ref = sessionId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    sessionId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 通用字段：会话id
+             * </pre>
+             *
+             * <code>string session_id = 3;</code>
+             *
+             * @param value The sessionId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSessionId(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                sessionId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 通用字段：会话id
+             * </pre>
+             *
+             * <code>string session_id = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearSessionId() {
+
+                sessionId_ = getDefaultInstance().getSessionId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 通用字段：会话id
+             * </pre>
+             *
+             * <code>string session_id = 3;</code>
+             *
+             * @param value The bytes for sessionId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSessionIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                sessionId_ = value;
+                onChanged();
+                return this;
+            }
+
+            private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest loginRequest_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder> loginRequestBuilder_;
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             *
+             * @return Whether the loginRequest field is set.
+             */
+            public boolean hasLoginRequest() {
+                return loginRequestBuilder_ != null || loginRequest_ != null;
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             *
+             * @return The loginRequest.
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest getLoginRequest() {
+                if (loginRequestBuilder_ == null) {
+                    return loginRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance() : loginRequest_;
+                } else {
+                    return loginRequestBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             */
+            public Builder setLoginRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest value) {
+                if (loginRequestBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    loginRequest_ = value;
+                    onChanged();
+                } else {
+                    loginRequestBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             */
+            public Builder setLoginRequest(
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder builderForValue) {
+                if (loginRequestBuilder_ == null) {
+                    loginRequest_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    loginRequestBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             */
+            public Builder mergeLoginRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest value) {
+                if (loginRequestBuilder_ == null) {
+                    if (loginRequest_ != null) {
+                        loginRequest_ =
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.newBuilder(loginRequest_).mergeFrom(value).buildPartial();
+                    } else {
+                        loginRequest_ = value;
+                    }
+                    onChanged();
+                } else {
+                    loginRequestBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             */
+            public Builder clearLoginRequest() {
+                if (loginRequestBuilder_ == null) {
+                    loginRequest_ = null;
+                    onChanged();
+                } else {
+                    loginRequest_ = null;
+                    loginRequestBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder getLoginRequestBuilder() {
+
+                onChanged();
+                return getLoginRequestFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder getLoginRequestOrBuilder() {
+                if (loginRequestBuilder_ != null) {
+                    return loginRequestBuilder_.getMessageOrBuilder();
+                } else {
+                    return loginRequest_ == null ?
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.getDefaultInstance() : loginRequest_;
+                }
+            }
+
+            /**
+             * <pre>
+             * 登录请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginRequest loginRequest = 4;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder>
+            getLoginRequestFieldBuilder() {
+                if (loginRequestBuilder_ == null) {
+                    loginRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginRequestOrBuilder>(
+                            getLoginRequest(),
+                            getParentForChildren(),
+                            isClean());
+                    loginRequest_ = null;
+                }
+                return loginRequestBuilder_;
+            }
+
+            private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse loginResponse_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder> loginResponseBuilder_;
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             *
+             * @return Whether the loginResponse field is set.
+             */
+            public boolean hasLoginResponse() {
+                return loginResponseBuilder_ != null || loginResponse_ != null;
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             *
+             * @return The loginResponse.
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse getLoginResponse() {
+                if (loginResponseBuilder_ == null) {
+                    return loginResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance() : loginResponse_;
+                } else {
+                    return loginResponseBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             */
+            public Builder setLoginResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse value) {
+                if (loginResponseBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    loginResponse_ = value;
+                    onChanged();
+                } else {
+                    loginResponseBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             */
+            public Builder setLoginResponse(
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder builderForValue) {
+                if (loginResponseBuilder_ == null) {
+                    loginResponse_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    loginResponseBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             */
+            public Builder mergeLoginResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse value) {
+                if (loginResponseBuilder_ == null) {
+                    if (loginResponse_ != null) {
+                        loginResponse_ =
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.newBuilder(loginResponse_).mergeFrom(value).buildPartial();
+                    } else {
+                        loginResponse_ = value;
+                    }
+                    onChanged();
+                } else {
+                    loginResponseBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             */
+            public Builder clearLoginResponse() {
+                if (loginResponseBuilder_ == null) {
+                    loginResponse_ = null;
+                    onChanged();
+                } else {
+                    loginResponse_ = null;
+                    loginResponseBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder getLoginResponseBuilder() {
+
+                onChanged();
+                return getLoginResponseFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder getLoginResponseOrBuilder() {
+                if (loginResponseBuilder_ != null) {
+                    return loginResponseBuilder_.getMessageOrBuilder();
+                } else {
+                    return loginResponse_ == null ?
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.getDefaultInstance() : loginResponse_;
+                }
+            }
+
+            /**
+             * <pre>
+             * 登录响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.LoginResponse loginResponse = 5;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder>
+            getLoginResponseFieldBuilder() {
+                if (loginResponseBuilder_ == null) {
+                    loginResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.LoginResponseOrBuilder>(
+                            getLoginResponse(),
+                            getParentForChildren(),
+                            isClean());
+                    loginResponse_ = null;
+                }
+                return loginResponseBuilder_;
+            }
+
+            private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest messageRequest_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder> messageRequestBuilder_;
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             *
+             * @return Whether the messageRequest field is set.
+             */
+            public boolean hasMessageRequest() {
+                return messageRequestBuilder_ != null || messageRequest_ != null;
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             *
+             * @return The messageRequest.
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest getMessageRequest() {
+                if (messageRequestBuilder_ == null) {
+                    return messageRequest_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance() : messageRequest_;
+                } else {
+                    return messageRequestBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             */
+            public Builder setMessageRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest value) {
+                if (messageRequestBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    messageRequest_ = value;
+                    onChanged();
+                } else {
+                    messageRequestBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             */
+            public Builder setMessageRequest(
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder builderForValue) {
+                if (messageRequestBuilder_ == null) {
+                    messageRequest_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    messageRequestBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             */
+            public Builder mergeMessageRequest(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest value) {
+                if (messageRequestBuilder_ == null) {
+                    if (messageRequest_ != null) {
+                        messageRequest_ =
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.newBuilder(messageRequest_).mergeFrom(value).buildPartial();
+                    } else {
+                        messageRequest_ = value;
+                    }
+                    onChanged();
+                } else {
+                    messageRequestBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             */
+            public Builder clearMessageRequest() {
+                if (messageRequestBuilder_ == null) {
+                    messageRequest_ = null;
+                    onChanged();
+                } else {
+                    messageRequest_ = null;
+                    messageRequestBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder getMessageRequestBuilder() {
+
+                onChanged();
+                return getMessageRequestFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder getMessageRequestOrBuilder() {
+                if (messageRequestBuilder_ != null) {
+                    return messageRequestBuilder_.getMessageOrBuilder();
+                } else {
+                    return messageRequest_ == null ?
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.getDefaultInstance() : messageRequest_;
+                }
+            }
+
+            /**
+             * <pre>
+             * IM消息请求
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageRequest messageRequest = 6;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder>
+            getMessageRequestFieldBuilder() {
+                if (messageRequestBuilder_ == null) {
+                    messageRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequest.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageRequestOrBuilder>(
+                            getMessageRequest(),
+                            getParentForChildren(),
+                            isClean());
+                    messageRequest_ = null;
+                }
+                return messageRequestBuilder_;
+            }
+
+            private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse messageResponse_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder> messageResponseBuilder_;
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             *
+             * @return Whether the messageResponse field is set.
+             */
+            public boolean hasMessageResponse() {
+                return messageResponseBuilder_ != null || messageResponse_ != null;
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             *
+             * @return The messageResponse.
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse getMessageResponse() {
+                if (messageResponseBuilder_ == null) {
+                    return messageResponse_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance() : messageResponse_;
+                } else {
+                    return messageResponseBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             */
+            public Builder setMessageResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse value) {
+                if (messageResponseBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    messageResponse_ = value;
+                    onChanged();
+                } else {
+                    messageResponseBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             */
+            public Builder setMessageResponse(
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder builderForValue) {
+                if (messageResponseBuilder_ == null) {
+                    messageResponse_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    messageResponseBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             */
+            public Builder mergeMessageResponse(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse value) {
+                if (messageResponseBuilder_ == null) {
+                    if (messageResponse_ != null) {
+                        messageResponse_ =
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.newBuilder(messageResponse_).mergeFrom(value).buildPartial();
+                    } else {
+                        messageResponse_ = value;
+                    }
+                    onChanged();
+                } else {
+                    messageResponseBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             */
+            public Builder clearMessageResponse() {
+                if (messageResponseBuilder_ == null) {
+                    messageResponse_ = null;
+                    onChanged();
+                } else {
+                    messageResponse_ = null;
+                    messageResponseBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder getMessageResponseBuilder() {
+
+                onChanged();
+                return getMessageResponseFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder getMessageResponseOrBuilder() {
+                if (messageResponseBuilder_ != null) {
+                    return messageResponseBuilder_.getMessageOrBuilder();
+                } else {
+                    return messageResponse_ == null ?
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.getDefaultInstance() : messageResponse_;
+                }
+            }
+
+            /**
+             * <pre>
+             * IM消息响应
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageResponse messageResponse = 7;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder>
+            getMessageResponseFieldBuilder() {
+                if (messageResponseBuilder_ == null) {
+                    messageResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponse.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageResponseOrBuilder>(
+                            getMessageResponse(),
+                            getParentForChildren(),
+                            isClean());
+                    messageResponse_ = null;
+                }
+                return messageResponseBuilder_;
+            }
+
+            private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification notification_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder> notificationBuilder_;
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             *
+             * @return Whether the notification field is set.
+             */
+            public boolean hasNotification() {
+                return notificationBuilder_ != null || notification_ != null;
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             *
+             * @return The notification.
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification getNotification() {
+                if (notificationBuilder_ == null) {
+                    return notification_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance() : notification_;
+                } else {
+                    return notificationBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             */
+            public Builder setNotification(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification value) {
+                if (notificationBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    notification_ = value;
+                    onChanged();
+                } else {
+                    notificationBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             */
+            public Builder setNotification(
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder builderForValue) {
+                if (notificationBuilder_ == null) {
+                    notification_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    notificationBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             */
+            public Builder mergeNotification(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification value) {
+                if (notificationBuilder_ == null) {
+                    if (notification_ != null) {
+                        notification_ =
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.newBuilder(notification_).mergeFrom(value).buildPartial();
+                    } else {
+                        notification_ = value;
+                    }
+                    onChanged();
+                } else {
+                    notificationBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             */
+            public Builder clearNotification() {
+                if (notificationBuilder_ == null) {
+                    notification_ = null;
+                    onChanged();
+                } else {
+                    notification_ = null;
+                    notificationBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder getNotificationBuilder() {
+
+                onChanged();
+                return getNotificationFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder getNotificationOrBuilder() {
+                if (notificationBuilder_ != null) {
+                    return notificationBuilder_.getMessageOrBuilder();
+                } else {
+                    return notification_ == null ?
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.getDefaultInstance() : notification_;
+                }
+            }
+
+            /**
+             * <pre>
+             * 系统通知
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageNotification notification = 8;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder>
+            getNotificationFieldBuilder() {
+                if (notificationBuilder_ == null) {
+                    notificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotification.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageNotificationOrBuilder>(
+                            getNotification(),
+                            getParentForChildren(),
+                            isClean());
+                    notification_ = null;
+                }
+                return notificationBuilder_;
+            }
+
+            private com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat heartBeat_;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder> heartBeatBuilder_;
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             *
+             * @return Whether the heartBeat field is set.
+             */
+            public boolean hasHeartBeat() {
+                return heartBeatBuilder_ != null || heartBeat_ != null;
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             *
+             * @return The heartBeat.
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat getHeartBeat() {
+                if (heartBeatBuilder_ == null) {
+                    return heartBeat_ == null ? com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance() : heartBeat_;
+                } else {
+                    return heartBeatBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             */
+            public Builder setHeartBeat(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat value) {
+                if (heartBeatBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    heartBeat_ = value;
+                    onChanged();
+                } else {
+                    heartBeatBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             */
+            public Builder setHeartBeat(
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder builderForValue) {
+                if (heartBeatBuilder_ == null) {
+                    heartBeat_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    heartBeatBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             */
+            public Builder mergeHeartBeat(com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat value) {
+                if (heartBeatBuilder_ == null) {
+                    if (heartBeat_ != null) {
+                        heartBeat_ =
+                                com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.newBuilder(heartBeat_).mergeFrom(value).buildPartial();
+                    } else {
+                        heartBeat_ = value;
+                    }
+                    onChanged();
+                } else {
+                    heartBeatBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             */
+            public Builder clearHeartBeat() {
+                if (heartBeatBuilder_ == null) {
+                    heartBeat_ = null;
+                    onChanged();
+                } else {
+                    heartBeat_ = null;
+                    heartBeatBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder getHeartBeatBuilder() {
+
+                onChanged();
+                return getHeartBeatFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             */
+            public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder getHeartBeatOrBuilder() {
+                if (heartBeatBuilder_ != null) {
+                    return heartBeatBuilder_.getMessageOrBuilder();
+                } else {
+                    return heartBeat_ == null ?
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.getDefaultInstance() : heartBeat_;
+                }
+            }
+
+            /**
+             * <pre>
+             * 心跳
+             * </pre>
+             *
+             * <code>.com.lesterlaucn.chatboot.common.bean.msg.MessageHeartBeat heartBeat = 9;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder>
+            getHeartBeatFieldBuilder() {
+                if (heartBeatBuilder_ == null) {
+                    heartBeatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeat.Builder, com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.MessageHeartBeatOrBuilder>(
+                            getHeartBeat(),
+                            getParentForChildren(),
+                            isClean());
+                    heartBeat_ = null;
+                }
+                return heartBeatBuilder_;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.Message)
+            // @@protoc_insertion_point(builder_scope:com.lesterlaucn.chatboot.common.bean.msg.Message)
+        }
+
+        // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.Message)
+        private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message DEFAULT_INSTANCE;
+
+        static {
+            DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message();
+        }
+
+        public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Message>
+                PARSER = new com.google.protobuf.AbstractParser<Message>() {
+            @java.lang.Override
+            public Message parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Message(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<Message> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Message> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:com.lesterlaucn.chatboot.common.bean.msg.Message)
-    private static final com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor
+    getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor
+            descriptor;
+
     static {
-      DEFAULT_INSTANCE = new com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message();
+        java.lang.String[] descriptorData = {
+                "\n\016ProtoMsg.proto\022(com.lesterlaucn.chatbo" +
+                        "ot.common.bean.msg\"c\n\014LoginRequest\022\013\n\003ui" +
+                        "d\030\001 \001(\t\022\020\n\010deviceId\030\002 \001(\t\022\r\n\005token\030\003 \001(\t" +
+                        "\022\020\n\010platform\030\004 \001(\r\022\023\n\013app_version\030\005 \001(\t\"" +
+                        "K\n\rLoginResponse\022\016\n\006result\030\001 \001(\010\022\014\n\004code" +
+                        "\030\002 \001(\r\022\014\n\004info\030\003 \001(\t\022\016\n\006expose\030\004 \001(\r\"\253\001\n" +
+                        "\016MessageRequest\022\016\n\006msg_id\030\001 \001(\004\022\014\n\004from\030" +
+                        "\002 \001(\t\022\n\n\002to\030\003 \001(\t\022\014\n\004time\030\004 \001(\004\022\020\n\010msg_t" +
+                        "ype\030\005 \001(\r\022\017\n\007content\030\006 \001(\t\022\013\n\003url\030\010 \001(\t\022" +
+                        "\020\n\010property\030\t \001(\t\022\021\n\tfrom_nick\030\n \001(\t\022\014\n\004" +
+                        "json\030\013 \001(\t\"M\n\017MessageResponse\022\016\n\006result\030" +
+                        "\001 \001(\010\022\014\n\004code\030\002 \001(\r\022\014\n\004info\030\003 \001(\t\022\016\n\006exp" +
+                        "ose\030\004 \001(\r\"E\n\023MessageNotification\022\r\n\005no_i" +
+                        "d\030\001 \001(\004\022\014\n\004json\030\002 \001(\t\022\021\n\ttimestamp\030\003 \001(\t" +
+                        "\":\n\020MessageHeartBeat\022\013\n\003seq\030\001 \001(\r\022\013\n\003uid" +
+                        "\030\002 \001(\t\022\014\n\004json\030\003 \001(\t\"\331\004\n\007Message\022@\n\004type" +
+                        "\030\001 \001(\01622.com.lesterlaucn.chatboot.common" +
+                        ".bean.msg.HeadType\022\020\n\010sequence\030\002 \001(\004\022\022\n\n" +
+                        "session_id\030\003 \001(\t\022L\n\014loginRequest\030\004 \001(\01326" +
+                        ".com.lesterlaucn.chatboot.common.bean.ms" +
+                        "g.LoginRequest\022N\n\rloginResponse\030\005 \001(\01327." +
+                        "com.lesterlaucn.chatboot.common.bean.msg" +
+                        ".LoginResponse\022P\n\016messageRequest\030\006 \001(\01328" +
+                        ".com.lesterlaucn.chatboot.common.bean.ms" +
+                        "g.MessageRequest\022R\n\017messageResponse\030\007 \001(" +
+                        "\01329.com.lesterlaucn.chatboot.common.bean" +
+                        ".msg.MessageResponse\022S\n\014notification\030\010 \001" +
+                        "(\0132=.com.lesterlaucn.chatboot.common.bea" +
+                        "n.msg.MessageNotification\022M\n\theartBeat\030\t" +
+                        " \001(\0132:.com.lesterlaucn.chatboot.common.b" +
+                        "ean.msg.MessageHeartBeat*\257\001\n\010HeadType\022\021\n" +
+                        "\rLOGIN_REQUEST\020\000\022\022\n\016LOGIN_RESPONSE\020\001\022\022\n\016" +
+                        "LOGOUT_REQUEST\020\002\022\023\n\017LOGOUT_RESPONSE\020\003\022\016\n" +
+                        "\nHEART_BEAT\020\004\022\023\n\017MESSAGE_REQUEST\020\005\022\024\n\020ME" +
+                        "SSAGE_RESPONSE\020\006\022\030\n\024MESSAGE_NOTIFICATION" +
+                        "\020\007b\006proto3"
+        };
+        descriptor = com.google.protobuf.Descriptors.FileDescriptor
+                .internalBuildGeneratedFileFrom(descriptorData,
+                        new com.google.protobuf.Descriptors.FileDescriptor[]{
+                        });
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor =
+                getDescriptor().getMessageTypes().get(0);
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor,
+                new java.lang.String[]{"Uid", "DeviceId", "Token", "Platform", "AppVersion",});
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor =
+                getDescriptor().getMessageTypes().get(1);
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor,
+                new java.lang.String[]{"Result", "Code", "Info", "Expose",});
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor =
+                getDescriptor().getMessageTypes().get(2);
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor,
+                new java.lang.String[]{"MsgId", "From", "To", "Time", "MsgType", "Content", "Url", "Property", "FromNick", "Json",});
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor =
+                getDescriptor().getMessageTypes().get(3);
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor,
+                new java.lang.String[]{"Result", "Code", "Info", "Expose",});
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor =
+                getDescriptor().getMessageTypes().get(4);
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor,
+                new java.lang.String[]{"NoId", "Json", "Timestamp",});
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor =
+                getDescriptor().getMessageTypes().get(5);
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor,
+                new java.lang.String[]{"Seq", "Uid", "Json",});
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor =
+                getDescriptor().getMessageTypes().get(6);
+        internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor,
+                new java.lang.String[]{"Type", "Sequence", "SessionId", "LoginRequest", "LoginResponse", "MessageRequest", "MessageResponse", "Notification", "HeartBeat",});
     }
 
-    public static com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Message>
-        PARSER = new com.google.protobuf.AbstractParser<Message>() {
-      @java.lang.Override
-      public Message parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Message(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Message> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Message> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg.Message getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\016ProtoMsg.proto\022(com.lesterlaucn.chatbo" +
-      "ot.common.bean.msg\"c\n\014LoginRequest\022\013\n\003ui" +
-      "d\030\001 \001(\t\022\020\n\010deviceId\030\002 \001(\t\022\r\n\005token\030\003 \001(\t" +
-      "\022\020\n\010platform\030\004 \001(\r\022\023\n\013app_version\030\005 \001(\t\"" +
-      "K\n\rLoginResponse\022\016\n\006result\030\001 \001(\010\022\014\n\004code" +
-      "\030\002 \001(\r\022\014\n\004info\030\003 \001(\t\022\016\n\006expose\030\004 \001(\r\"\253\001\n" +
-      "\016MessageRequest\022\016\n\006msg_id\030\001 \001(\004\022\014\n\004from\030" +
-      "\002 \001(\t\022\n\n\002to\030\003 \001(\t\022\014\n\004time\030\004 \001(\004\022\020\n\010msg_t" +
-      "ype\030\005 \001(\r\022\017\n\007content\030\006 \001(\t\022\013\n\003url\030\010 \001(\t\022" +
-      "\020\n\010property\030\t \001(\t\022\021\n\tfrom_nick\030\n \001(\t\022\014\n\004" +
-      "json\030\013 \001(\t\"M\n\017MessageResponse\022\016\n\006result\030" +
-      "\001 \001(\010\022\014\n\004code\030\002 \001(\r\022\014\n\004info\030\003 \001(\t\022\016\n\006exp" +
-      "ose\030\004 \001(\r\"E\n\023MessageNotification\022\r\n\005no_i" +
-      "d\030\001 \001(\004\022\014\n\004json\030\002 \001(\t\022\021\n\ttimestamp\030\003 \001(\t" +
-      "\":\n\020MessageHeartBeat\022\013\n\003seq\030\001 \001(\r\022\013\n\003uid" +
-      "\030\002 \001(\t\022\014\n\004json\030\003 \001(\t\"\331\004\n\007Message\022@\n\004type" +
-      "\030\001 \001(\01622.com.lesterlaucn.chatboot.common" +
-      ".bean.msg.HeadType\022\020\n\010sequence\030\002 \001(\004\022\022\n\n" +
-      "session_id\030\003 \001(\t\022L\n\014loginRequest\030\004 \001(\01326" +
-      ".com.lesterlaucn.chatboot.common.bean.ms" +
-      "g.LoginRequest\022N\n\rloginResponse\030\005 \001(\01327." +
-      "com.lesterlaucn.chatboot.common.bean.msg" +
-      ".LoginResponse\022P\n\016messageRequest\030\006 \001(\01328" +
-      ".com.lesterlaucn.chatboot.common.bean.ms" +
-      "g.MessageRequest\022R\n\017messageResponse\030\007 \001(" +
-      "\01329.com.lesterlaucn.chatboot.common.bean" +
-      ".msg.MessageResponse\022S\n\014notification\030\010 \001" +
-      "(\0132=.com.lesterlaucn.chatboot.common.bea" +
-      "n.msg.MessageNotification\022M\n\theartBeat\030\t" +
-      " \001(\0132:.com.lesterlaucn.chatboot.common.b" +
-      "ean.msg.MessageHeartBeat*\257\001\n\010HeadType\022\021\n" +
-      "\rLOGIN_REQUEST\020\000\022\022\n\016LOGIN_RESPONSE\020\001\022\022\n\016" +
-      "LOGOUT_REQUEST\020\002\022\023\n\017LOGOUT_RESPONSE\020\003\022\016\n" +
-      "\nHEART_BEAT\020\004\022\023\n\017MESSAGE_REQUEST\020\005\022\024\n\020ME" +
-      "SSAGE_RESPONSE\020\006\022\030\n\024MESSAGE_NOTIFICATION" +
-      "\020\007b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginRequest_descriptor,
-        new java.lang.String[] { "Uid", "DeviceId", "Token", "Platform", "AppVersion", });
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lesterlaucn_chatboot_common_bean_msg_LoginResponse_descriptor,
-        new java.lang.String[] { "Result", "Code", "Info", "Expose", });
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageRequest_descriptor,
-        new java.lang.String[] { "MsgId", "From", "To", "Time", "MsgType", "Content", "Url", "Property", "FromNick", "Json", });
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageResponse_descriptor,
-        new java.lang.String[] { "Result", "Code", "Info", "Expose", });
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageNotification_descriptor,
-        new java.lang.String[] { "NoId", "Json", "Timestamp", });
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lesterlaucn_chatboot_common_bean_msg_MessageHeartBeat_descriptor,
-        new java.lang.String[] { "Seq", "Uid", "Json", });
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_lesterlaucn_chatboot_common_bean_msg_Message_descriptor,
-        new java.lang.String[] { "Type", "Sequence", "SessionId", "LoginRequest", "LoginResponse", "MessageRequest", "MessageResponse", "Notification", "HeartBeat", });
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }
