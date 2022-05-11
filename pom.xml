@@ -10,7 +10,8 @@
         <module>chatboot-client</module>
         <module>chatboot-server</module>
         <module>chatboot-common</module>
-        <module>chatboot-client-spring-boot-starter</module>
+        <module>spring-boot-starter</module>
+        <module>examples</module>
     </modules>
     <packaging>pom</packaging>
     <!-- 依赖版本集中管理 -->
