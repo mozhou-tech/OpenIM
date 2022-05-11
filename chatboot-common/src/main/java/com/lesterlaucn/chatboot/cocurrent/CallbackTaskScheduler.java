@@ -12,8 +12,7 @@ import java.util.concurrent.ExecutorService;
  */
 
 @Slf4j
-public class CallbackTaskScheduler
-{
+public class CallbackTaskScheduler {
 
     static ListeningExecutorService gPool = null;
 
@@ -28,6 +27,7 @@ public class CallbackTaskScheduler
 
     /**
      * 添加任务
+     *
      * @param executeTask
      */
 
@@ -36,6 +36,7 @@ public class CallbackTaskScheduler
 
 
         ListenableFuture<R> future = gPool.submit(new Callable<R>() {
+            @Override
             public R call() throws Exception {
 
                 R r = executeTask.execute();
@@ -45,16 +46,16 @@ public class CallbackTaskScheduler
         });
 
         Futures.addCallback(future, new FutureCallback<R>() {
+            @Override
             public void onSuccess(R r) {
                 executeTask.onBack(r);
             }
 
+            @Override
             public void onFailure(Throwable t) {
                 executeTask.onException(t);
             }
-        });
-
-
+        }, gPool);
     }
 
 

@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.imClient.ClientSender;
 
-import com.lesterlaucn.chatboot.im.common.bean.ChatMsg;
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.ChatMsg;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.imClient.clientBuilder.ChatMsgBuilder;
 import com.lesterlaucn.chatboot.util.Logger;
 import lombok.extern.slf4j.Slf4j;

@@ -21,7 +21,6 @@ import java.text.DecimalFormat;
 public class IOUtil
 {
 
-
     public static String getUserHomeResourcePath(String resName)
     {
         String p = System.getProperty("user.dir") + File.separator + resName;

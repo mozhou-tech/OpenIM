@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.imClient.clientMsgProcesser;
 
 
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.imClient.client.ClientSession;
 
 /**

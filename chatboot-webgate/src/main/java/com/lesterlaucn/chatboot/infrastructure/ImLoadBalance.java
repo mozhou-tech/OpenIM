@@ -43,7 +43,6 @@ public class ImLoadBalance {
             log.info("节点信息：{}", JsonUtil.pojoToJson(node));
         });
         ImNode best = balance(workers);
-
         return best;
     }
 
@@ -57,17 +56,14 @@ public class ImLoadBalance {
         if (items.size() > 0) {
             // 根据balance值由小到大排序
             Collections.sort(items);
-
             // 返回balance值最小的那个
             ImNode node = items.get(0);
-
             log.info("最佳的节点为：{}", JsonUtil.pojoToJson(node));
             return node;
         } else {
             return null;
         }
     }
-
 
     /**
      * 从zookeeper中拿到所有IM节点

@@ -1,8 +1,8 @@
 package com.lesterlaucn.chatboot.imClient.clientHandler;
 
 
-import com.lesterlaucn.chatboot.im.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.UserDTO;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.imClient.client.ClientSession;
 import com.lesterlaucn.chatboot.imClient.protoBuilder.HeartBeatMsgBuilder;
 import io.netty.channel.ChannelHandler;

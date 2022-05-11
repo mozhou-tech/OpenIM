@@ -1,8 +1,8 @@
 package com.lesterlaucn.chatboot.imClient.client;
 
-import com.lesterlaucn.chatboot.im.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.im.common.codec.ProtobufDecoder;
-import com.lesterlaucn.chatboot.im.common.codec.ProtobufEncoder;
+import com.lesterlaucn.chatboot.common.bean.UserDTO;
+import com.lesterlaucn.chatboot.common.codec.ProtobufDecoder;
+import com.lesterlaucn.chatboot.common.codec.ProtobufEncoder;
 import com.lesterlaucn.chatboot.imClient.ClientSender.ChatSender;
 import com.lesterlaucn.chatboot.imClient.ClientSender.LoginSender;
 import com.lesterlaucn.chatboot.imClient.clientHandler.ChatMsgHandler;
@@ -23,8 +23,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Data
 @Service("NettyClient")
-public class NettyClient
-{
+public class NettyClient {
     // 服务器ip地址
     private String host;
     // 服务器端口
@@ -56,8 +55,7 @@ public class NettyClient
     private Bootstrap b;
     private EventLoopGroup g;
 
-    public NettyClient()
-    {
+    public NettyClient() {
 
         /**
          * 客户端的是Bootstrap，服务端的则是 ServerBootstrap。
@@ -76,10 +74,8 @@ public class NettyClient
     /**
      * 重连
      */
-    public void doConnect()
-    {
-        try
-        {
+    public void doConnect() {
+        try {
             b = new Bootstrap();
 
             b.group(g);
@@ -90,10 +86,9 @@ public class NettyClient
 
             // 设置通道初始化
             b.handler(
-                    new ChannelInitializer<SocketChannel>()
-                    {
-                        public void initChannel(SocketChannel ch)
-                        {
+                    new ChannelInitializer<SocketChannel>() {
+                        @Override
+                        public void initChannel(SocketChannel ch) {
                             ch.pipeline().addLast("decoder", new ProtobufDecoder());
                             ch.pipeline().addLast("encoder", new ProtobufEncoder());
                             ch.pipeline().addLast("loginResponseHandler", loginResponceHandler);
@@ -111,14 +106,12 @@ public class NettyClient
             // 阻塞
             // f.channel().closeFuture().sync();
 
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             log.info("客户端连接失败!" + e.getMessage());
         }
     }
 
-    public void close()
-    {
+    public void close() {
         g.shutdownGracefully();
     }
 

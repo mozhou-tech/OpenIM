@@ -4,9 +4,9 @@
 
 package com.lesterlaucn.chatboot.imClient.clientBuilder;
 
-import com.lesterlaucn.chatboot.im.common.bean.ChatMsg;
-import com.lesterlaucn.chatboot.im.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.ChatMsg;
+import com.lesterlaucn.chatboot.common.bean.UserDTO;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.imClient.client.ClientSession;
 
 /**

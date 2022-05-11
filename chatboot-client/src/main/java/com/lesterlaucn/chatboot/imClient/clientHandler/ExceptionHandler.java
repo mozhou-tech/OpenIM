@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.imClient.clientHandler;
 
-import com.lesterlaucn.chatboot.im.common.exception.BusinessException;
-import com.lesterlaucn.chatboot.im.common.exception.InvalidFrameException;
+import com.lesterlaucn.chatboot.common.exception.BusinessException;
+import com.lesterlaucn.chatboot.common.exception.InvalidFrameException;
 import com.lesterlaucn.chatboot.imClient.client.CommandController;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

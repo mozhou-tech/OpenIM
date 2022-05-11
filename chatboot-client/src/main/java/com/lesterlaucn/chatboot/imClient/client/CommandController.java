@@ -1,9 +1,9 @@
 package com.lesterlaucn.chatboot.imClient.client;
 
 import com.lesterlaucn.chatboot.cocurrent.FutureTaskScheduler;
+import com.lesterlaucn.chatboot.common.bean.UserDTO;
 import com.lesterlaucn.chatboot.entity.ImNode;
 import com.lesterlaucn.chatboot.entity.LoginBack;
-import com.lesterlaucn.chatboot.im.common.bean.UserDTO;
 import com.lesterlaucn.chatboot.imClient.ClientSender.ChatSender;
 import com.lesterlaucn.chatboot.imClient.ClientSender.LoginSender;
 import com.lesterlaucn.chatboot.imClient.clientCommand.*;

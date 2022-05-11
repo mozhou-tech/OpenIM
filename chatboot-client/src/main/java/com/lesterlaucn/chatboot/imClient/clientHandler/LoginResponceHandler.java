@@ -1,8 +1,8 @@
 package com.lesterlaucn.chatboot.imClient.clientHandler;
 
 
-import com.lesterlaucn.chatboot.im.common.ProtoInstant;
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.ProtoInstant;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.imClient.client.ClientSession;
 import com.lesterlaucn.chatboot.imClient.client.CommandController;
 import io.netty.channel.ChannelHandler;

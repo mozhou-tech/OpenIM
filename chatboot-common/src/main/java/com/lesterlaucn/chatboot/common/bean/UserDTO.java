@@ -1,6 +1,6 @@
-package com.lesterlaucn.chatboot.im.common.bean;
+package com.lesterlaucn.chatboot.common.bean;
 
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 

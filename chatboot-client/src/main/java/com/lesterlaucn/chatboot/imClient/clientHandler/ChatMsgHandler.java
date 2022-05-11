@@ -1,7 +1,7 @@
 package com.lesterlaucn.chatboot.imClient.clientHandler;
 
 
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.imClient.ClientSender.LoginSender;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

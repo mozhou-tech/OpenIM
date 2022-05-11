@@ -1,4 +1,4 @@
-package com.lesterlaucn.chatboot.im.common.exception;
+package com.lesterlaucn.chatboot.common.exception;
 
 /**
  * create by lesterlaucn

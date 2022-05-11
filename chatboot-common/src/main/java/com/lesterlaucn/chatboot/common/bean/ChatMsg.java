@@ -1,8 +1,8 @@
-package com.lesterlaucn.chatboot.im.common.bean;
+package com.lesterlaucn.chatboot.common.bean;
 
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import lombok.Data;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 @Data
 public class ChatMsg

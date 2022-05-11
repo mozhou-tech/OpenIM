@@ -2,8 +2,8 @@ package com.lesterlaucn.chatboot.imClient.ClientSender;
 
 import com.lesterlaucn.chatboot.cocurrent.CallbackTask;
 import com.lesterlaucn.chatboot.cocurrent.CallbackTaskScheduler;
-import com.lesterlaucn.chatboot.im.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.im.common.bean.msg.ProtoMsg;
+import com.lesterlaucn.chatboot.common.bean.UserDTO;
+import com.lesterlaucn.chatboot.common.bean.msg.ProtoMsg;
 import com.lesterlaucn.chatboot.imClient.client.ClientSession;
 import com.lesterlaucn.chatboot.imClient.client.CommandController;
 import io.netty.channel.ChannelFuture;
