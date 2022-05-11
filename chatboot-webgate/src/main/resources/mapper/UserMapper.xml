@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lesterlaucn.chatboot.infrastructure.mybatis.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.lesterlaucn.chatboot.infrastructure.mybatis.entity.UserPO">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName"/>
+        <result column="register_time" jdbcType="TIMESTAMP" property="registerTime"/>
+        <result column="pass_word" jdbcType="VARCHAR" property="passWord"/>
+    </resultMap>
+    <resultMap id="BaseResultMap" type="com.lesterlaucn.chatboot.infrastructure.mybatis.entity.UserPO">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName"/>
+        <result column="register_time" jdbcType="TIMESTAMP" property="registerTime"/>
+    </resultMap>
+</mapper>
