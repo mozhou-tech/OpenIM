@@ -1,8 +1,8 @@
 package com.lesterlaucn.chatboot.crazyIm;
 
-import com.lesterlaucn.chatboot.imServer.distributed.ImWorker;
-import com.lesterlaucn.chatboot.imServer.distributed.WorkerRouter;
-import com.lesterlaucn.chatboot.imServer.startup.ServerApplication;
+import com.lesterlaucn.chatboot.server.ServerApplication;
+import com.lesterlaucn.chatboot.server.distributed.ImWorker;
+import com.lesterlaucn.chatboot.server.distributed.WorkerRouter;
 import com.lesterlaucn.chatboot.util.JsonUtil;
 import com.lesterlaucn.chatboot.util.Logger;
 import com.lesterlaucn.chatboot.util.ThreadUtil;

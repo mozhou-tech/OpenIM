@@ -1,6 +1,6 @@
+import com.lesterlaucn.chatboot.client.ClientSender.ChatSender;
+import com.lesterlaucn.chatboot.client.client.ClientSession;
 import com.lesterlaucn.chatboot.common.bean.UserDTO;
-import com.lesterlaucn.chatboot.imClient.ClientSender.ChatSender;
-import com.lesterlaucn.chatboot.imClient.client.ClientSession;
 import org.junit.Test;
 
 /**
