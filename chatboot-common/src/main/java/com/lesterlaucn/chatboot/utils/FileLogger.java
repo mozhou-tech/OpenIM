@@ -8,32 +8,26 @@ package com.lesterlaucn.chatboot.utils;
 
 import java.io.*;
 
-public class FileLogger
-{
+public class FileLogger {
 
     private static File logFile;
 
-    static
-    {
-        try
-        {
+    static {
+        try {
             String logDir = IOUtil.builderResourcePath("/AOP/");
             File dir = new File(logDir);
-            if (!dir.exists())
-            {
+            if (!dir.exists()) {
                 dir.mkdir();
             }
             String filePath = logDir + DateUtil.getToday() + ".txt";
 
             logFile = new File(filePath);
-            if (!logFile.exists())
-            {
+            if (!logFile.exists()) {
 
                 logFile.createNewFile();
             }
 
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -44,12 +38,10 @@ public class FileLogger
      *
      * @param s 待输出的字符串形参
      */
-    public static void info(Object s)
-    {
+    public static void info(Object s) {
         Writer fileWriter = null;
         BufferedWriter bufferedWriter = null;
-        try
-        {
+        try {
             fileWriter = new FileWriter(logFile, true);
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.append(DateUtil.getNow());
@@ -58,12 +50,10 @@ public class FileLogger
             bufferedWriter.append("\r");
             bufferedWriter.flush();
 
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
 
-        } finally
-        {
+        } finally {
             IOUtil.closeQuietly(bufferedWriter);
 
         }

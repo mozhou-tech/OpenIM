@@ -5,61 +5,50 @@ import com.google.gson.Gson;
 
 import java.io.*;
 
-public class ObjectUtil
-{
+public class ObjectUtil {
 
-    public static byte[] Object2JsonBytes(java.lang.Object obj)
-    {
+    public static byte[] Object2JsonBytes(java.lang.Object obj) {
 
         //尽量把对象转换成JSON保存更稳妥
 
         String json = ObjectToJson(obj);
-        try
-        {
+        try {
             return json.getBytes("UTF-8");
-        } catch (UnsupportedEncodingException e)
-        {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public static <T> T JsonBytes2Object(byte[] bytes, Class<T> tClass)
-    {
+    public static <T> T JsonBytes2Object(byte[] bytes, Class<T> tClass) {
 
         //尽量把对象转换成JSON保存更稳妥
-        try
-        {
+        try {
             String json = new String(bytes, "UTF-8");
             T t = JsonToObject(json, tClass);
             return t;
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
 
     //使用谷歌Gson转成字符串
-    public static String ObjectToJson(java.lang.Object obj)
-    {
+    public static String ObjectToJson(java.lang.Object obj) {
 
         String json = new Gson().toJson(obj);
         return json;
     }
 
     //使用阿里JSON将字符串转成对象
-    public static <T> T JsonToObject(String json, Class<T> tClass)
-    {
+    public static <T> T JsonToObject(String json, Class<T> tClass) {
         T t = JSON.parseObject(json, tClass);
         return t;
     }
 
-    public static byte[] ObjectToByte(java.lang.Object obj)
-    {
+    public static byte[] ObjectToByte(java.lang.Object obj) {
         byte[] bytes = null;
-        try
-        {
+        try {
             // object to bytearray
             ByteArrayOutputStream bo = new ByteArrayOutputStream();
             ObjectOutputStream oo = new ObjectOutputStream(bo);
@@ -71,8 +60,7 @@ public class ObjectUtil
             oo.close();
 
 
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("translation" + e.getMessage());
             e.printStackTrace();
         }
@@ -80,11 +68,9 @@ public class ObjectUtil
     }
 
 
-    public static Object ByteToObject(byte[] bytes)
-    {
+    public static Object ByteToObject(byte[] bytes) {
         Object obj = null;
-        try
-        {
+        try {
             // bytearray to object
             ByteArrayInputStream bi = new ByteArrayInputStream(bytes);
             ObjectInputStream oi = new ObjectInputStream(bi);
@@ -92,8 +78,7 @@ public class ObjectUtil
             obj = oi.readObject();
             bi.close();
             oi.close();
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("translation" + e.getMessage());
             e.printStackTrace();
         }

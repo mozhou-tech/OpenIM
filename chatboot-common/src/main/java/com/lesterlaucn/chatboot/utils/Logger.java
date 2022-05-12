@@ -5,8 +5,7 @@
 package com.lesterlaucn.chatboot.utils;
 
 
-public class Logger
-{
+public class Logger {
     /**
      * 信息输出
      *
@@ -40,8 +39,8 @@ public class Logger
      * @param s 待输出的字符串形参
      */
     synchronized public static void tcfo(Object s) {
-        String cft= "["+Thread.currentThread().getName()+"|"+ReflectionUtil.getNakeCallClassMethod()+"]";
-        System.out.println(cft +   "："+ s);
+        String cft = "[" + Thread.currentThread().getName() + "|" + ReflectionUtil.getNakeCallClassMethod() + "]";
+        System.out.println(cft + "：" + s);
     }
 
     /**
@@ -52,20 +51,17 @@ public class Logger
     public static void hint(Object s) {
         System.out.println("/--" + s + "--/");
     }
+
     /**
      * 带着方法名输出，方法名称放在前面
      *
      * @param s 待输出的字符串形参
      */
-    public static void debug(Object s)
-    {
+    public static void debug(Object s) {
         String content = null;
-        if (null != s)
-        {
+        if (null != s) {
             content = s.toString().trim();
-        }
-        else
-        {
+        } else {
             content = "";
         }
 
@@ -79,15 +75,11 @@ public class Logger
      *
      * @param s 待输出的字符串形参
      */
-    synchronized public static void info(Object s)
-    {
+    synchronized public static void info(Object s) {
         String content = null;
-        if (null != s)
-        {
+        if (null != s) {
             content = s.toString().trim();
-        }
-        else
-        {
+        } else {
             content = "";
         }
         String cft = "[" + Thread.currentThread().getName() + "|" + ReflectionUtil.getNakeCallClassMethod() + "]";
@@ -102,11 +94,10 @@ public class Logger
      *
      * @param args 待输出的字符串形参
      */
-    synchronized public static void info(Object... args)
-    {
+    synchronized public static void info(Object... args) {
         StringBuilder content = new StringBuilder();
         for (int i = 0; i < args.length; i++) {
-            content.append(args[i]!=null?args[i].toString():"null");
+            content.append(args[i] != null ? args[i].toString() : "null");
             content.append(" ");
         }
 
@@ -122,11 +113,10 @@ public class Logger
      *
      * @param args 待输出的字符串形参
      */
-    synchronized public static void error(Object... args)
-    {
+    synchronized public static void error(Object... args) {
         StringBuilder content = new StringBuilder();
         for (int i = 0; i < args.length; i++) {
-            content.append(args[i]!=null?args[i].toString():"null");
+            content.append(args[i] != null ? args[i].toString() : "null");
             content.append(" ");
         }
 

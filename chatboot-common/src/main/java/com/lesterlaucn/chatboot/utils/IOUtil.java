@@ -18,11 +18,9 @@ import java.nio.ByteBuffer;
 import java.text.DecimalFormat;
 
 @Slf4j
-public class IOUtil
-{
+public class IOUtil {
 
-    public static String getUserHomeResourcePath(String resName)
-    {
+    public static String getUserHomeResourcePath(String resName) {
         String p = System.getProperty("user.dir") + File.separator + resName;
         return p;
     }
@@ -35,16 +33,13 @@ public class IOUtil
      * @param resName 需要获取完整路径的资源,需要以/打头
      * @return 完整路径
      */
-    public static String getResourcePath(String resName)
-    {
+    public static String getResourcePath(String resName) {
         URL url = IOUtil.class.getResource(resName);
         String path = url.getPath();
         String decodePath = null;
-        try
-        {
+        try {
             decodePath = URLDecoder.decode(path, "UTF-8");
-        } catch (UnsupportedEncodingException e)
-        {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return decodePath;
@@ -58,29 +53,23 @@ public class IOUtil
      * @param resName 需要获取完整路径的资源,需要以/打头
      * @return 完整路径
      */
-    public static String builderResourcePath(String resName)
-    {
+    public static String builderResourcePath(String resName) {
         URL url = IOUtil.class.getResource("/");
         String path = url.getPath();
         String decodePath = null;
-        try
-        {
+        try {
             decodePath = URLDecoder.decode(path, "UTF-8");
-        } catch (UnsupportedEncodingException e)
-        {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return decodePath + resName;
     }
 
-    public static void closeQuietly(java.io.Closeable o)
-    {
+    public static void closeQuietly(java.io.Closeable o) {
         if (null == o) return;
-        try
-        {
+        try {
             o.close();
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -91,21 +80,17 @@ public class IOUtil
      * @param length
      * @return
      */
-    public static String getFormatFileSize(long length)
-    {
+    public static String getFormatFileSize(long length) {
         double size = ((double) length) / (1 << 30);
-        if (size >= 1)
-        {
+        if (size >= 1) {
             return fileSizeFormater.format(size) + "GB";
         }
         size = ((double) length) / (1 << 20);
-        if (size >= 1)
-        {
+        if (size >= 1) {
             return fileSizeFormater.format(size) + "MB";
         }
         size = ((double) length) / (1 << 10);
-        if (size >= 1)
-        {
+        if (size >= 1) {
             return fileSizeFormater.format(size) + "KB";
         }
         return length + "B";
@@ -124,45 +109,36 @@ public class IOUtil
      * @param MaxLen
      * @return
      */
-    public static String getVarStrFromBuf(ByteBuffer buf, int MaxLen)
-    {
+    public static String getVarStrFromBuf(ByteBuffer buf, int MaxLen) {
         byte[] btemp = new byte[MaxLen];
         byte j = -1;
         int avaibleBytes = buf.array().length - buf.position();
-        if (!(avaibleBytes > 0))
-        {
+        if (!(avaibleBytes > 0)) {
             return "";
         }
         int len = 0;
-        for (int i = 0; i < MaxLen; i++)
-        {
+        for (int i = 0; i < MaxLen; i++) {
             btemp[i] = buf.get();
             len = i;
-            if (btemp[i] == 0)
-            {
+            if (btemp[i] == 0) {
                 break;
             }
         }
-        try
-        {
+        try {
             return new String(btemp, 0, len, "UTF-8");
-        } catch (UnsupportedEncodingException e)
-        {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return null;
     }
 
 
-    public static String getHostAddress()
-    {
+    public static String getHostAddress() {
         String ip = null;
-        try
-        {
+        try {
 
             ip = InetAddress.getLocalHost().getHostAddress();
-        } catch (Exception ex)
-        {
+        } catch (Exception ex) {
             log.error("获取ip报错", ex.getMessage());
         }
         return ip;

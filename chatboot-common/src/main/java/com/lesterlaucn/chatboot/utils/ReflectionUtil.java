@@ -8,20 +8,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by nien woo
- * Date: 18-1-11
- * Time: 下午12:40
- */
-public class ReflectionUtil
-{
+public class ReflectionUtil {
     /**
      * 获得调用方法的名称
      *
      * @return 方法名称
      */
-    public static String getCallMethod()
-    {
+    public static String getCallMethod() {
         StackTraceElement[] stack = Thread.currentThread().getStackTrace();
         // 获得调用方法名
         String method = stack[3].getMethodName();
@@ -33,8 +26,7 @@ public class ReflectionUtil
      *
      * @return 方法名称
      */
-    public static String getCallClassMethod()
-    {
+    public static String getCallClassMethod() {
         StackTraceElement stack[] = Thread.currentThread().getStackTrace();
         // 获得调用方法名
         String[] className = stack[3].getClassName().split("\\.");
@@ -47,8 +39,7 @@ public class ReflectionUtil
      *
      * @return 方法名称
      */
-    public static String getNakeCallClassMethod()
-    {
+    public static String getNakeCallClassMethod() {
         StackTraceElement stack[] = Thread.currentThread().getStackTrace();
         // 获得调用方法名
         String[] className = stack[3].getClassName().split("\\.");
@@ -62,16 +53,14 @@ public class ReflectionUtil
      * @param targetClass
      * @return
      */
-    public static Class<?>[] getInterfaces(Class<?> targetClass)
-    {
+    public static Class<?>[] getInterfaces(Class<?> targetClass) {
         Set<Class<?>> interfaceSet = new HashSet<>();
         //数组转成list
         List<Class<?>> subList = Arrays.asList(targetClass.getInterfaces());
         if (subList.size() > 0)
             interfaceSet.addAll(subList);
         Class superClass = targetClass.getSuperclass();
-        while (null != superClass)
-        {
+        while (null != superClass) {
             subList = Arrays.asList(superClass.getInterfaces());
 
             if (subList.size() > 0)
@@ -84,8 +73,7 @@ public class ReflectionUtil
 
     }
 
-    public static Object newProxyInstance(Object targetObject, InvocationHandler handler)
-    {
+    public static Object newProxyInstance(Object targetObject, InvocationHandler handler) {
 
 
         Class targetClass = targetObject.getClass();
